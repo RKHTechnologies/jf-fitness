@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jf-fitness.git/static/css/main.5f361e03.chunk.css",
+    "main.js": "/jf-fitness.git/static/js/main.88454a8b.chunk.js",
+    "main.js.map": "/jf-fitness.git/static/js/main.88454a8b.chunk.js.map",
+    "runtime-main.js": "/jf-fitness.git/static/js/runtime-main.d2819634.js",
+    "runtime-main.js.map": "/jf-fitness.git/static/js/runtime-main.d2819634.js.map",
+    "static/js/2.823249e6.chunk.js": "/jf-fitness.git/static/js/2.823249e6.chunk.js",
+    "static/js/2.823249e6.chunk.js.map": "/jf-fitness.git/static/js/2.823249e6.chunk.js.map",
+    "index.html": "/jf-fitness.git/index.html",
+    "precache-manifest.9c8fb546776409b53b68a12b1798b355.js": "/jf-fitness.git/precache-manifest.9c8fb546776409b53b68a12b1798b355.js",
+    "service-worker.js": "/jf-fitness.git/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/jf-fitness.git/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.823249e6.chunk.js.LICENSE.txt": "/jf-fitness.git/static/js/2.823249e6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2819634.js",
+    "static/js/2.823249e6.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.88454a8b.chunk.js"
+  ]
+}
