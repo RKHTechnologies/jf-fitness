@@ -1,15 +1,16 @@
 import React from 'react';
-import './App.css';
+import styled from "styled-components";
+
+const PageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          JF Fitness
-        </p>
-      </header>
-    </div>
+    <PageContainer>JF Fitness</PageContainer>
   );
 }
 
