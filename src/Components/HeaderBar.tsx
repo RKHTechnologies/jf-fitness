@@ -52,7 +52,7 @@ const HeaderButton = styled.a`
     text-decoration: none;
     
     &:hover {
-      color: ${colours.primary};
+      color: ${colours.primary} !important;
       border-color: ${colours.primary};
     }
 
@@ -74,7 +74,7 @@ const NavItemsRightContainer = styled.div`
     @media( max-width: 1100px ) {
         flex-direction: column;
         align-self: flex-start;
-        margin-top: 70px;
+        margin-top: 80px;
         transition: all 0.3s ease;
         height: ${(p:menuProps) => p.menuOpen ? "400px" : "0"};
 
@@ -83,32 +83,32 @@ const NavItemsRightContainer = styled.div`
             margin-right: 20px;
             text-align: right;
             border-radius: 0;
-            background: #1f1f1f;
-            padding: 0 25px;
+            background: ${colours.dark};
+            color: ${colours.light};
+            padding: 28px 25px;
+            border: 0;
         }
     }
 `;
 
 const Burger = styled.div`
-    height: 5px;
+    height: 3px;
     width: 40px;
-    background: ${(p: menuProps) => p.menuOpen ? colours.primary : "#fff"};
+    background: ${(p: menuProps) => p.menuOpen ? colours.primary : colours.dark};
     transition: all 0.5s ease;
     transition-property: height, width, transform;
     position: absolute;
     top: calc(50% - 12.5px);
     left: calc(50% - 20px);
     transform: ${(p: menuProps) => p.menuOpen ? "translateY(10px) rotate(45deg)" : ""};
-    border-radius: 4px;
 
     &:before, &:after {
         content: '';
         position: absolute;
-        height: 5px;
+        height: 3px;
         width: 40px;
         background: ${(p: menuProps) => p.menuOpen ? colours.primary : "inherit"};
         transition: transform 0.5s ease, opacity 0.5s ease;
-        border-radius: 4px;
     }
 
     &:before {
@@ -125,9 +125,9 @@ const Burger = styled.div`
 
 
 const BurgerContainer = styled.div`
-    height: 70px;
+    height: 80px;
     width: 100px;
-    background: ${(p: menuProps) => p.menuOpen ? "#1f1f1f" : "transparent"};
+    background: ${(p: menuProps) => p.menuOpen ? "#000" : "transparent"};
     position: relative;
     align-self: flex-end;
     cursor: pointer;
