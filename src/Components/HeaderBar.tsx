@@ -37,7 +37,7 @@ const Logo = styled.img`
 `;
 
 
-const HeaderButton = styled.button`
+const HeaderButton = styled.a`
     height: 100%;
     background: transparent;
     color: ${colours.dark};
@@ -49,6 +49,7 @@ const HeaderButton = styled.button`
     font-weight: 500;
     border-bottom: 2px solid transparent;
     font-size: 1em;
+    text-decoration: none;
     
     &:hover {
       color: ${colours.primary};
@@ -57,7 +58,6 @@ const HeaderButton = styled.button`
 
     &:focus {
       outline: 0;
-      /* background: #f7f7f7;   */
     }
 
     /* &:last-child {
@@ -153,20 +153,16 @@ interface IProps {
 const HeaderBar: React.FC<IProps> = ({ stickyHeader }: IProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleNav = (link: string): void => {
-        console.log("clicked nav", link);
-    }
-
     return (
         <HeaderNavContainer stickyHeader={stickyHeader}>
-            <Logo src={logojf} alt="JF Fitness Logo" onClick={() => handleNav("")} />
+            <Logo src={logojf} alt="JF Fitness Logo" />
             <NavItemsRightContainer menuOpen={menuOpen}>
                 <BurgerContainer menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><Burger menuOpen={menuOpen} /></BurgerContainer>
-                <HeaderButton onClick={() => handleNav("#about")}>ABOUT</HeaderButton>
-                <HeaderButton onClick={() => handleNav("lettings")}>TESTEMONIALS</HeaderButton>
-                <HeaderButton onClick={() => handleNav("dealsourcing")}>PARTNERS</HeaderButton>
-                <HeaderButton onClick={() => handleNav("projects")}>SERVICES</HeaderButton>
-                <HeaderButton onClick={() => handleNav("contact")}>CONTACT</HeaderButton>
+                <HeaderButton href="#about">ABOUT</HeaderButton>
+                <HeaderButton href="#testemonials">TESTEMONIALS</HeaderButton>
+                <HeaderButton href="#partners">PARTNERS</HeaderButton>
+                <HeaderButton href="#services">SERVICES</HeaderButton>
+                <HeaderButton href="#contact">CONTACT</HeaderButton>
             </NavItemsRightContainer>
         </HeaderNavContainer>
     );

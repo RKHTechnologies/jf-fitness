@@ -3,12 +3,7 @@ import { colours } from "./SharedStyles";
 
 const GlobalStyle = createGlobalStyle`
     * {
-        font-family: "Metric", 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    }
-
-    html {
+        font-family: "Metric", 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         scroll-behavior: smooth;
     }
 

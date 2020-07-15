@@ -15,6 +15,30 @@ const ContentContainer = styled.div`
   border-top: 1px solid ${colours.lightGrey};
 `;
 
+const Section = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+interface ExampleProps {
+  dark?: boolean;
+}
+
+const Example = styled.div`
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: ${(p: ExampleProps) => p.dark ? colours.dark : colours.light};
+  color: ${(p: ExampleProps) => p.dark ? colours.light : colours.dark};
+  font-size: 3em;
+  font-weight: 100;
+`;
+
 const Home: React.FC = () => {
   
   return (
@@ -22,7 +46,26 @@ const Home: React.FC = () => {
       <GlobalStyle />
       <HeaderBar stickyHeader />
       <ContentContainer>
-        <MetricTest />
+        <Section id="about">
+          <MetricTest />
+        </Section>
+        
+        <Section id="testemonials">
+          <Example dark>Testemonials</Example>
+        </Section>
+
+        <Section id="partners">
+          <Example>Partners</Example>
+        </Section>
+
+        <Section id="services">
+          <Example dark>Services</Example>
+        </Section>
+
+        <Section id="contact">
+          <Example>Contact</Example>
+        </Section>
+
       </ContentContainer>
     </>
   );

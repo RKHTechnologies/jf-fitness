@@ -28,7 +28,7 @@ const PageContainer = styled.div`
   position: relative;
   padding-top: 200px;
 
-  div:first-child { font-weight: 100; }
+  div:nth-child(2) { font-weight: 100; }
   div:nth-child(3) { font-weight: 300; }
   div:nth-child(4) { font-weight: 300; font-style: italic; }
   div:nth-child(5) { font-weight: 400; }
