@@ -29,12 +29,12 @@ const PageContainer = styled.div`
   padding-top: 200px;
 
   div:first-child { font-weight: 100; }
-  div:nth-child(2) { font-weight: 300; }
-  div:nth-child(3) { font-weight: 300; font-style: italic; }
-  div:nth-child(4) { font-weight: 400; }
-  div:nth-child(5) { font-weight: 500; }
-  div:nth-child(6) { font-weight: 600; }
-  div:nth-child(7) { font-weight: 800; }
+  div:nth-child(3) { font-weight: 300; }
+  div:nth-child(4) { font-weight: 300; font-style: italic; }
+  div:nth-child(5) { font-weight: 400; }
+  div:nth-child(6) { font-weight: 500; }
+  div:nth-child(7) { font-weight: 600; }
+  div:nth-child(8) { font-weight: 800; }
 
   ${JFLogo} {
     right: ${(p: ContainerProps): string => p.black ? "40px" : "unset"};
