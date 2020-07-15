@@ -158,11 +158,11 @@ const HeaderBar: React.FC<IProps> = ({ stickyHeader }: IProps) => {
             <Logo src={logojf} alt="JF Fitness Logo" />
             <NavItemsRightContainer menuOpen={menuOpen}>
                 <BurgerContainer menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><Burger menuOpen={menuOpen} /></BurgerContainer>
-                <HeaderButton href="#about">ABOUT</HeaderButton>
-                <HeaderButton href="#testemonials">TESTEMONIALS</HeaderButton>
-                <HeaderButton href="#partners">PARTNERS</HeaderButton>
-                <HeaderButton href="#services">SERVICES</HeaderButton>
-                <HeaderButton href="#contact">CONTACT</HeaderButton>
+                <HeaderButton href="#about" onClick={() => setMenuOpen(false)}>ABOUT</HeaderButton>
+                <HeaderButton href="#testemonials" onClick={() => setMenuOpen(false)}>TESTEMONIALS</HeaderButton>
+                <HeaderButton href="#partners" onClick={() => setMenuOpen(false)}>PARTNERS</HeaderButton>
+                <HeaderButton href="#services" onClick={() => setMenuOpen(false)}>SERVICES</HeaderButton>
+                <HeaderButton href="#contact" onClick={() => setMenuOpen(false)}>CONTACT</HeaderButton>
             </NavItemsRightContainer>
         </HeaderNavContainer>
     );
