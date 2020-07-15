@@ -23,7 +23,7 @@ const HeaderNavContainer = styled.div`
     transition: height 0.3s ease;
 
     & > img {
-        height: 70px;
+        height: 68px;
         margin-left: 50px;
     }
 
@@ -44,16 +44,25 @@ const HeaderButton = styled.button`
     border: none;
     letter-spacing: 5px;
     text-indent: 5px;
-    padding: 27px 25px;
+    padding: 32px 20px 26px;
     cursor: pointer;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
     
     &:hover {
-        color: ${colours.primary};
+      color: ${colours.primary};
+      border-color: ${colours.primary};
     }
 
-    &:last-child {
-        margin-right: 50px;
+    &:focus {
+      outline: 0;
+      /* background: #f7f7f7;   */
     }
+
+    /* &:last-child {
+        margin-right: 50px;
+    } */
 `;
 
 const NavItemsRightContainer = styled.div`
