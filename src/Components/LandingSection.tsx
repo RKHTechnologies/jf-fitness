@@ -22,7 +22,7 @@ interface HeaderProps {
 }
 
 const MainHeading = styled.div`
-  font-size: 8.5em;
+  font-size: 8.5vw;
   font-weight: 800;
   color: ${(p: HeaderProps) => p.white ? colours.light : colours.dark};
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
