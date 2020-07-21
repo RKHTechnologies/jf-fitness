@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { colours } from '../Shared/SharedStyles';
 import GlobalStyle from '../Shared/GlobalStyle';
 import MetricTest from "./MetricTest";
+import LandingSection from './LandingSection';
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -12,6 +13,7 @@ const ContentContainer = styled.div`
   left: 0;
   right: 0;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   border-top: 1px solid ${colours.lightGrey};
 `;
 
@@ -46,8 +48,12 @@ const Home: React.FC = () => {
       <GlobalStyle />
       <HeaderBar stickyHeader />
       <ContentContainer>
+      <Section id="landing">
+          <LandingSection />
+        </Section>
+        
         <Section id="about">
-          <MetricTest />
+          <Example>About Us</Example>
         </Section>
         
         <Section id="testemonials">
@@ -64,6 +70,10 @@ const Home: React.FC = () => {
 
         <Section id="contact">
           <Example>Contact</Example>
+        </Section>
+
+        <Section id="metric">
+          <MetricTest />
         </Section>
 
       </ContentContainer>
