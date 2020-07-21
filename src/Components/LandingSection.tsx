@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 interface HeaderProps {
