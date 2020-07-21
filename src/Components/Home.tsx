@@ -6,6 +6,7 @@ import GlobalStyle from '../Shared/GlobalStyle';
 import MetricTest from "./MetricTest";
 import LandingSection from './LandingSection';
 import About from './About';
+import Testimonials from './Testimonials';
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -32,18 +33,18 @@ const Home: React.FC = () => {
       <GlobalStyle />
       <HeaderBar stickyHeader />
       <ContentContainer>
-      <Section id="landing">
+        <Section id="landing">
           <LandingSection />
         </Section>
         
+        <Section id="testimonials">
+          <Testimonials />
+        </Section>
+
         <Section id="about">
           <About />
         </Section>
         
-        <Section id="testemonials">
-          <SectionContainer dark><h1>Testemonials</h1></SectionContainer>
-        </Section>
-
         <Section id="partners">
           <SectionContainer><h1>Partners</h1></SectionContainer>
         </Section>
