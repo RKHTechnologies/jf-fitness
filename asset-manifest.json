@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/jf-fitness/static/css/main.6c61e9db.chunk.css",
-    "main.js": "/jf-fitness/static/js/main.2a2a6d67.chunk.js",
-    "main.js.map": "/jf-fitness/static/js/main.2a2a6d67.chunk.js.map",
+    "main.js": "/jf-fitness/static/js/main.ae7e1823.chunk.js",
+    "main.js.map": "/jf-fitness/static/js/main.ae7e1823.chunk.js.map",
     "runtime-main.js": "/jf-fitness/static/js/runtime-main.23d7f3eb.js",
     "runtime-main.js.map": "/jf-fitness/static/js/runtime-main.23d7f3eb.js.map",
-    "static/js/2.123c1a0c.chunk.js": "/jf-fitness/static/js/2.123c1a0c.chunk.js",
-    "static/js/2.123c1a0c.chunk.js.map": "/jf-fitness/static/js/2.123c1a0c.chunk.js.map",
+    "static/js/2.69b36697.chunk.js": "/jf-fitness/static/js/2.69b36697.chunk.js",
+    "static/js/2.69b36697.chunk.js.map": "/jf-fitness/static/js/2.69b36697.chunk.js.map",
     "index.html": "/jf-fitness/index.html",
-    "precache-manifest.6d747dd006034ca9d8a4a7f70e8ca9aa.js": "/jf-fitness/precache-manifest.6d747dd006034ca9d8a4a7f70e8ca9aa.js",
+    "precache-manifest.5a2d44ee39a0de04133c3f1a009ebea0.js": "/jf-fitness/precache-manifest.5a2d44ee39a0de04133c3f1a009ebea0.js",
     "service-worker.js": "/jf-fitness/service-worker.js",
     "static/css/main.6c61e9db.chunk.css.map": "/jf-fitness/static/css/main.6c61e9db.chunk.css.map",
-    "static/js/2.123c1a0c.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.123c1a0c.chunk.js.LICENSE.txt",
+    "static/js/2.69b36697.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.69b36697.chunk.js.LICENSE.txt",
     "static/media/index.css": "/jf-fitness/static/media/Metric-Thin.b16382bd.otf",
+    "static/media/gym1.jpeg": "/jf-fitness/static/media/gym1.21030241.jpeg",
     "static/media/logo.svg": "/jf-fitness/static/media/logo.6e34a0e5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.23d7f3eb.js",
-    "static/js/2.123c1a0c.chunk.js",
+    "static/js/2.69b36697.chunk.js",
     "static/css/main.6c61e9db.chunk.css",
-    "static/js/main.2a2a6d67.chunk.js"
+    "static/js/main.ae7e1823.chunk.js"
   ]
 }
