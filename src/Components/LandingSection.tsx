@@ -22,9 +22,9 @@ interface HeaderProps {
 }
 
 const MainHeading = styled.div`
-  font-size: 8.5vw;
+  font-size: 5.5vw;
   font-weight: 800;
-  color: ${(p: HeaderProps) => p.white ? colours.light : colours.dark};
+  color: ${(p: HeaderProps) => p.white ? colours.light : colours.primary};
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 `;
 
@@ -33,9 +33,9 @@ const LandingSection: React.FC = () => {
 
   return (
     <ImageContainer>
-      <MainHeading >Fitness.</MainHeading>
+      {/* <MainHeading >Fitness.</MainHeading>
       <MainHeading>Results Driven.</MainHeading>
-      <MainHeading>Client Centric.</MainHeading>
+      <MainHeading>Client Centric.</MainHeading> */}
     </ImageContainer>
   );
 };

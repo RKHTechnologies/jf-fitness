@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderBar from './HeaderBar';
 import styled from 'styled-components';
-import { colours } from '../Shared/SharedStyles';
+import { colours, SectionContainer } from '../Shared/SharedStyles';
 import GlobalStyle from '../Shared/GlobalStyle';
 import MetricTest from "./MetricTest";
 import LandingSection from './LandingSection';
+import About from './About';
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -24,23 +25,6 @@ const Section = styled.div`
   flex-wrap: wrap;
 `;
 
-interface ExampleProps {
-  dark?: boolean;
-}
-
-const Example = styled.div`
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background: ${(p: ExampleProps) => p.dark ? colours.dark : colours.light};
-  color: ${(p: ExampleProps) => p.dark ? colours.light : colours.dark};
-  font-size: 3em;
-  font-weight: 100;
-`;
-
 const Home: React.FC = () => {
   
   return (
@@ -53,23 +37,23 @@ const Home: React.FC = () => {
         </Section>
         
         <Section id="about">
-          <Example>About Us</Example>
+          <About />
         </Section>
         
         <Section id="testemonials">
-          <Example dark>Testemonials</Example>
+          <SectionContainer dark><h1>Testemonials</h1></SectionContainer>
         </Section>
 
         <Section id="partners">
-          <Example>Partners</Example>
+          <SectionContainer><h1>Partners</h1></SectionContainer>
         </Section>
 
         <Section id="services">
-          <Example dark>Services</Example>
+          <SectionContainer dark><h1>Services</h1></SectionContainer>
         </Section>
 
         <Section id="contact">
-          <Example>Contact</Example>
+          <SectionContainer><h1>Contact</h1></SectionContainer>
         </Section>
 
         <Section id="metric">
