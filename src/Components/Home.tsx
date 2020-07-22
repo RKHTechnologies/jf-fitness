@@ -37,12 +37,12 @@ const Home: React.FC = () => {
           <LandingSection />
         </Section>
         
-        <Section id="testimonials">
-          <Testimonials />
-        </Section>
-
         <Section id="about">
           <About />
+        </Section>
+
+        <Section id="testimonials">
+          <Testimonials />
         </Section>
         
         <Section id="partners">

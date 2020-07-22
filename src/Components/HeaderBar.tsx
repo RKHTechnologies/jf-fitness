@@ -159,7 +159,7 @@ const HeaderBar: React.FC<IProps> = ({ stickyHeader }: IProps) => {
             <NavItemsRightContainer menuOpen={menuOpen}>
                 <BurgerContainer menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><Burger menuOpen={menuOpen} /></BurgerContainer>
                 <HeaderButton href="#about" onClick={() => setMenuOpen(false)}>ABOUT</HeaderButton>
-                <HeaderButton href="#testemonials" onClick={() => setMenuOpen(false)}>TESTEMONIALS</HeaderButton>
+                <HeaderButton href="#testimonials" onClick={() => setMenuOpen(false)}>TESTIMONIALS</HeaderButton>
                 <HeaderButton href="#partners" onClick={() => setMenuOpen(false)}>PARTNERS</HeaderButton>
                 <HeaderButton href="#services" onClick={() => setMenuOpen(false)}>SERVICES</HeaderButton>
                 <HeaderButton href="#contact" onClick={() => setMenuOpen(false)}>CONTACT</HeaderButton>
