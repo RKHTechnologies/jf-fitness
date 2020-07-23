@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FC, useEffect } from 'react';
 import styled from 'styled-components';
 import { SectionContainer } from '../Shared/SharedStyles';
 
@@ -46,20 +46,36 @@ const Carousel = styled.div`
     transform: ${(p: CarouselProps) => p.xPos ? `translateX(-${p.xPos}%)` : 0};
 `;
 
-
-const Testimonials: React.FC = () => {
+const Testimonials: FC = () => {
+  
+  const [seconds, setSeconds] = useState(3);
   const [xPos, setXPos] = useState(50);
-  const [counter, setCounter] = useState(2);
 
-  React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-  }, [counter]);
+  let updatedSeconds = seconds;
+  let updatedXPos = xPos;
+
+  const updateTime = () => {
+    if (updatedSeconds > 0) {
+      updatedSeconds--;
+      console.log("Updated Seconds: ", updatedSeconds);
+    } else {
+      updatedSeconds = 3;
+      updatedXPos === 50 ? setXPos(0) : setXPos(50);
+    }
+    return setSeconds(updatedSeconds);
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      updateTime();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <TestimonialsSection dark>
       <Carousel xPos={xPos}>
         <Testimonial>
-          <p>counter</p>
           <p>"We have been working with James for 3 years and have seen great improvements in overall fitness and strength levels. He always creates effective plans tailored to our goals and we love the encouragement and energy that he brings to each session, as well as the constant learning of new techniques"</p>
           <span>- Tilly &amp; Tom</span>
         </Testimonial>
