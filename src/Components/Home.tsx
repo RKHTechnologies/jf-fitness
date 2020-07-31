@@ -7,6 +7,7 @@ import MetricTest from "./MetricTest";
 import LandingSection from './LandingSection';
 import About from './About';
 import Testimonials from './Testimonials';
+import Hero from '../Shared/Hero';
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -35,6 +36,7 @@ const Home: React.FC = () => {
       <ContentContainer>
         <Section id="landing">
           <LandingSection />
+          {/* <Hero image="gym2" /> */}
         </Section>
         
         <Section id="about">

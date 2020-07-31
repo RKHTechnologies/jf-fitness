@@ -26,7 +26,7 @@ const Testimonial = styled.div`
     font-weight: 500;
     font-style: normal;
     margin-left: 40px;
-    width: 220px;
+    width: 360px;
   }
 
   p {
@@ -48,7 +48,7 @@ const Carousel = styled.div`
 
 const Testimonials: FC = () => {
   
-  const [seconds, setSeconds] = useState(3);
+  const [seconds, setSeconds] = useState(5);
   const [xPos, setXPos] = useState(50);
 
   let updatedSeconds = seconds;
@@ -57,10 +57,16 @@ const Testimonials: FC = () => {
   const updateTime = () => {
     if (updatedSeconds > 0) {
       updatedSeconds--;
-      console.log("Updated Seconds: ", updatedSeconds);
+      console.log(`Updated Seconds: ${updatedSeconds}, xPos: ${updatedXPos}`);
     } else {
-      updatedSeconds = 3;
-      updatedXPos === 50 ? setXPos(0) : setXPos(50);
+      updatedSeconds = 5;
+      if (updatedXPos === 50) {
+        setXPos(0);
+        updatedXPos = 0;
+      } else {
+        setXPos(50);
+        updatedXPos = 50;
+      } 
     }
     return setSeconds(updatedSeconds);
   }

@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import gym2 from '../gym2.jpg';
+import gym2 from '../img/gym2.jpg';
 import jf from '../JF_logo_White.png';
 import { colours } from '../Shared/SharedStyles';
 
 const ImageContainer = styled.div`
   width: 100%;
-  height: calc(100vh - 81px);
+  /* height: calc(100vh - 81px); */
+  height: 70vh;
   background-image: url(${gym2});
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,14 +32,10 @@ const LogoContainer = styled.div`
   background-repeat: no-repeat;
 `;
 
-interface HeaderProps {
-  white?: boolean;
-}
-
 const MainHeading = styled.div`
   font-size: 5.5vw;
   font-weight: 800;
-  color: ${(p: HeaderProps) => p.white ? colours.light : colours.light};
+  color: ${colours.light};
   margin-right: 30px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 `;
