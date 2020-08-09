@@ -19,7 +19,7 @@ const HeroBanner = styled.div`
     width: 100%;
     height: ${(p: HeroProps):string => p.small ? "65vh" : "80vh"};
     text-align: center;
-    background: #eee;
+    background: #eee;   
     background-image: url(${(p: HeroProps):string => p.imageUrl});
     background-size: cover;
     background-repeat: no-repeat;
