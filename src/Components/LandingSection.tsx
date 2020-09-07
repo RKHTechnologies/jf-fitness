@@ -45,9 +45,6 @@ const LandingSection: React.FC = () => {
 
   return (
     <ImageContainer>
-      {/* <MainHeading>Fitness.</MainHeading>
-      <MainHeading>Results Driven.</MainHeading>
-      <MainHeading>Client Centric.</MainHeading> */}
       <LogoContainer />
     </ImageContainer>
   );

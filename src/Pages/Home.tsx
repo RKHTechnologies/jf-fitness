@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderBar from '../Components/HeaderBar';
 import styled from 'styled-components';
-import { colours, SectionContainer, SharedSettings } from '../Shared/SharedStyles';
+import { colours, SectionContainer, SharedSettings, PageBodyContainer } from '../Shared/SharedStyles';
 import GlobalStyle from '../Shared/GlobalStyle';
 import LandingSection from '../Components/LandingSection';
 import About from '../Components/About';
@@ -48,7 +48,8 @@ const Section = styled.div`
 const Home: React.FC = () => {
   
   return (
-    <>
+    <PageBodyContainer>
+
       <Section id="landing">
         <LandingSection />
       </Section>
@@ -68,7 +69,7 @@ const Home: React.FC = () => {
       <Section id="contact">
         <SectionContainer dark><h1>Contact</h1></SectionContainer>
       </Section>
-    </>
+    </PageBodyContainer>
   );
 }
 
