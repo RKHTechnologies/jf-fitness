@@ -30,8 +30,6 @@ export const SharedSettings: SettingsProps = {
 }
 
 
-
-
 export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;

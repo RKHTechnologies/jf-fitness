@@ -2,10 +2,27 @@ import React, { useState } from 'react';
 import logojf from '../logo.svg';
 import styled from 'styled-components';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
+import { useHistory } from 'react-router-dom';
+
+interface IProps {
+    stickyHeader?: boolean;
+}
 
 interface menuProps {
     menuOpen? : boolean;
 }
+
+const HeaderNav = styled.div`
+    position: ${(p: IProps) => p.stickyHeader ? "fixed" : "absolute"};
+    top: ${(p: IProps) => p.stickyHeader ? "0" : "100vh"};
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${colours.light};
+    z-index: 2;
+`;
 
 const HeaderNavContainer = styled.div` 
     width: 100%;
@@ -15,8 +32,6 @@ const HeaderNavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: ${(p: IProps) => p.stickyHeader ? "fixed" : "absolute"};
-    top: ${(p: IProps) => p.stickyHeader ? "0" : "100vh"};
     background: ${colours.light};
     color: ${colours.dark};
     z-index: 1;
@@ -25,6 +40,10 @@ const HeaderNavContainer = styled.div`
     & > img {
         height: 68px;
         margin-left: 50px;
+
+        @media(max-width: 350px) {
+            margin-left: 10px;
+        }
     }
 
     @media(min-width: ${SharedSettings.maxWidth}) {
@@ -42,9 +61,9 @@ const HeaderButton = styled.a`
     background: transparent;
     color: ${colours.dark};
     border: none;
-    letter-spacing: 5px;
-    text-indent: 5px;
-    padding: 32px 20px 26px;
+    letter-spacing: 4px;
+    text-indent: 4px;
+    padding: 32px 28px 26px;
     cursor: pointer;
     font-weight: 500;
     border-bottom: 2px solid transparent;
@@ -60,9 +79,9 @@ const HeaderButton = styled.a`
       outline: 0;
     }
 
-    /* &:last-child {
-        margin-right: 50px;
-    } */
+    &:last-child {
+        margin-right: 20px;
+    }
 `;
 
 const NavItemsRightContainer = styled.div`
@@ -74,20 +93,32 @@ const NavItemsRightContainer = styled.div`
     @media( max-width: 1100px ) {
         flex-direction: column;
         align-self: flex-start;
-        margin-top: 80px;
-        transition: all 0.3s ease;
-        height: ${(p:menuProps) => p.menuOpen ? "400px" : "0"};
+        /* margin-top: 80px; */
+        height: ${(p:menuProps) => p.menuOpen ? "80vh" : "0"};
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        right: 20px;
+        background: ${colours.dark};
 
         ${HeaderButton} {
-            display: initial;
-            margin-right: 20px;
-            text-align: right;
+            text-align: center;
             border-radius: 0;
-            background: ${colours.dark};
             color: ${colours.light};
-            padding: 28px 25px;
-            border: 0;
+            padding: 0px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
+    }
+
+    @media( max-width: 350px) {
+        left: 5px;
+        right: 5px;
     }
 `;
 
@@ -142,29 +173,39 @@ const BurgerContainer = styled.div`
 
     @media( max-width: 1100px ) {
         display: initial;
+    }
 
+    @media( max-width: 350px ) {
+        right: 5px;
     }
 `;
-
-interface IProps {
-    stickyHeader?: boolean;
-}
 
 const HeaderBar: React.FC<IProps> = ({ stickyHeader }: IProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const history = useHistory();
+
+    const handleNav = (link: string): void => {
+        setMenuOpen(false);
+        history.push(`${process.env.PUBLIC_URL}${link}`);
+    }
+
     return (
-        <HeaderNavContainer stickyHeader={stickyHeader}>
-            <Logo src={logojf} alt="JF Fitness Logo" />
-            <NavItemsRightContainer menuOpen={menuOpen}>
-                <BurgerContainer menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><Burger menuOpen={menuOpen} /></BurgerContainer>
-                <HeaderButton href="#about" onClick={() => setMenuOpen(false)}>ABOUT</HeaderButton>
-                <HeaderButton href="#testimonials" onClick={() => setMenuOpen(false)}>TESTIMONIALS</HeaderButton>
-                <HeaderButton href="#partners" onClick={() => setMenuOpen(false)}>PARTNERS</HeaderButton>
-                <HeaderButton href="#services" onClick={() => setMenuOpen(false)}>SERVICES</HeaderButton>
-                <HeaderButton href="#contact" onClick={() => setMenuOpen(false)}>CONTACT</HeaderButton>
-            </NavItemsRightContainer>
+      <HeaderNav stickyHeader={stickyHeader}>
+        <HeaderNavContainer>
+          <Logo src={logojf} alt="JF Fitness Logo" onClick={() => handleNav("")} />
+          <BurgerContainer menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><Burger menuOpen={menuOpen} /></BurgerContainer>
+          
+          <NavItemsRightContainer menuOpen={menuOpen}>
+            <HeaderButton onClick={() => handleNav("")}>HOME</HeaderButton>
+            <HeaderButton onClick={() => handleNav("/onlinecoaching")}>1-2-1 ONLINE COACHING</HeaderButton>
+            <HeaderButton onClick={() => handleNav("/onlineprograms")}>ONLINE PROGRAMS</HeaderButton>
+            <HeaderButton onClick={() => handleNav("/ebooks")}>E-BOOKS</HeaderButton>
+            <HeaderButton onClick={() => handleNav("/contact")}>CONTACT</HeaderButton>
+          </NavItemsRightContainer>
+
         </HeaderNavContainer>
+      </HeaderNav>
     );
 }
 
