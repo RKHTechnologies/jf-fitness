@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84a2b0bc7d582ba0e5cd730713e25349",
+    "revision": "762566a9e0ee7edfde4442a1dc3fd472",
     "url": "/jf-fitness/index.html"
   },
   {
-    "revision": "c5970c5bd2df9f443df1",
-    "url": "/jf-fitness/static/css/main.70691e07.chunk.css"
+    "revision": "df69d43a11c98d1f2ac1",
+    "url": "/jf-fitness/static/css/main.6c61e9db.chunk.css"
   },
   {
-    "revision": "ce659691e278cc71a529",
-    "url": "/jf-fitness/static/js/2.de19adf5.chunk.js"
+    "revision": "232b47d4abfcb0bd5433",
+    "url": "/jf-fitness/static/js/2.f7c81f54.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/jf-fitness/static/js/2.de19adf5.chunk.js.LICENSE.txt"
+    "url": "/jf-fitness/static/js/2.f7c81f54.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c5970c5bd2df9f443df1",
-    "url": "/jf-fitness/static/js/main.77256290.chunk.js"
+    "revision": "df69d43a11c98d1f2ac1",
+    "url": "/jf-fitness/static/js/main.a582169d.chunk.js"
   },
   {
     "revision": "ca48e22de7e439ad5ce1",
