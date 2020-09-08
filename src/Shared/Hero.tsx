@@ -1,13 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-
-import gym1 from '../img/gym1.jpeg';
-import gym2 from '../img/gym2.jpg';
-
-const images = {
-    'gym1': gym1,
-    'gym2': gym2,
-};
+import { imageLib, ImagesDesktop, ImagesMobile } from './ImageLib';
+import { useMediaQuery } from 'react-responsive';
 
 interface HeroProps {
     imageUrl: string;
@@ -17,26 +11,32 @@ interface HeroProps {
 
 const HeroBanner = styled.div`
     width: 100%;
-    height: ${(p: HeroProps):string => p.small ? "65vh" : "80vh"};
+    height: ${(p: HeroProps):string => p.small ? "65%" : "80%"};
     text-align: center;
-    background: #eee;   
+    background: #eee;
     background-image: url(${(p: HeroProps):string => p.imageUrl});
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: ${(p: HeroProps):string => p.imageHeight ?? "center"};
     background-position-x: center;
+
+    @media(max-width: 700px) {
+        height: 300px;
+    }
 `;
 
 
 interface IProps {
-    image: 'gym1' | 'gym2';
+    image: imageLib;
     small?: boolean;
     imageHeight?: string;
 }
 
 const Hero: FC<IProps> = ({image, small, imageHeight}: IProps) => {
+    const mobile = useMediaQuery({query: '(max-width: 700px)'});
+    
     return (
-        <HeroBanner imageUrl={images[image]} small={small} imageHeight={imageHeight} />
+        <HeroBanner imageUrl={mobile ? ImagesMobile[image] : ImagesDesktop[image]} small={small} imageHeight={imageHeight} />
     );
 }
 

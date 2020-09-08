@@ -6,6 +6,7 @@ import GlobalStyle from '../Shared/GlobalStyle';
 import LandingSection from '../Components/LandingSection';
 import About from '../Components/About';
 import Testimonials from '../Components/Testimonials';
+import Hero from '../Shared/Hero';
 
 // const ContentContainer = styled.div`
 //   position: absolute;
@@ -49,10 +50,8 @@ const Home: React.FC = () => {
   
   return (
     <PageBodyContainer>
-
-      <Section id="landing">
-        <LandingSection />
-      </Section>
+      <Hero image="gym" />
+      
       
       <Section id="about">
         <About />
