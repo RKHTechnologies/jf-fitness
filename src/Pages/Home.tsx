@@ -1,24 +1,9 @@
 import React from 'react';
-import HeaderBar from '../Components/HeaderBar';
 import styled from 'styled-components';
-import { colours, SectionContainer, SharedSettings, PageBodyContainer } from '../Shared/SharedStyles';
-import GlobalStyle from '../Shared/GlobalStyle';
-import LandingSection from '../Components/LandingSection';
+import { SectionContainer, SharedSettings, PageBodyContainer } from '../Shared/SharedStyles';
 import About from '../Components/About';
 import Testimonials from '../Components/Testimonials';
 import Hero from '../Shared/Hero';
-
-// const ContentContainer = styled.div`
-//   position: absolute;
-//   top: 80px;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   overflow-y: scroll;
-//   -webkit-overflow-scrolling: touch;
-//   border-top: 1px solid ${colours.lightGrey};
-// `;
-
 
 interface SectionProps {
   fullwidth?: boolean;
@@ -52,12 +37,13 @@ const Home: React.FC = () => {
     <PageBodyContainer>
       <Hero image="gym" />
       
-      
       <Section id="about">
-        <About />
+        <div className="wrapper">
+          <About />
+        </div>
       </Section>
 
-      <Section id="testimonials">
+      <Section id="testimonials" fullwidth>
         <Testimonials />
       </Section>
       

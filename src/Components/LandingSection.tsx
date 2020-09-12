@@ -6,7 +6,6 @@ import { colours } from '../Shared/SharedStyles';
 
 const ImageContainer = styled.div`
   width: 100%;
-  /* height: calc(100vh - 81px); */
   height: 70vh;
   background-image: url(${gym2});
   background-size: cover;
