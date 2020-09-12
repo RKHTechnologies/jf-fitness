@@ -4,6 +4,8 @@ import { SectionContainer, SharedSettings, PageBodyContainer } from '../Shared/S
 import About from '../Components/About';
 import Testimonials from '../Components/Testimonials';
 import Hero from '../Shared/Hero';
+import ProductCards from '../Components/ProductCards';
+import WhyUs from '../Components/WhyUs';
 
 interface SectionProps {
   fullwidth?: boolean;
@@ -37,7 +39,20 @@ const Home: React.FC = () => {
     <PageBodyContainer>
       <Hero image="gym" />
       
-      <Section id="about">
+      <Section id="about" lastItem>
+        <div className="wrapper">
+          <SectionContainer>
+            <p>JF Fitness is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p>
+            <ProductCards />
+          </SectionContainer>
+        </div>
+      </Section>
+
+      <Section id="whyUs" fullwidth>
+        <WhyUs />
+      </Section>
+      
+      <Section id="about" lastItem>
         <div className="wrapper">
           <About />
         </div>
@@ -48,12 +63,16 @@ const Home: React.FC = () => {
       </Section>
       
       <Section id="services">
-        <SectionContainer><h1>Services</h1></SectionContainer>
+        <div className="wrapper">
+          
+        </div>
       </Section>
-
+{/* 
       <Section id="contact">
-        <SectionContainer dark><h1>Contact</h1></SectionContainer>
-      </Section>
+        <div className="wrapper">
+          Contact us
+        </div>
+      </Section> */}
     </PageBodyContainer>
   );
 }

@@ -65,7 +65,7 @@ const HeaderButton = styled.a`
     text-indent: 2px;
     padding: 20px 28px 14px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 400;
     border-bottom: 2px solid transparent;
     font-size: 1em;
     text-decoration: none;
