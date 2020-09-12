@@ -15,8 +15,8 @@ interface SectionProps {
 const Section = styled.div`
   width: 100%;
   min-height: 200px;
-  padding: ${(p: SectionProps) => p.fullwidth ? "20px 0 100px" : "20px 30px 100px"};
-  padding-bottom: ${(p: SectionProps) => p.lastItem ? "0 !important" : null};
+  margin: ${(p: SectionProps) => p.fullwidth ? "20px 0 100px" : "20px 30px 100px"};
+  margin-bottom: ${(p: SectionProps) => p.lastItem ? "0 !important" : null};
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -48,8 +48,10 @@ const Home: React.FC = () => {
         </div>
       </Section>
 
-      <Section id="whyUs" fullwidth>
-        <WhyUs />
+      <Section id="whyUs" fullwidth style={{background: "#000"}}>
+        <div className="wrapper">
+          <WhyUs />
+        </div>
       </Section>
       
       <Section id="about" lastItem>
