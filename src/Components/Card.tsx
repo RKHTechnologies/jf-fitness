@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { ImagesDesktop, imageLib } from '../Shared/ImageLib';
-import { colours } from '../Shared/SharedStyles';
+import { colours, SharedSettings } from '../Shared/SharedStyles';
 import { useHistory } from 'react-router-dom';
 
 interface IProps {
@@ -27,6 +27,7 @@ const CardContainer = styled.div`
   justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
 
   &:before {
     content: '';
@@ -42,17 +43,27 @@ const CardContainer = styled.div`
   &:hover {
     transform: scale(1.10);
   }
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    min-height: 250px;
+  }
 `;
 
 const PrimaryText = styled.div`
-  font-size: 3em;
+  font-size: 3vw;
   color: ${colours.light};
-  /* border-top: 2px solid ${colours.light};
-  border-bottom: 2px solid ${colours.light}; */
   padding: 3px 0;
   z-index: 1;
   text-align: center;
   max-width: 80%;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    font-size: 1.8em;
+  }
+
+  @media(max-width: 410px) {
+    font-size: 1.4em;
+  }
 `;
 
 const Card: FC<IProps> = ({image, primary, url}: IProps) => {

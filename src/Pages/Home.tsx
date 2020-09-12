@@ -39,20 +39,21 @@ const Home: React.FC = () => {
     <PageBodyContainer>
       <Hero image="gym" />
       
-      <Section id="about" lastItem>
+      <Section id="about">
         <div className="wrapper">
           <SectionContainer>
             <p>JF Fitness is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p>
+            <WhyUs />
             <ProductCards />
           </SectionContainer>
         </div>
       </Section>
-
+{/* 
       <Section id="whyUs" fullwidth style={{background: "#000"}}>
         <div className="wrapper">
           <WhyUs />
         </div>
-      </Section>
+      </Section> */}
       
       <Section id="about" lastItem>
         <div className="wrapper">

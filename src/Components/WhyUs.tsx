@@ -6,21 +6,23 @@ import { faHeartbeat, faCalendarCheck, faBalanceScaleRight, faBullseye, faDumbbe
 
 const WhyUsSection = styled(SectionContainer)`
   min-height: 200px;
+  margin-bottom: 30px;
 `;
 
 export const PageHeading = styled.div`
   font-weight: 400;
   font-size: 2.5em;
   margin: 20px auto;
-  color: ${colours.light};
+  color: ${colours.primary};
   text-align: center;
+  font-weight: 300;
 `;
 
 export const Grid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  color: ${colours.light};
+  color: ${colours.dark};
 
   @media(max-width: ${SharedSettings.mobile}) {
     grid-template-columns: 1fr;
@@ -30,11 +32,15 @@ export const Grid = styled.div`
 export const GridItem = styled.div`
   display: grid;
   grid-gap: 25px 0;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-areas: 
     'icon title'
     'icon description';
   position: relative;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    grid-template-columns: 1fr 2fr;
+  }
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
@@ -52,7 +58,7 @@ export const Title = styled.h2`
   width: 85%;
   margin-top: 21px;
   margin-bottom: 0;
-  color: ${colours.light};
+  color: ${colours.dark};
   font-weight: 500;
 `;
 
@@ -68,8 +74,8 @@ export const Description = styled.p`
 const WhyUs: FC = () => {
  
   return (
-    <WhyUsSection dark>
-      <PageHeading>Why JF Fitness</PageHeading>
+    <WhyUsSection>
+      <PageHeading>Why JF Fitness?</PageHeading>
       <Grid>
         <GridItem>
           <Icon icon={faCalendarCheck} size="2x" />
