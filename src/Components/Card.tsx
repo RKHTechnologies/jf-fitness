@@ -35,8 +35,8 @@ const CardContainer = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background: ${colours.dark};
-    opacity: 0.3;
+    background: #969696;
+    opacity: 0.2;
   }
 
   &:hover {
@@ -45,10 +45,10 @@ const CardContainer = styled.div`
 `;
 
 const PrimaryText = styled.div`
-  font-size: 2em;
+  font-size: 3em;
   color: ${colours.light};
-  border-top: 2px solid ${colours.light};
-  border-bottom: 2px solid ${colours.light};
+  /* border-top: 2px solid ${colours.light};
+  border-bottom: 2px solid ${colours.light}; */
   padding: 3px 0;
   z-index: 1;
   text-align: center;

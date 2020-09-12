@@ -2,14 +2,18 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { SectionContainer, colours, SharedSettings } from '../Shared/SharedStyles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSmile, faHeartbeat, faCalendarCheck, faBalanceScaleRight, faBullseye, faDumbbell, faPeopleArrows } from "@fortawesome/free-solid-svg-icons";
+import { faHeartbeat, faCalendarCheck, faBalanceScaleRight, faBullseye, faDumbbell, faPeopleArrows } from "@fortawesome/free-solid-svg-icons";
 
 const WhyUsSection = styled(SectionContainer)`
   min-height: 200px;
-  /* justify-content: center;
-  overflow: hidden;
-  padding: 0 20px;
-  position: relative; */
+`;
+
+export const PageHeading = styled.div`
+  font-weight: 400;
+  font-size: 2.5em;
+  margin: 20px auto;
+  color: ${colours.light};
+  text-align: center;
 `;
 
 export const Grid = styled.div`
@@ -65,7 +69,7 @@ const WhyUs: FC = () => {
  
   return (
     <WhyUsSection dark>
-      Why us
+      <PageHeading>Why JF Fitness</PageHeading>
       <Grid>
         <GridItem>
           <Icon icon={faCalendarCheck} size="2x" />
