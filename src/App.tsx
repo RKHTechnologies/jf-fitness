@@ -9,7 +9,7 @@ import MetricTest from './Components/MetricTest';
 import OnlineCoaching from './Pages/OnlineCoaching';
 import OnlinePrograms from './Pages/OnlinePrograms';
 import EBooks from './Pages/EBooks';
-import Contact from './Pages/Contact';
+// import Contact from './Pages/Contact';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route exact path={`${process.env.PUBLIC_URL}/onlinecoaching`} component={OnlineCoaching} />
           <Route exact path={`${process.env.PUBLIC_URL}/onlineprograms`} component={OnlinePrograms} />
           <Route exact path={`${process.env.PUBLIC_URL}/ebooks`} component={EBooks} />
-          <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} />
+          {/* <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} /> */}
           <Route exact path={`${process.env.PUBLIC_URL}/metric`} component={MetricTest} />
           <Route component={Error404} />
         </Switch>

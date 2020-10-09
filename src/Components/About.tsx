@@ -1,10 +1,25 @@
 import React from 'react';
+import styled from 'styled-components';
 import { SectionContainer } from '../Shared/SharedStyles';
+import Testimonials from './Testimonials';
+
+const Container = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 600px;
+`;
+
+const AboutUs = styled.div`
+  text-align: justify;
+  font-size: 1.8em;
+  font-weight: 400;
+  /* width: 800px; */
+`;
 
 const About: React.FC = () => {
   return (
-    <SectionContainer>
-      <p>
+    <Container>
+      <AboutUs>
         JF Fitness places health and wellbeing at the center of success.
         <br />
         <br />
@@ -15,8 +30,9 @@ const About: React.FC = () => {
         <br />
         <br />
         Everyone has their own, unique inner athlete. JF Fitness can help unlock and unleash yours.
-      </p>
-    </SectionContainer>
+      </AboutUs>
+      <Testimonials />
+    </Container>
   );
 }
 

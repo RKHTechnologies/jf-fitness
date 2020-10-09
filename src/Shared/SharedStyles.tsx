@@ -28,8 +28,8 @@ interface SettingsProps {
 }
 
 export const SharedSettings: SettingsProps = {
-    maxWidth: "1400px",
-    maxWidthHalf: "700px",
+    maxWidth: "1600px",
+    maxWidthHalf: "800px",
     mobile: "1100px",
 }
 

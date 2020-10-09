@@ -6,6 +6,7 @@ import Testimonials from '../Components/Testimonials';
 import Hero from '../Shared/Hero';
 import ProductCards from '../Components/ProductCards';
 import WhyUs from '../Components/WhyUs';
+import Contact from '../Components/Contact';
 
 interface SectionProps {
   fullwidth?: boolean;
@@ -48,21 +49,11 @@ const Home: React.FC = () => {
           </SectionContainer>
         </div>
       </Section>
-{/* 
-      <Section id="whyUs" fullwidth style={{background: "#000"}}>
-        <div className="wrapper">
-          <WhyUs />
-        </div>
-      </Section> */}
       
       <Section id="about" lastItem>
         <div className="wrapper">
           <About />
         </div>
-      </Section>
-
-      <Section id="testimonials" fullwidth>
-        <Testimonials />
       </Section>
       
       <Section id="services">
@@ -70,12 +61,10 @@ const Home: React.FC = () => {
           
         </div>
       </Section>
-{/* 
-      <Section id="contact">
-        <div className="wrapper">
-          Contact us
-        </div>
-      </Section> */}
+
+      <Section id="ContactUs" fullwidth lastItem>
+        <Contact />
+      </Section>
     </PageBodyContainer>
   );
 }

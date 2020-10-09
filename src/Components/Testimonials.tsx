@@ -1,36 +1,58 @@
 import React, { useState, FC, useEffect } from 'react';
 import styled from 'styled-components';
-import { SectionContainer } from '../Shared/SharedStyles';
+import { colours } from '../Shared/SharedStyles';
 
-const TestimonialsSection = styled(SectionContainer)`
-  min-height: 200px;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0 20px;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const TestimonialsSection = styled.div`
   position: relative;
+  width: 500px;
+  height: 60%;
+  background: ${colours.dark};
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Testimonial = styled.div`
   font-style: italic;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  
-  width: calc(100% - 500px);
-  padding: 0 250px;
-  left: 0;
+  color: ${colours.light};
+  font-size: 1.4em;
+  text-align: justify;
 
-  span {
-    font-size: 2em;
-    font-weight: 500;
-    font-style: normal;
-    margin-left: 40px;
-    width: 360px;
+  &:before {
+    content: '"';
+    position: absolute;
+    color: ${colours.primary};
+    margin-top: -27px;
+    margin-left: -50px;
+    font-size: 3em;
+    font-family: fantasy;
+  }
+  
+  &:after {
+    content: '"';
+    position: absolute;
+    color: ${colours.primary};
+    margin-bottom: 27px;
+    margin-right: 50px;
+    font-size: 3em;
+    font-family: fantasy;
   }
 
-  p {
-    margin: 0;
+  span {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
   }
 `;
 
@@ -71,23 +93,26 @@ const Testimonials: FC = () => {
     return setSeconds(updatedSeconds);
   }
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      updateTime();
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     updateTime();
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
-    <TestimonialsSection dark>
-      <Carousel xPos={xPos}>
+    <Container>
+      <TestimonialsSection>
         <Testimonial>
-          <p>"We have been working with James for 3 years and have seen great improvements in overall fitness and strength levels. He always creates effective plans tailored to our goals and we love the encouragement and energy that he brings to each session, as well as the constant learning of new techniques"</p>
+          We have been working with James for 3 years and have seen great improvements in overall fitness and strength levels. He always creates effective plans tailored to our goals and we love the encouragement and energy that he brings to each session, as well as the constant learning of new techniques
           <span>- Tilly &amp; Tom</span>
         </Testimonial>
-        <Testimonial><p>" I've really enjoyed working with James over the past few years and feel stronger, more mobile and fitter than ever before "</p><span>- Reem</span></Testimonial>
-      </Carousel>
-    </TestimonialsSection>
+        {/* <Testimonial>
+          I've really enjoyed working with James over the past few years and feel stronger, more mobile and fitter than ever before
+          <span>- Reem</span>
+        </Testimonial> */}
+      </TestimonialsSection>
+    </Container>
   );
 }
 

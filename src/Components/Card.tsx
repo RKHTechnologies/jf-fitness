@@ -16,7 +16,7 @@ interface IContainerProps {
 
 const CardContainer = styled.div`
   width: 100%;
-  min-height: 400px;
+  min-height: 350px;
   position: relative;
   background: url(${(p: IContainerProps) => ImagesDesktop[p.image]});
   background-size: cover;
@@ -50,12 +50,20 @@ const CardContainer = styled.div`
 `;
 
 const PrimaryText = styled.div`
-  font-size: 3vw;
+  font-size: 2vw;
   color: ${colours.light};
-  padding: 3px 0;
+  background: ${colours.dark};
+  /* padding: 3px 0; */
+  padding-top: 8px;
+  padding-left: 15px; //margin: auto
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
   text-align: center;
-  max-width: 80%;
+  /* max-width: 80%; */
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 1.8em;
