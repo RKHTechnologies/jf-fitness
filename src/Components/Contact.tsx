@@ -43,10 +43,11 @@ const Container = styled.div`
 `;
 
 const MainHeader = styled.h1`
-  font-weight: 500;
-  color: ${colours.light};
+  font-weight: 400;
+  /* color: ${colours.light}; */
   font-size: 3em;
   margin: 0;
+  color: #444;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 2.4em;
@@ -54,11 +55,12 @@ const MainHeader = styled.h1`
 `;
 
 const SubHeader = styled.div`
+  /* color: ${colours.light}; */
   max-width: 1000px;
-  color: ${colours.light};
   margin-bottom: 40px;
   margin-top: 10px;
-  font-weight: 500;
+  color: #75758a;
+  font-weight: 300;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 0.8em;
@@ -90,24 +92,22 @@ const Column = styled.div`
 const FormItem = styled.input`
   width: 100%;
   height: 50px;
-  background: ${colours.light};
+  background: #f5f5f5;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
   border: 0;
-  border-radius: 4px;
   margin-bottom: 20px;
   box-sizing: border-box;
   padding: 0 20px;
   font-size: 0.8em;
   font-weight: 400;
-
-  &::placeholder {
-    color: #00A794;
-  }
+  padding-top: 6px;
 `;
 
 const MultiLineForm = styled.textarea`
   width: 100%;
   height: 120px;
-  background: ${colours.light};
+  background: #f5f5f5;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
   border: 0;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -115,32 +115,31 @@ const MultiLineForm = styled.textarea`
   padding: 14px 20px 0;
   font-size: 0.8em;
   font-weight: 400;
-
-  &::placeholder {
-    color: #00A794;
-  }
 `;
 
 export const SubmitButton = styled.input`
-  border-radius: 40px;
-  background: ${colours.light};
-  color: ${colours.dark};
-  border: 3px solid ${colours.dark};
-  font-size: 0.8em;
+  background: #e4e4e4;
   cursor: pointer;
-  padding: 14px 90px;
-  margin-top: 20px;
-  font-weight: 800;
+  font-size: 1em;
+  margin-top: 50px;
+  border: 2px solid transparent;
+  color: #757575;
+  border-radius: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: 20px;
 
   &:hover {
     color: ${colours.light};
-    background: ${colours.dark};
+    background: #ccc;
   }
 `;
 
 const Contact: React.FC = () => {
-  const [overlayOpen, setOverlayOpen] = useState(false);
-  const [overlayText, setOverlayText] = useState("");
+  // const [overlayOpen, setOverlayOpen] = useState(false);
+  // const [overlayText, setOverlayText] = useState("");
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -158,25 +157,25 @@ const Contact: React.FC = () => {
       message: data.message,
     }
 
-    emailjs.send('admin_outlook', '260_Contact', returnData, 'user_YDxgyMHIC23AXohprfLhK')
-      .then((result) => {
-          console.log(result.text);
-          setOverlayOpen(true);
-          setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible")
-      }, (error) => {
-          console.log(error.text);
-          setOverlayOpen(true);
-          setOverlayText("Oops, an error occured. Please try again later, or contact us if the issue persists.")
-      });
+    // emailjs.send('admin_outlook', '260_Contact', returnData, 'user_YDxgyMHIC23AXohprfLhK')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //       setOverlayOpen(true);
+    //       setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible")
+    //   }, (error) => {
+    //       console.log(error.text);
+    //       setOverlayOpen(true);
+    //       setOverlayText("Oops, an error occured. Please try again later, or contact us if the issue persists.")
+    //   });
 
-    event.target.reset();
+    // event.target.reset();
   }
 
   return (
-    <Section background={colours.dark}>
+    <Section>
         <Container>
           <MainHeader>Contact Us</MainHeader>
-          <SubHeader>If you're looking to get involved in scouting, or simply wish to get in contact with us; please enter your message below and we will get back to you as soon as possible</SubHeader>
+          <SubHeader>If you're looking to get involved, have any questions, or would like to book in a session - please get in touch below, and we will get back to you as soon as possible</SubHeader>
 
           <FormContainer onSubmit={handleSubmit}>
             <Column>
@@ -189,7 +188,7 @@ const Contact: React.FC = () => {
               <FormItem placeholder="Subject" name="subject" />
               <MultiLineForm placeholder="Your Message" name="message"></MultiLineForm>
             </Column>
-            <SubmitButton type="submit" value="Submit" />
+            <SubmitButton type="submit" value="Send" />
           </FormContainer>
 
         </Container>

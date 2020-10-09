@@ -50,17 +50,17 @@ const Home: React.FC = () => {
         </div>
       </Section>
       
-      <Section id="about" lastItem>
+      <Section id="about">
         <div className="wrapper">
           <About />
         </div>
       </Section>
       
-      <Section id="services">
+      {/* <Section id="services">
         <div className="wrapper">
           
         </div>
-      </Section>
+      </Section> */}
 
       <Section id="ContactUs" fullwidth lastItem>
         <Contact />
