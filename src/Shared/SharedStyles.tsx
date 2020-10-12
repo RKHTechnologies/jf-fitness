@@ -16,8 +16,9 @@ export const colours: ColoursProps = {
     dark: "#000",
     primary: "#0D98E9",
     secondary: "E6E7EA",
-    darkGrey: "#707070",
+    darkGrey: "#818999",
     lightGrey: "#D2D2D2",
+
 }
 
 
