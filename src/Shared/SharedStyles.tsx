@@ -78,8 +78,9 @@ export const SectionContainer = styled.div`
 
   p {
       font-size: 1.8em;
-      font-weight: 500;
+      font-weight: 300;
       text-align: center;
+      margin: 10px 0;
   }
 
   @media(max-width: ${SharedSettings.mobile}) {

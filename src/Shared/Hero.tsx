@@ -11,7 +11,7 @@ interface HeroProps {
 
 const HeroBanner = styled.div`
     width: 100%;
-    height: ${(p: HeroProps):string => p.small ? "65%" : "80%"};
+    height: ${(p: HeroProps):string => p.small ? "65%" : "85%"};
     text-align: center;
     background: #eee;
     background-image: url(${(p: HeroProps):string => p.imageUrl});
