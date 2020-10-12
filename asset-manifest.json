@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/jf-fitness/static/css/main.6c61e9db.chunk.css",
-    "main.js": "/jf-fitness/static/js/main.4013d283.chunk.js",
-    "main.js.map": "/jf-fitness/static/js/main.4013d283.chunk.js.map",
+    "main.js": "/jf-fitness/static/js/main.5f124596.chunk.js",
+    "main.js.map": "/jf-fitness/static/js/main.5f124596.chunk.js.map",
     "runtime-main.js": "/jf-fitness/static/js/runtime-main.23d7f3eb.js",
     "runtime-main.js.map": "/jf-fitness/static/js/runtime-main.23d7f3eb.js.map",
-    "static/js/2.9740ca15.chunk.js": "/jf-fitness/static/js/2.9740ca15.chunk.js",
-    "static/js/2.9740ca15.chunk.js.map": "/jf-fitness/static/js/2.9740ca15.chunk.js.map",
+    "static/js/2.c6c70105.chunk.js": "/jf-fitness/static/js/2.c6c70105.chunk.js",
+    "static/js/2.c6c70105.chunk.js.map": "/jf-fitness/static/js/2.c6c70105.chunk.js.map",
     "index.html": "/jf-fitness/index.html",
-    "precache-manifest.7c6cdf137f421095842ab302083da0ae.js": "/jf-fitness/precache-manifest.7c6cdf137f421095842ab302083da0ae.js",
+    "precache-manifest.8150c0a4c435d63a68af59db3d6d9184.js": "/jf-fitness/precache-manifest.8150c0a4c435d63a68af59db3d6d9184.js",
     "service-worker.js": "/jf-fitness/service-worker.js",
     "static/css/main.6c61e9db.chunk.css.map": "/jf-fitness/static/css/main.6c61e9db.chunk.css.map",
-    "static/js/2.9740ca15.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.9740ca15.chunk.js.LICENSE.txt",
+    "static/js/2.c6c70105.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.c6c70105.chunk.js.LICENSE.txt",
     "static/media/index.css": "/jf-fitness/static/media/Metric-Thin.b16382bd.otf",
     "static/media/RKHT_logo.png": "/jf-fitness/static/media/RKHT_logo.8c8521de.png",
     "static/media/gym1.jpg": "/jf-fitness/static/media/gym1.21030241.jpg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.23d7f3eb.js",
-    "static/js/2.9740ca15.chunk.js",
+    "static/js/2.c6c70105.chunk.js",
     "static/css/main.6c61e9db.chunk.css",
-    "static/js/main.4013d283.chunk.js"
+    "static/js/main.5f124596.chunk.js"
   ]
 }
