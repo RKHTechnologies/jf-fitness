@@ -107,10 +107,6 @@ const SubHeading = styled.div`
   }
 `;
 
-const Price = styled(SubHeading)`
-  color: ${colours.primary};
-`;
-
 export const Icon = styled(FontAwesomeIcon)`
   height: 32px;
   color: ${colours.light};
@@ -118,6 +114,32 @@ export const Icon = styled(FontAwesomeIcon)`
   min-width: 32px;
 `;
 
+const Price = styled(SubHeading)`
+  color: ${colours.primary};
+
+  div {
+    margin-top: 8px;
+  }
+
+  ${Icon} {
+    color: ${colours.primary};
+    min-width: 32px;
+    margin-right: 0;
+    height: 26px;
+  }
+`;
+
+const BuyNow = styled.div`
+  border: 2px solid ${colours.primary};
+  width: 100px;
+  height: 40px;
+  color: ${colours.primary};
+  line-height: 48px;
+  text-align: center;
+  border-radius: 100px;
+  margin-top: 0 !important;
+  margin-left: 30px;
+`;
 
 const List = styled.ul`
   color: ${colours.darkGrey};
@@ -166,7 +188,8 @@ const OnlinePrograms: FC = () => {
 
           <Price>
             <Icon icon={faPoundSign} />
-            <div>123</div>
+            <div>100</div>
+            <BuyNow>Buy</BuyNow>
           </Price>
         </Product>
         
