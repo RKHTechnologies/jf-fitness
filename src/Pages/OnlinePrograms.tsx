@@ -50,13 +50,16 @@ const ProductsGrid = styled.div`
 const Product = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
-
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
   margin-bottom: 1000px;
-  transition: all 0.3s ease;
 
   &:hover {
-    transform: scale(1.10);
+    transform: scale(1.05) translateY(30px);
+    /* background: ${colours.darkGrey}42; */
+    background: #c0c6d026;
+  
   }
 `;
 
