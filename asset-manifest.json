@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/jf-fitness/static/css/main.6c61e9db.chunk.css",
-    "main.js": "/jf-fitness/static/js/main.3722a6c4.chunk.js",
-    "main.js.map": "/jf-fitness/static/js/main.3722a6c4.chunk.js.map",
+    "main.css": "/jf-fitness/static/css/main.70691e07.chunk.css",
+    "main.js": "/jf-fitness/static/js/main.c387f8f2.chunk.js",
+    "main.js.map": "/jf-fitness/static/js/main.c387f8f2.chunk.js.map",
     "runtime-main.js": "/jf-fitness/static/js/runtime-main.23d7f3eb.js",
     "runtime-main.js.map": "/jf-fitness/static/js/runtime-main.23d7f3eb.js.map",
-    "static/js/2.c6c70105.chunk.js": "/jf-fitness/static/js/2.c6c70105.chunk.js",
-    "static/js/2.c6c70105.chunk.js.map": "/jf-fitness/static/js/2.c6c70105.chunk.js.map",
+    "static/js/2.c4ff4f89.chunk.js": "/jf-fitness/static/js/2.c4ff4f89.chunk.js",
+    "static/js/2.c4ff4f89.chunk.js.map": "/jf-fitness/static/js/2.c4ff4f89.chunk.js.map",
     "index.html": "/jf-fitness/index.html",
-    "precache-manifest.670b1c411695e06357620df88ccf3972.js": "/jf-fitness/precache-manifest.670b1c411695e06357620df88ccf3972.js",
+    "precache-manifest.cab4c64668fea8c4f74df23c06179e63.js": "/jf-fitness/precache-manifest.cab4c64668fea8c4f74df23c06179e63.js",
     "service-worker.js": "/jf-fitness/service-worker.js",
-    "static/css/main.6c61e9db.chunk.css.map": "/jf-fitness/static/css/main.6c61e9db.chunk.css.map",
-    "static/js/2.c6c70105.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.c6c70105.chunk.js.LICENSE.txt",
+    "static/css/main.70691e07.chunk.css.map": "/jf-fitness/static/css/main.70691e07.chunk.css.map",
+    "static/js/2.c4ff4f89.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.c4ff4f89.chunk.js.LICENSE.txt",
+    "static/media/JF_Logo.png": "/jf-fitness/static/media/JF_Logo.8fc3e343.png",
     "static/media/index.css": "/jf-fitness/static/media/Metric-Thin.b16382bd.otf",
     "static/media/RKHT_logo.png": "/jf-fitness/static/media/RKHT_logo.8c8521de.png",
     "static/media/gym1.jpg": "/jf-fitness/static/media/gym1.21030241.jpg",
@@ -20,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.23d7f3eb.js",
-    "static/js/2.c6c70105.chunk.js",
-    "static/css/main.6c61e9db.chunk.css",
-    "static/js/main.3722a6c4.chunk.js"
+    "static/js/2.c4ff4f89.chunk.js",
+    "static/css/main.70691e07.chunk.css",
+    "static/js/main.c387f8f2.chunk.js"
   ]
 }
