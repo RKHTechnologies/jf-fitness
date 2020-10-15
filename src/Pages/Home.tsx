@@ -7,6 +7,7 @@ import Hero from '../Shared/Hero';
 import ProductCards from '../Components/ProductCards';
 import WhyUs from '../Components/WhyUs';
 import Contact from '../Components/Contact';
+import HeroVideo from '../Components/HeroVideo';
 
 interface SectionProps {
   fullwidth?: boolean;
@@ -38,7 +39,8 @@ const Home: React.FC = () => {
   
   return (
     <PageBodyContainer>
-      <Hero image="gym" />
+      {/* <Hero image="gym" /> */}
+      <HeroVideo />
       
       <Section id="about">
         <div className="wrapper">
