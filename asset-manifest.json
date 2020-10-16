@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jf-fitness/static/css/main.7a4aea02.chunk.css",
-    "main.js": "/jf-fitness/static/js/main.4d92a206.chunk.js",
-    "main.js.map": "/jf-fitness/static/js/main.4d92a206.chunk.js.map",
+    "main.js": "/jf-fitness/static/js/main.404ed3b9.chunk.js",
+    "main.js.map": "/jf-fitness/static/js/main.404ed3b9.chunk.js.map",
     "runtime-main.js": "/jf-fitness/static/js/runtime-main.23d7f3eb.js",
     "runtime-main.js.map": "/jf-fitness/static/js/runtime-main.23d7f3eb.js.map",
     "static/js/2.10e245f7.chunk.js": "/jf-fitness/static/js/2.10e245f7.chunk.js",
     "static/js/2.10e245f7.chunk.js.map": "/jf-fitness/static/js/2.10e245f7.chunk.js.map",
     "index.html": "/jf-fitness/index.html",
-    "precache-manifest.53debc358b76a3bd2a38021f4362e78b.js": "/jf-fitness/precache-manifest.53debc358b76a3bd2a38021f4362e78b.js",
+    "precache-manifest.9b0509e9c4195506da314da2cf419621.js": "/jf-fitness/precache-manifest.9b0509e9c4195506da314da2cf419621.js",
     "service-worker.js": "/jf-fitness/service-worker.js",
     "static/css/main.7a4aea02.chunk.css.map": "/jf-fitness/static/css/main.7a4aea02.chunk.css.map",
     "static/js/2.10e245f7.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.10e245f7.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.23d7f3eb.js",
     "static/js/2.10e245f7.chunk.js",
     "static/css/main.7a4aea02.chunk.css",
-    "static/js/main.4d92a206.chunk.js"
+    "static/js/main.404ed3b9.chunk.js"
   ]
 }
