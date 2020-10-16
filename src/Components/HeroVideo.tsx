@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { ImagesDesktop } from '../Shared/ImageLib';
+// import { ImagesDesktop } from '../Shared/ImageLib';
 import JFLogo from '../img/JF_Logo.png';
 
 
@@ -11,17 +11,18 @@ const Container = styled.div`
   position: relative;
 
   &:after {
-    content: 'FITNESS';
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background: #ffffff52;
     top: 0;
-    text-align: center;
-    /* padding-top: 100%; */
+    /* text-align: center;
     font-size: 5em;
     padding-top: 450px;
+    top: calc(50% + 167px);
     letter-spacing: 33px;
+    text-indent: 33px; */
   }
 `;
 
@@ -34,12 +35,24 @@ const Video = styled.video`
 const Logo = styled.div`
   position: absolute;
   height: 200px;
-  width: 200px;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
+  width: 138px;
+  top: calc(50% - 130px);
+  left: calc(50% - 69px);
   background: url(${JFLogo});
   background-size: contain;
   z-index: 1;
+`;
+
+const Fitness = styled.div`
+   position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    font-size: 5em;
+    top: calc(50% + 105px);
+    letter-spacing: 33px;
+    text-indent: 33px;
+    z-index: 1;
 `;
 
 const HeroVideo: FC = () => {
@@ -52,6 +65,7 @@ const HeroVideo: FC = () => {
         loop
       />
       <Logo />
+      <Fitness>FITNESS</Fitness>
     </Container>
   )
 }
