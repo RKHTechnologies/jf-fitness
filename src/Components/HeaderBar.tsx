@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logojf from '../logo.svg';
+import logojf from '../img/logo.svg';
 import styled from 'styled-components';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
 import { useHistory } from 'react-router-dom';
@@ -197,7 +197,7 @@ const HeaderBar: React.FC<IProps> = ({ stickyHeader }: IProps) => {
           <BurgerContainer menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><Burger menuOpen={menuOpen} /></BurgerContainer>
           
           <NavItemsRightContainer menuOpen={menuOpen}>
-            <HeaderButton onClick={() => handleNav("")}>HOME</HeaderButton>
+            <HeaderButton onClick={() => handleNav("/")}>HOME</HeaderButton>
             <HeaderButton onClick={() => handleNav("/onlinecoaching")}>1-2-1 ONLINE COACHING</HeaderButton>
             <HeaderButton onClick={() => handleNav("/onlineprograms")}>ONLINE PROGRAMS</HeaderButton>
             <HeaderButton onClick={() => handleNav("/ebooks")}>E-BOOKS</HeaderButton>

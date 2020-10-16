@@ -44,7 +44,18 @@ const ProductsGrid = styled.div`
   padding-top: 20px;
   box-sizing: border-box;
   grid-gap: 20px;
-  background: #0E0F14;
+  background: ${colours.primary};
+  position: relative;
+
+  &:before { 
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(14,15,20,0) 0%, rgb(13 148 227) 100%);
+  }
 `;
 
 const Product = styled.div`
@@ -54,13 +65,15 @@ const Product = styled.div`
   border-radius: 10px;
   transition: transform 0.3s ease;
   margin-bottom: 1000px;
+  background: #0E0F14;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 
-  &:hover {
-    transform: scale(1.05) translateY(30px);
-    /* background: ${colours.darkGrey}42; */
+  /* &:hover {
+    transform: scale(1.005);
+    /* background: ${colours.darkGrey}42;
     background: #c0c6d026;
   
-  }
+  } */
 `;
 
 interface ImageProps {
@@ -84,6 +97,7 @@ const Title = styled.h1`
   font-size: 2.6em;
   font-weight: 400;
   margin: 10px 0;
+  text-transform: uppercase;
 `;
 
 const Overview = styled.div`
@@ -103,7 +117,8 @@ const SubHeading = styled.div`
   align-items: center;
 
   div {
-    margin-top: 6px;
+    margin-top: 9px;
+    text-transform: uppercase;
   }
 `;
 
@@ -116,10 +131,9 @@ export const Icon = styled(FontAwesomeIcon)`
 
 const Price = styled(SubHeading)`
   color: ${colours.primary};
-
-  div {
-    margin-top: 8px;
-  }
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
 
   ${Icon} {
     color: ${colours.primary};
@@ -154,6 +168,7 @@ const OnlinePrograms: FC = () => {
       <Hero image="gym" small />
       <TextOverlay>Online Programs</TextOverlay>
 
+
       <ProductsGrid>
         
         <Product>
@@ -187,8 +202,10 @@ const OnlinePrograms: FC = () => {
           <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
 
           <Price>
-            <Icon icon={faPoundSign} />
-            <div>100</div>
+            <div>
+              <Icon icon={faPoundSign} />
+              <span>100</span>
+            </div>
             <BuyNow>Buy</BuyNow>
           </Price>
         </Product>
@@ -221,6 +238,14 @@ const OnlinePrograms: FC = () => {
             <div>What to Expect</div>
           </SubHeading>
           <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+        
+          <Price>
+            <div>
+              <Icon icon={faPoundSign} />
+              <span>100</span>
+            </div>
+            <BuyNow>Buy</BuyNow>
+          </Price>
         </Product>
 
         <Product>
@@ -252,6 +277,14 @@ const OnlinePrograms: FC = () => {
             <div>What to Expect</div>
           </SubHeading>
           <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+
+          <Price>
+            <div>
+              <Icon icon={faPoundSign} />
+              <span>100</span>
+            </div>
+            <BuyNow>Buy</BuyNow>
+          </Price>
         </Product>
 
       </ProductsGrid>

@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 // import { ImagesDesktop } from '../Shared/ImageLib';
-import JFLogo from '../img/JF_Logo.png';
+import JFLogo from '../img/JF_Logo_White.png';
+import { colours } from '../Shared/SharedStyles';
 
 
 const Container = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 
@@ -17,12 +18,6 @@ const Container = styled.div`
     height: 100%;
     background: #ffffff52;
     top: 0;
-    /* text-align: center;
-    font-size: 5em;
-    padding-top: 450px;
-    top: calc(50% + 167px);
-    letter-spacing: 33px;
-    text-indent: 33px; */
   }
 `;
 
@@ -36,11 +31,13 @@ const Logo = styled.div`
   position: absolute;
   height: 200px;
   width: 138px;
-  top: calc(50% - 130px);
+  top: calc(50% - 150px);
   left: calc(50% - 69px);
   background: url(${JFLogo});
   background-size: contain;
+  background-repeat: no-repeat;
   z-index: 1;
+
 `;
 
 const Fitness = styled.div`
@@ -49,17 +46,19 @@ const Fitness = styled.div`
     top: 0;
     text-align: center;
     font-size: 5em;
-    top: calc(50% + 105px);
-    letter-spacing: 33px;
-    text-indent: 33px;
+    top: calc(50% + 85px);
+    letter-spacing: 26px;
+    text-indent: 26px;
     z-index: 1;
+    font-weight: 300;
+    color: ${colours.light};
 `;
 
 const HeroVideo: FC = () => {
   return (
     <Container>
       <Video 
-        src={`${process.env.PUBLIC_URL}/JF_Fitness.mp4`} 
+        src={`${process.env.PUBLIC_URL}/JF_Fitness_md.mp4`} 
         autoPlay
         muted
         loop

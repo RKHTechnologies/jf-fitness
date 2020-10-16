@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { ReactComponent as Logo } from '../logo.svg';
+import { ReactComponent as Logo } from '../img/logo.svg';
 
 interface ContainerProps {
   black?: boolean;

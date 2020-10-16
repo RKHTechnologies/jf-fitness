@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import Home from './Pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
@@ -11,12 +11,18 @@ import OnlinePrograms from './Pages/OnlinePrograms';
 import EBooks from './Pages/EBooks';
 // import Contact from './Pages/Contact';
 
-function App() {
+const App: FC = () => {
+  const [stickyHeader, setStickyHeader] = useState(false);
+    
+  window.addEventListener("scroll", () => {
+      window.pageYOffset > window.innerHeight - 5 ? setStickyHeader(true) : setStickyHeader(false);
+  });
+
   return (
     <>
       <Router>
         <ScrollToTop />
-        <HeaderBar stickyHeader />
+        <HeaderBar stickyHeader={stickyHeader} />
         <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}`} component={Home} />
           <Route exact path={`${process.env.PUBLIC_URL}/onlinecoaching`} component={OnlineCoaching} />

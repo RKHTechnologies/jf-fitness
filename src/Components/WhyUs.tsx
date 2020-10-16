@@ -58,8 +58,9 @@ export const Title = styled.h2`
   width: 85%;
   margin-top: 21px;
   margin-bottom: 0;
-  color: ${colours.dark};
+  color: ${colours.light};
   font-weight: 500;
+  text-transform: uppercase;
 `;
 
 export const Description = styled.p`
@@ -74,7 +75,7 @@ export const Description = styled.p`
 const WhyUs: FC = () => {
  
   return (
-    <WhyUsSection>
+    <WhyUsSection dark>
       <PageHeading>Why JF Fitness?</PageHeading>
       <Grid>
         <GridItem>

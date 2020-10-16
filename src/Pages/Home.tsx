@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { SectionContainer, SharedSettings, PageBodyContainer } from '../Shared/SharedStyles';
 import About from '../Components/About';
-import Testimonials from '../Components/Testimonials';
-import Hero from '../Shared/Hero';
-import ProductCards from '../Components/ProductCards';
+// import Testimonials from '../Components/Testimonials';
+// import Hero from '../Shared/Hero';
+// import ProductCards from '../Components/ProductCards';
 import WhyUs from '../Components/WhyUs';
 import Contact from '../Components/Contact';
 import HeroVideo from '../Components/HeroVideo';
+
+const Container = styled(PageBodyContainer)`
+  top: 0;
+`;
 
 interface SectionProps {
   fullwidth?: boolean;
@@ -38,21 +42,20 @@ const Section = styled.div`
 const Home: React.FC = () => {
   
   return (
-    <PageBodyContainer>
-      {/* <Hero image="gym" /> */}
+    <Container>
       <HeroVideo />
       
-      <Section id="about">
+      <Section id="whyus">
         <div className="wrapper">
-          <SectionContainer>
-            <p>JF Fitness is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p>
+          <SectionContainer dark>
+            <p>JF FITNESS is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p>
             <WhyUs />
-            <ProductCards />
+            {/* <ProductCards /> */}
           </SectionContainer>
         </div>
       </Section>
       
-      <Section id="about">
+      <Section id="intro">
         <div className="wrapper">
           <About />
         </div>
@@ -67,7 +70,7 @@ const Home: React.FC = () => {
       <Section id="ContactUs" fullwidth lastItem>
         <Contact />
       </Section>
-    </PageBodyContainer>
+    </Container>
   );
 }
 
