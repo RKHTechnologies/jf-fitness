@@ -16,6 +16,7 @@ const Container = styled(PageBodyContainer)`
 interface SectionProps {
   fullwidth?: boolean;
   lastItem?: boolean;
+  topSpace?: boolean;
 }
 
 const Section = styled.div`
@@ -26,6 +27,7 @@ const Section = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  padding-top: ${(p: SectionProps) => p.topSpace ? "100px" : null};
 
   div.wrapper {
     width: 96%;
@@ -45,7 +47,7 @@ const Home: React.FC = () => {
     <Container>
       <HeroVideo />
       
-      <Section id="whyus">
+      <Section id="whyus" topSpace>
         <div className="wrapper">
           <SectionContainer dark>
             <p>JF FITNESS is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p>
@@ -60,12 +62,6 @@ const Home: React.FC = () => {
           <About />
         </div>
       </Section>
-      
-      {/* <Section id="services">
-        <div className="wrapper">
-          
-        </div>
-      </Section> */}
 
       <Section id="ContactUs" fullwidth lastItem>
         <Contact />

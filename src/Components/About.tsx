@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionContainer } from '../Shared/SharedStyles';
+import { colours } from '../Shared/SharedStyles';
 import Testimonials from './Testimonials';
 
 const Container = styled.div`
@@ -12,15 +12,15 @@ const Container = styled.div`
 const AboutUs = styled.div`
   text-align: justify;
   font-size: 1.8em;
-  font-weight: 400;
-  /* width: 800px; */
+  font-weight: 100;
+  color: ${colours.light};
 `;
 
 const About: React.FC = () => {
   return (
     <Container>
       <AboutUs>
-        JF Fitness places health and wellbeing at the center of success.
+        JF FITNESS places health and wellbeing at the center of success.
         <br />
         <br />
         With over 6 years of personal training expereince and a passion for seeing clients grow and progress, James Fisher has created a range of accessible online programmes for all breadth of abilities. From dynamic subscription-based training programmes through to bespoke 1-2-1 online plans, JF Fitness has the solution to help you reach - and break through - your goals in a supportive environment.

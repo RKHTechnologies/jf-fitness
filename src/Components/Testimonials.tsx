@@ -14,19 +14,19 @@ const TestimonialsSection = styled.div`
   position: relative;
   width: 500px;
   height: 60%;
-  background: ${colours.dark};
+  background: ${colours.light};
   border-radius: 5px;
   box-sizing: border-box;
   padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
+  box-shadow: 0 2.8px 2.2px rgb(255 255 255 / 3%), 0 6.7px 5.3px rgb(255 255 255 / 5%), 0 12.5px 10px rgb(255 255 255 / 6%), 0 22.3px 17.9px rgb(255 255 255 / 7%), 0 41.8px 33.4px rgb(255 255 255 / 9%), 0 100px 80px rgb(255 255 255 / 12%);
 `;
 
 const Testimonial = styled.div`
   font-style: italic;
-  color: ${colours.light};
+  color: ${colours.dark};
   font-size: 1.4em;
   text-align: justify;
 
