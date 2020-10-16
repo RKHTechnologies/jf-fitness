@@ -7,15 +7,17 @@ import { faHeartbeat, faCalendarCheck, faBalanceScaleRight, faBullseye, faDumbbe
 const WhyUsSection = styled(SectionContainer)`
   min-height: 200px;
   margin-bottom: 30px;
+  background: transparent;
 `;
 
 export const PageHeading = styled.div`
   font-weight: 400;
   font-size: 2.5em;
   margin: 20px auto;
-  color: ${colours.primary};
+  color: ${colours.light};
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
+  text-transform: uppercase;
 `;
 
 export const Grid = styled.div`
@@ -59,7 +61,7 @@ export const Title = styled.h2`
   margin-top: 21px;
   margin-bottom: 0;
   color: ${colours.light};
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase;
 `;
 

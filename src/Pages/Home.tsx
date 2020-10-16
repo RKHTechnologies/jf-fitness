@@ -47,23 +47,23 @@ const Home: React.FC = () => {
     <Container>
       <HeroVideo />
       
-      <Section id="whyus" topSpace>
-        <div className="wrapper">
-          <SectionContainer dark>
-            <p>JF FITNESS is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p>
-            <WhyUs />
-            {/* <ProductCards /> */}
-          </SectionContainer>
-        </div>
-      </Section>
-      
-      <Section id="intro">
+      <Section id="intro" topSpace>
         <div className="wrapper">
           <About />
         </div>
       </Section>
 
-      <Section id="ContactUs" fullwidth lastItem>
+      <Section id="whyus">
+        <div className="wrapper">
+          <WhyUs />
+          {/* <p>JF FITNESS is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p> */}  
+          {/* <ProductCards /> */}
+        </div>
+      </Section>
+      
+      
+
+      <Section id="ContactUs" fullwidth lastItem style={{background: "#fff"}}>
         <Contact />
       </Section>
     </Container>

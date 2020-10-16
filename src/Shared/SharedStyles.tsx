@@ -67,7 +67,8 @@ export const SectionContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  background: ${(p: SectionProps) => p.dark ? colours.dark : colours.light};
+  /* background: ${(p: SectionProps) => p.dark ? colours.dark : colours.light}; */
+  background: transparent;
   color: ${(p: SectionProps) => p.dark ? colours.light : colours.dark};
   font-weight: 100;
 
@@ -82,6 +83,7 @@ export const SectionContainer = styled.div`
       font-weight: 300;
       text-align: center;
       margin: 10px 0;
+      font-weight: 100;
   }
 
   @media(max-width: ${SharedSettings.mobile}) {
