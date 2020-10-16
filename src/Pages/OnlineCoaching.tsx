@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PageBodyContainer } from '../Shared/SharedStyles';
+import { colours, PageBodyContainer } from '../Shared/SharedStyles';
 import styled from 'styled-components';
 
 export const Centered = styled.div`
@@ -7,6 +7,7 @@ export const Centered = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  color: ${colours.light};
 `;
 
 const OnlineCoaching: FC = () => {

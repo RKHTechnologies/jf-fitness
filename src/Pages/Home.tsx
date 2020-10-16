@@ -41,8 +41,14 @@ const Section = styled.div`
   }
 `;
 
-const Home: React.FC = () => {
+interface IProps {
+  updateSticky: () => void;
+}
+
+const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
   
+  updateSticky();
+
   return (
     <Container>
       <HeroVideo />

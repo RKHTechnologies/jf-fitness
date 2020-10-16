@@ -15,8 +15,20 @@ const App: FC = () => {
   const [stickyHeader, setStickyHeader] = useState(false);
     
   window.addEventListener("scroll", () => {
-      window.pageYOffset > window.innerHeight - 5 ? setStickyHeader(true) : setStickyHeader(false);
+    if (window.location.pathname.split(process.env.PUBLIC_URL)[1]?.length > 1)
+      setStickyHeader(true);
+    
+    else
+      window.pageYOffset > window.innerHeight - 5 ? setStickyHeader(true) : setStickyHeader(false); 
   });
+
+  const updateSticky = () => {
+    if (window.location.pathname.split(process.env.PUBLIC_URL)[1]?.length > 1)
+      setStickyHeader(true);
+    
+    else
+      window.pageYOffset > window.innerHeight - 5 ? setStickyHeader(true) : setStickyHeader(false); 
+  }
 
   return (
     <>
@@ -24,7 +36,7 @@ const App: FC = () => {
         <ScrollToTop />
         <HeaderBar stickyHeader={stickyHeader} />
         <Switch>
-          <Route exact path={`${process.env.PUBLIC_URL}`} component={Home} />
+          <Route exact path={`${process.env.PUBLIC_URL}`} component={() => <Home updateSticky={updateSticky} />} />
           <Route exact path={`${process.env.PUBLIC_URL}/onlinecoaching`} component={OnlineCoaching} />
           <Route exact path={`${process.env.PUBLIC_URL}/onlineprograms`} component={OnlinePrograms} />
           <Route exact path={`${process.env.PUBLIC_URL}/ebooks`} component={EBooks} />

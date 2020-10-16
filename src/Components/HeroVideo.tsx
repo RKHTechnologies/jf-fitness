@@ -48,7 +48,7 @@ const FadeIn = keyframes`
   }
   50% {
     opacity: 0;
-    transform: translateY(240px);
+    transform: translateY(140px);
   }
   80% {
     opacity: 0.5
