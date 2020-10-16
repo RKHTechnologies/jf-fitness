@@ -13,7 +13,7 @@ const Container = styled.div`
 const TestimonialsSection = styled.div`
   position: relative;
   width: 500px;
-  height: 60%;
+  height: 290px;
   background: ${colours.dark};
   border-radius: 5px;
   box-sizing: border-box;

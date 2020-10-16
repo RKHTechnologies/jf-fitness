@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 // import { ImagesDesktop } from '../Shared/ImageLib';
 import JFLogo from '../img/JF_Logo_White.png';
 import { colours } from '../Shared/SharedStyles';
@@ -40,6 +40,25 @@ const Logo = styled.div`
 
 `;
 
+
+const FadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(240px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(240px);
+  }
+  80% {
+    opacity: 0.5
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+`;
+
 const Fitness = styled.div`
    position: absolute;
     width: 100%;
@@ -52,7 +71,11 @@ const Fitness = styled.div`
     z-index: 1;
     font-weight: 300;
     color: ${colours.light};
+    animation: ${FadeIn} 1.8s ease;
 `;
+
+
+
 
 const HeroVideo: FC = () => {
   return (
