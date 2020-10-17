@@ -6,6 +6,7 @@ import gym1 from '../img/gym1.jpg';
 import boxJump from '../img/_boxJump.jpg';
 import pullUp from '../img/_pullUp.jpg';
 import holdUpBar from '../img/_holdUpBar.jpg';
+import holdUpBar2 from '../img/_holdUpBar2.jpg';
 import pushWeight from '../img/_pushWeight.jpg';
 import barResting from '../img/_barResting.jpg';
 
@@ -17,6 +18,7 @@ export const ImagesDesktop = {
   'boxJump': boxJump,
   'pullUp': pullUp,
   'holdUpBar': holdUpBar,
+  'holdUpBar2': holdUpBar2,
   'pushWeight': pushWeight,
   'barResting': barResting,
 }
@@ -29,8 +31,9 @@ export const ImagesMobile = {
   'boxJump': boxJump,
   'pullUp': pullUp,
   'holdUpBar': holdUpBar,
+  'holdUpBar2': holdUpBar2,
   'pushWeight': pushWeight,
   'barResting': barResting,
 }
 
-export type imageLib = 'rkh' | 'jf' | 'gym' | 'gym1' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'pushWeight' | 'barResting';
+export type imageLib = 'rkh' | 'jf' | 'gym' | 'gym1' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting';

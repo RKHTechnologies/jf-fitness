@@ -8,6 +8,7 @@ import About from '../Components/About';
 import WhyUs from '../Components/WhyUs';
 import Contact from '../Components/Contact';
 import HeroVideo from '../Components/HeroVideo';
+import Services from '../Components/Services';
 
 const Container = styled(PageBodyContainer)`
   top: 0;
@@ -66,10 +67,13 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
           {/* <ProductCards /> */}
         </div>
       </Section>
-      
+
+      <Section id="services" fullwidth>
+        <Services />
+      </Section>
       
 
-      <Section id="ContactUs" fullwidth lastItem style={{background: "#fff"}}>
+      <Section id="ContactUs" fullwidth lastItem>
         <Contact />
       </Section>
     </Container>

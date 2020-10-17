@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colours } from '../Shared/SharedStyles';
 import Testimonials from './Testimonials';
 
 const Container = styled.div`
@@ -13,7 +12,7 @@ const AboutUs = styled.div`
   text-align: justify;
   font-size: 1.8em;
   font-weight: 100;
-  color: ${colours.light};
+  color: rgb(255 255 255 / 0.88);
 `;
 
 const About: React.FC = () => {

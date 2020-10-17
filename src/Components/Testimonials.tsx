@@ -27,7 +27,7 @@ const TestimonialsSection = styled.div`
 
 const Testimonial = styled.div`
   font-style: italic;
-  color: ${colours.light};
+  color: rgb(255 255 255 / 0.88);
   font-size: 1.4em;
   text-align: justify;
 

@@ -14,7 +14,7 @@ export const PageHeading = styled.div`
   font-weight: 400;
   font-size: 2.5em;
   margin: 20px auto;
-  color: ${colours.light};
+  color: rgb(255 255 255 / 0.88);
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ export const Title = styled.h2`
   width: 85%;
   margin-top: 21px;
   margin-bottom: 0;
-  color: ${colours.light};
+  color: rgb(255 255 255 / 0.88);
   font-weight: 300;
   text-transform: uppercase;
 `;
