@@ -44,7 +44,7 @@ const ProductsGrid = styled.div`
   padding-top: 20px;
   box-sizing: border-box;
   grid-gap: 20px;
-  background: ${colours.primary};
+  background: #121212;
   position: relative;
 
   &:before { 
@@ -54,7 +54,15 @@ const ProductsGrid = styled.div`
     left: 0;
     width: 100%;
     height: 200px;
-    background: linear-gradient(180deg, rgba(14,15,20,0) 0%, rgb(13 148 227) 100%);
+    background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgb(18 18 18) 100%);
+  }
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    grid-template-columns: 1fr;
+  }
+
+  @media(max-width: 800px) {
+    padding: 0 10px;
   }
 `;
 
@@ -62,18 +70,13 @@ const Product = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
+  padding-bottom: 100px;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  margin-bottom: 1000px;
-  background: #0E0F14;
+  margin-bottom: 80px;
+  background: rgba(255,255,255, 0.12);
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-
-  /* &:hover {
-    transform: scale(1.005);
-    /* background: ${colours.darkGrey}42;
-    background: #c0c6d026;
-  
-  } */
+  position: relative;
 `;
 
 interface ImageProps {
@@ -129,11 +132,12 @@ export const Icon = styled(FontAwesomeIcon)`
   min-width: 32px;
 `;
 
-const Price = styled(SubHeading)`
+const Price = styled.div`
   color: ${colours.primary};
-  width: 100%;
-  display: flex; 
-  justify-content: space-between;
+  font-size: 1.8em;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 
   ${Icon} {
     color: ${colours.primary};
@@ -144,15 +148,23 @@ const Price = styled(SubHeading)`
 `;
 
 const BuyNow = styled.div`
-  border: 2px solid ${colours.primary};
-  width: 100px;
-  height: 40px;
   color: ${colours.primary};
-  line-height: 48px;
-  text-align: center;
-  border-radius: 100px;
-  margin-top: 0 !important;
-  margin-left: 30px;
+  background: ${colours.primary}40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 14px 26px 5px;
+  cursor: pointer;
+
+  &:hover {
+    background: ${colours.primary};
+    color: rgb(255 255 255 / 0.90);
+  }
 `;
 
 const List = styled.ul`
@@ -165,14 +177,14 @@ const List = styled.ul`
 const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
-      <Hero image="gym" small />
+      <Hero image="barResting" small />
       <TextOverlay>Online Programs</TextOverlay>
 
 
       <ProductsGrid>
         
         <Product>
-          <Image image={"gym"} />
+          <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
           <Overview>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
           
@@ -202,16 +214,14 @@ const OnlinePrograms: FC = () => {
           <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
 
           <Price>
-            <div>
               <Icon icon={faPoundSign} />
-              <span>100</span>
-            </div>
-            <BuyNow>Buy</BuyNow>
+              <span>125</span>
           </Price>
+          <BuyNow>Buy Now</BuyNow>
         </Product>
         
         <Product>
-          <Image image={"gym"} />
+          <Image image={"holdUpBar"} />
           <Title>Strength Building</Title>
           <Overview>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
           <SubHeading>
@@ -240,16 +250,14 @@ const OnlinePrograms: FC = () => {
           <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
         
           <Price>
-            <div>
-              <Icon icon={faPoundSign} />
-              <span>100</span>
-            </div>
-            <BuyNow>Buy</BuyNow>
+            <Icon icon={faPoundSign} />
+            <span>299</span>
           </Price>
+          <BuyNow>Buy Now</BuyNow>
         </Product>
 
         <Product>
-          <Image image={"gym"} />
+          <Image image={"pushWeight"} />
           <Title>Performance Gains</Title>
           <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
 
@@ -281,10 +289,11 @@ const OnlinePrograms: FC = () => {
           <Price>
             <div>
               <Icon icon={faPoundSign} />
-              <span>100</span>
+              <span>349</span>
             </div>
-            <BuyNow>Buy</BuyNow>
+            
           </Price>
+          <BuyNow>Buy Now</BuyNow>
         </Product>
 
       </ProductsGrid>

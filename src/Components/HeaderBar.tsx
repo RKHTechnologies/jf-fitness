@@ -22,6 +22,7 @@ const HeaderNav = styled.div`
     align-items: center;
     background: #1F1F1F;
     z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 const HeaderNavContainer = styled.div` 
