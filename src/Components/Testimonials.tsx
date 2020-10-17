@@ -14,7 +14,7 @@ const TestimonialsSection = styled.div`
   position: relative;
   width: 500px;
   height: 290px;
-  background: ${colours.dark};
+  background: rgb(255 255 255 / 0.08);
   border-radius: 5px;
   box-sizing: border-box;
   padding: 50px;

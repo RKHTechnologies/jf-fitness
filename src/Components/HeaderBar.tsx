@@ -20,7 +20,7 @@ const HeaderNav = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${colours.light};
+    background: #1F1F1F;
     z-index: 2;
 `;
 
@@ -32,14 +32,15 @@ const HeaderNavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: ${colours.light};
-    color: ${colours.dark};
+    /* background: ${colours.light}; */
+    color: ${colours.light};
     z-index: 1;
     transition: height 0.3s ease;
 
     & > img {
-        height: 68px;
+        height: 50px;
         margin-left: 50px;
+        margin-top: 4px;
 
         @media(max-width: 350px) {
             margin-left: 10px;
@@ -59,7 +60,7 @@ const Logo = styled.img`
 const HeaderButton = styled.a`
     height: 100%;
     background: transparent;
-    color: ${colours.dark};
+    /* color: ${colours.dark}; */
     border: none;
     letter-spacing: 2px;
     text-indent: 2px;
