@@ -1,29 +1,34 @@
 {
   "files": {
     "main.css": "/jf-fitness/static/css/main.cb2bad7b.chunk.css",
-    "main.js": "/jf-fitness/static/js/main.51b48083.chunk.js",
-    "main.js.map": "/jf-fitness/static/js/main.51b48083.chunk.js.map",
+    "main.js": "/jf-fitness/static/js/main.41df45d5.chunk.js",
+    "main.js.map": "/jf-fitness/static/js/main.41df45d5.chunk.js.map",
     "runtime-main.js": "/jf-fitness/static/js/runtime-main.23d7f3eb.js",
     "runtime-main.js.map": "/jf-fitness/static/js/runtime-main.23d7f3eb.js.map",
-    "static/js/2.10e245f7.chunk.js": "/jf-fitness/static/js/2.10e245f7.chunk.js",
-    "static/js/2.10e245f7.chunk.js.map": "/jf-fitness/static/js/2.10e245f7.chunk.js.map",
+    "static/js/2.af8b9267.chunk.js": "/jf-fitness/static/js/2.af8b9267.chunk.js",
+    "static/js/2.af8b9267.chunk.js.map": "/jf-fitness/static/js/2.af8b9267.chunk.js.map",
     "index.html": "/jf-fitness/index.html",
-    "precache-manifest.c5b452eb19a692c0202e070825d4b1b6.js": "/jf-fitness/precache-manifest.c5b452eb19a692c0202e070825d4b1b6.js",
+    "precache-manifest.f31566f53bec72b9e6947b99e3e766e4.js": "/jf-fitness/precache-manifest.f31566f53bec72b9e6947b99e3e766e4.js",
     "service-worker.js": "/jf-fitness/service-worker.js",
     "static/css/main.cb2bad7b.chunk.css.map": "/jf-fitness/static/css/main.cb2bad7b.chunk.css.map",
-    "static/js/2.10e245f7.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.10e245f7.chunk.js.LICENSE.txt",
+    "static/js/2.af8b9267.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.af8b9267.chunk.js.LICENSE.txt",
     "static/media/JF_Logo.png": "/jf-fitness/static/media/JF_Logo.e42562ce.png",
     "static/media/JF_Logo_White.png": "/jf-fitness/static/media/JF_Logo_White.1b3ed183.png",
     "static/media/index.css": "/jf-fitness/static/media/Metric-Thin.b16382bd.otf",
     "static/media/RKHT_logo.png": "/jf-fitness/static/media/RKHT_logo.8c8521de.png",
+    "static/media/_barResting.jpg": "/jf-fitness/static/media/_barResting.033e91d9.jpg",
+    "static/media/_boxJump.jpg": "/jf-fitness/static/media/_boxJump.645df28e.jpg",
+    "static/media/_holdUpBar.jpg": "/jf-fitness/static/media/_holdUpBar.1ff7640a.jpg",
+    "static/media/_pullUp.jpg": "/jf-fitness/static/media/_pullUp.369ed3a0.jpg",
+    "static/media/_pushWeight.jpg": "/jf-fitness/static/media/_pushWeight.3da93aaf.jpg",
     "static/media/gym1.jpg": "/jf-fitness/static/media/gym1.21030241.jpg",
     "static/media/gym2.jpg": "/jf-fitness/static/media/gym2.55fea5a6.jpg",
     "static/media/logo.svg": "/jf-fitness/static/media/logo.57fa89ce.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.23d7f3eb.js",
-    "static/js/2.10e245f7.chunk.js",
+    "static/js/2.af8b9267.chunk.js",
     "static/css/main.cb2bad7b.chunk.css",
-    "static/js/main.51b48083.chunk.js"
+    "static/js/main.41df45d5.chunk.js"
   ]
 }
