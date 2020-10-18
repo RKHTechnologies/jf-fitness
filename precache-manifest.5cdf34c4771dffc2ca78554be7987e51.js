@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9847925c7d4a1f2a0fa072cf650c1e0",
+    "revision": "dfceb434918982f7ce9597a5f37a65cd",
     "url": "/jf-fitness/index.html"
   },
   {
-    "revision": "8410683355fd57011677",
-    "url": "/jf-fitness/static/css/main.2e23ef6e.chunk.css"
+    "revision": "354adf049b4c899a84d4",
+    "url": "/jf-fitness/static/css/main.cb2bad7b.chunk.css"
   },
   {
-    "revision": "d4f884b85652a179cddd",
-    "url": "/jf-fitness/static/js/2.af8b9267.chunk.js"
+    "revision": "41f140ab8a7a9e5614b0",
+    "url": "/jf-fitness/static/js/2.a42715cc.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/jf-fitness/static/js/2.af8b9267.chunk.js.LICENSE.txt"
+    "url": "/jf-fitness/static/js/2.a42715cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8410683355fd57011677",
-    "url": "/jf-fitness/static/js/main.ec0761f6.chunk.js"
+    "revision": "354adf049b4c899a84d4",
+    "url": "/jf-fitness/static/js/main.917515b5.chunk.js"
   },
   {
     "revision": "ca48e22de7e439ad5ce1",
     "url": "/jf-fitness/static/js/runtime-main.23d7f3eb.js"
+  },
+  {
+    "revision": "16cbe5790f74c7b2a5a3059423283ff0",
+    "url": "/jf-fitness/static/media/Check_Icon.16cbe579.svg"
   },
   {
     "revision": "e42562ce54c72e3358300e569e592d87",
@@ -76,12 +80,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jf-fitness/static/media/_holdUpBar.1ff7640a.jpg"
   },
   {
+    "revision": "b910a9bdb7ae6d927e677d492d7d8dcb",
+    "url": "/jf-fitness/static/media/_holdUpBar2.b910a9bd.jpg"
+  },
+  {
     "revision": "369ed3a065cdfb4c3ae72de5258cef04",
     "url": "/jf-fitness/static/media/_pullUp.369ed3a0.jpg"
   },
   {
     "revision": "3da93aafbff53b881239527e26f70620",
     "url": "/jf-fitness/static/media/_pushWeight.3da93aaf.jpg"
+  },
+  {
+    "revision": "b35f924c2e2a502fecc64472892873fe",
+    "url": "/jf-fitness/static/media/_rowing.b35f924c.jpg"
+  },
+  {
+    "revision": "c84f372a0a0cc7598026fddb5a504c44",
+    "url": "/jf-fitness/static/media/_stretching.c84f372a.jpg"
   },
   {
     "revision": "21030241a369b03e049bc8f91e5689b1",
