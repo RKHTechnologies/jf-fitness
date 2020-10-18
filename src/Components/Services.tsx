@@ -71,7 +71,7 @@ const Text = styled.div`
   grid-area: text;
   padding: 50px 100px;
   text-align: ${(p: ServiceProps) => p.alt ? "right" : null};
-  padding-left: ${(p: ServiceProps) => p.alt ? "50px" : null};
+  /* padding-left: ${(p: ServiceProps) => p.alt ? "50px" : null}; */
   color: rgb(255 255 255 /0.88);
 
   @media(max-width: ${SharedSettings.mobile}) {
@@ -89,13 +89,13 @@ const Title = styled.h1`
   color: ${colours.primary};
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-left: ${(p: ServiceProps) => p.alt ? "50px" : null};
+  /* padding-left: ${(p: ServiceProps) => p.alt ? "50px" : null}; */
   text-align: ${(p: ServiceProps) => p.alt ? "left" : null};
   text-transform: uppercase;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 2em;
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 `;
 
@@ -103,11 +103,11 @@ const Description = styled.div`
   text-align: justify;
   font-size: 1.2em;
   color: #818999;
-  padding-left: ${(p: ServiceProps) => p.alt ? "50px" :  null};
+  /* padding-left: ${(p: ServiceProps) => p.alt ? "50px" :  null}; */
 
   @media(max-width: ${SharedSettings.mobile}) {
     text-align: justify;
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 `;
 
@@ -177,17 +177,10 @@ const Services: FC = ()  => {
       history.push(`${process.env.PUBLIC_URL}${link}`);
   }
 
-  const handleClick = (subject: string, address: string) => {
-    window.open(
-      `mailto:${address}@howardhavens.com?subject=${subject}`,
-      '_blank'
-    );
-  }
-
   return (
     <Container>
 
-      <Strip id="sales">
+      <Strip id="onlineCoaching">
         <Service>
           <Image image="holdUpBar2" right />
           <Text>
@@ -207,27 +200,27 @@ const Services: FC = ()  => {
         </Service>
       </Strip>
 
-      <Strip alt id="discuss">
+      <Strip alt id="onlinePrograms">
         <Service alt>
-          <Image image="pullUp" alt short />
+          <Image image="stretching" alt short />
           <Text alt>
             <Title alt>Online Programs</Title>
             <Description alt>
-              There are so many different options, avenues and <Highlight>opportunities</Highlight> out there when it comes to your property - <Highlight>we understand</Highlight> better than most how difficult the decision can be.
+              There are many different programs to <Highlight>fit your needs</Highlight>, quis nostrud exercitation ullamco commodo <Highlight>we understand</Highlight> ullamco laboris nisi ut aliquip.
               <br /><br />
-              Howard Havens are here to de-mystify, and <Highlight>remove any stresses</Highlight> involved; Our experts are on hand to discuss your individual situation and the avenues available to you.
-              We will be able to <Highlight>advise</Highlight> and recommend a <Highlight>great solution</Highlight> for you, with <Highlight>no obligations or charges</Highlight>.
+              JF FITNESS can help you to <Highlight>progress</Highlight> In voluptate velit esse cillum dolore eu fugiat nulla pariatur dipiscing et dolore magna aliqua.
+              We will be able to <Highlight>advise</Highlight> and personally recommend a <Highlight>great program</Highlight> fugiat nulla pariatur.
               <br /><br />
-              If at this point you decide you would like for us to help, our <Highlight>1-2-1 dedicated team member</Highlight> will guide you through the next steps, <Highlight>removing all hassle</Highlight> and stress!
+              Quis nostrud exercitation ullamco laboris nisi ut a <Highlight>fitness regime</Highlight> will guide you through the next steps, <Highlight>removing all hassle</Highlight> and stress!
             </Description>
             <Button onClick={() => handleNav("/onlineprograms")}>View our different programs</Button>
           </Text>
         </Service>
       </Strip>
 
-      <Strip id="tenantbuyers">
+      <Strip id="ebooks">
         <Service>
-          <Image image="pullUp" />
+          <Image image="rowing" />
           <Text>
             <Title>Ebooks</Title>
             <Description>
