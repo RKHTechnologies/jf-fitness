@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/jf-fitness/static/css/main.2e23ef6e.chunk.css",
-    "main.js": "/jf-fitness/static/js/main.ef7496fa.chunk.js",
-    "main.js.map": "/jf-fitness/static/js/main.ef7496fa.chunk.js.map",
+    "main.js": "/jf-fitness/static/js/main.ec0761f6.chunk.js",
+    "main.js.map": "/jf-fitness/static/js/main.ec0761f6.chunk.js.map",
     "runtime-main.js": "/jf-fitness/static/js/runtime-main.23d7f3eb.js",
     "runtime-main.js.map": "/jf-fitness/static/js/runtime-main.23d7f3eb.js.map",
-    "static/js/2.4e3d4e7d.chunk.js": "/jf-fitness/static/js/2.4e3d4e7d.chunk.js",
-    "static/js/2.4e3d4e7d.chunk.js.map": "/jf-fitness/static/js/2.4e3d4e7d.chunk.js.map",
+    "static/js/2.af8b9267.chunk.js": "/jf-fitness/static/js/2.af8b9267.chunk.js",
+    "static/js/2.af8b9267.chunk.js.map": "/jf-fitness/static/js/2.af8b9267.chunk.js.map",
     "index.html": "/jf-fitness/index.html",
-    "precache-manifest.e1e988749fe02432b7b811fee96cf4ba.js": "/jf-fitness/precache-manifest.e1e988749fe02432b7b811fee96cf4ba.js",
+    "precache-manifest.a42e06dfbbe1a4aa587752ce62b987ff.js": "/jf-fitness/precache-manifest.a42e06dfbbe1a4aa587752ce62b987ff.js",
     "service-worker.js": "/jf-fitness/service-worker.js",
     "static/css/main.2e23ef6e.chunk.css.map": "/jf-fitness/static/css/main.2e23ef6e.chunk.css.map",
-    "static/js/2.4e3d4e7d.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.4e3d4e7d.chunk.js.LICENSE.txt",
+    "static/js/2.af8b9267.chunk.js.LICENSE.txt": "/jf-fitness/static/js/2.af8b9267.chunk.js.LICENSE.txt",
     "static/media/JF_Logo.png": "/jf-fitness/static/media/JF_Logo.e42562ce.png",
     "static/media/JF_Logo_White.png": "/jf-fitness/static/media/JF_Logo_White.1b3ed183.png",
     "static/media/index.css": "/jf-fitness/static/media/Metric-Thin.b16382bd.otf",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.23d7f3eb.js",
-    "static/js/2.4e3d4e7d.chunk.js",
+    "static/js/2.af8b9267.chunk.js",
     "static/css/main.2e23ef6e.chunk.css",
-    "static/js/main.ef7496fa.chunk.js"
+    "static/js/main.ec0761f6.chunk.js"
   ]
 }
