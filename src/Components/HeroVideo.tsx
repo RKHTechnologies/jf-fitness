@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled, { keyframes } from 'styled-components';
 // import { ImagesDesktop } from '../Shared/ImageLib';
 import JFLogo from '../img/JF_Logo_White.png';
-import { colours } from '../Shared/SharedStyles';
+import { colours, SharedSettings } from '../Shared/SharedStyles';
 
 
 const Container = styled.div`
@@ -10,6 +10,9 @@ const Container = styled.div`
   height: 100%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:after {
     content: '';
@@ -22,8 +25,8 @@ const Container = styled.div`
 `;
 
 const Video = styled.video`
-  width: 100%;
-  margin: auto;
+  /* width: 100%; */
+  /* margin: auto; */
   display: block;
 `;
 
@@ -37,6 +40,18 @@ const Logo = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    width: 80px;
+    left: calc(50% - 40px);
+    top: calc(50% - 60px);
+  }
+
+  /* @media(max-width: 450px) {
+    width: 50px;
+    left: calc(50% - 25px);
+    top: calc(50% - 30px);
+  } */
 
 `;
 
@@ -60,18 +75,30 @@ const FadeIn = keyframes`
 `;
 
 const Fitness = styled.div`
-   position: absolute;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    font-size: 5em;
-    top: calc(50% + 85px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  font-size: 5em;
+  top: calc(50% + 85px);
+  letter-spacing: 32px;
+  text-indent: 32px;
+  z-index: 1;
+  font-weight: 300;
+  color: ${colours.light};
+  animation: ${FadeIn} 1.8s ease;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    font-size: 3em;
     letter-spacing: 26px;
     text-indent: 26px;
-    z-index: 1;
-    font-weight: 300;
-    color: ${colours.light};
-    animation: ${FadeIn} 1.8s ease;
+  }
+
+  @media(max-width: 450px) {
+    font-size: 2em;
+    letter-spacing: 20px;
+    text-indent: 20px;
+  }
 `;
 
 

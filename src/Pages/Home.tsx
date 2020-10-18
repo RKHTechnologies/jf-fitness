@@ -55,7 +55,7 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
       
       <Section id="intro" topSpace>
         <div className="wrapper">
-          <About />
+          {/* <About /> */}
         </div>
       </Section>
 
