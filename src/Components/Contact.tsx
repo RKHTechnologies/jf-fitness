@@ -43,11 +43,12 @@ const Container = styled.div`
 `;
 
 const MainHeader = styled.h1`
-  font-weight: 400;
-  /* color: ${colours.light}; */
+  font-weight: 300;
   font-size: 3em;
   margin: 0;
-  color: #444;
+  color: rgb(255 255 255 / 0.88);
+  text-transform: uppercase;
+  letter-spacing: 5px;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 2.4em;
@@ -55,11 +56,10 @@ const MainHeader = styled.h1`
 `;
 
 const SubHeader = styled.div`
-  /* color: ${colours.light}; */
   max-width: 1000px;
   margin-bottom: 40px;
   margin-top: 10px;
-  color: #75758a;
+  color: #818999;
   font-weight: 300;
 
   @media(max-width: ${SharedSettings.mobile}) {
@@ -92,8 +92,8 @@ const Column = styled.div`
 const FormItem = styled.input`
   width: 100%;
   height: 50px;
-  background: #f5f5f5;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  background: rgb(255 255 255 / 0.88);
+  box-shadow: 0 2.8px 2.2px rgba(255, 255, 255, 0.034), 0 6.7px 5.3px rgba(255, 255, 255, 0.048), 0 12.5px 10px rgba(255, 255, 255, 0.06), 0 22.3px 17.9px rgba(255, 255, 255, 0.072), 0 41.8px 33.4px rgba(255, 255, 255, 0.086), 0 100px 80px rgba(255, 255, 255, 0.12);
   border: 0;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -106,8 +106,8 @@ const FormItem = styled.input`
 const MultiLineForm = styled.textarea`
   width: 100%;
   height: 120px;
-  background: #f5f5f5;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  background: rgb(255 255 255 / 0.88);
+  box-shadow: 0 2.8px 2.2px rgba(255, 255, 255, 0.034), 0 6.7px 5.3px rgba(255, 255, 255, 0.048), 0 12.5px 10px rgba(255, 255, 255, 0.06), 0 22.3px 17.9px rgba(255, 255, 255, 0.072), 0 41.8px 33.4px rgba(255, 255, 255, 0.086), 0 100px 80px rgba(255, 255, 255, 0.12);
   border: 0;
   border-radius: 4px;
   margin-bottom: 20px;
