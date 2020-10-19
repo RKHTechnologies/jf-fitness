@@ -71,7 +71,6 @@ const Text = styled.div`
   grid-area: text;
   padding: 50px 100px;
   text-align: ${(p: ServiceProps) => p.alt ? "right" : null};
-  /* padding-left: ${(p: ServiceProps) => p.alt ? "50px" : null}; */
   color: rgb(255 255 255 /0.88);
 
   @media(max-width: ${SharedSettings.mobile}) {
@@ -89,13 +88,11 @@ const Title = styled.h1`
   color: ${colours.primary};
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* padding-left: ${(p: ServiceProps) => p.alt ? "50px" : null}; */
   text-align: ${(p: ServiceProps) => p.alt ? "left" : null};
   text-transform: uppercase;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 2em;
-    /* padding-left: 0; */
   }
 `;
 
@@ -103,12 +100,6 @@ const Description = styled.div`
   text-align: justify;
   font-size: 1.2em;
   color: #818999;
-  /* padding-left: ${(p: ServiceProps) => p.alt ? "50px" :  null}; */
-
-  @media(max-width: ${SharedSettings.mobile}) {
-    text-align: justify;
-    /* padding-left: 0; */
-  }
 `;
 
 const CheckList = styled.div`
@@ -138,10 +129,6 @@ const CheckList = styled.div`
   }
 `;
 
-interface ButtonProps {
-  primary?: boolean;
-}
-
 const Button = styled.div`
   color: ${colours.primary};
   background: ${colours.primary}40;
@@ -150,9 +137,6 @@ const Button = styled.div`
   justify-content: center;
   border-radius: 5px;
   text-transform: uppercase;
-  /* position: absolute;
-  bottom: 20px;
-  right: 20px; */
   padding: 14px 26px 5px;
   cursor: pointer;
   margin-top: 20px;
@@ -205,7 +189,7 @@ const Services: FC = ()  => {
           <Image image="stretching" alt short />
           <Text alt>
             <Title alt>Online Programs</Title>
-            <Description alt>
+            <Description>
               There are many different programs to <Highlight>fit your needs</Highlight>, quis nostrud exercitation ullamco commodo <Highlight>we understand</Highlight> ullamco laboris nisi ut aliquip.
               <br /><br />
               JF FITNESS can help you to <Highlight>progress</Highlight> In voluptate velit esse cillum dolore eu fugiat nulla pariatur dipiscing et dolore magna aliqua.

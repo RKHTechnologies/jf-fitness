@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SharedSettings } from '../Shared/SharedStyles';
 import Testimonials from './Testimonials';
 
 const Container = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 600px;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const AboutUs = styled.div`
@@ -13,6 +18,11 @@ const AboutUs = styled.div`
   font-size: 1.8em;
   font-weight: 100;
   color: rgb(255 255 255 / 0.88);
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    margin-top: 70px;
+    font-size: 1.3em;
+  }
 `;
 
 const About: React.FC = () => {

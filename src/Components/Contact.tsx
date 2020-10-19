@@ -20,6 +20,7 @@ const Section = styled.div`
     flex-wrap: wrap;
     width: 100%;
     overflow: hidden;
+    position: relative;
 
     &#about {
         padding-top: 130px;
@@ -59,7 +60,7 @@ const SubHeader = styled.div`
   max-width: 1000px;
   margin-bottom: 40px;
   margin-top: 10px;
-  color: #818999;
+  color: rgb(255 255 255 / 40%);
   font-weight: 300;
 
   @media(max-width: ${SharedSettings.mobile}) {
@@ -92,8 +93,9 @@ const Column = styled.div`
 const FormItem = styled.input`
   width: 100%;
   height: 50px;
-  background: rgb(255 255 255 / 0.88);
-  box-shadow: 0 2.8px 2.2px rgba(255, 255, 255, 0.034), 0 6.7px 5.3px rgba(255, 255, 255, 0.048), 0 12.5px 10px rgba(255, 255, 255, 0.06), 0 22.3px 17.9px rgba(255, 255, 255, 0.072), 0 41.8px 33.4px rgba(255, 255, 255, 0.086), 0 100px 80px rgba(255, 255, 255, 0.12);
+  background: #1F1F1F;
+  /* box-shadow: 0 2.8px 2.2px rgba(255, 255, 255, 0.034), 0 6.7px 5.3px rgba(255, 255, 255, 0.048), 0 12.5px 10px rgba(255, 255, 255, 0.06), 0 22.3px 17.9px rgba(255, 255, 255, 0.072), 0 41.8px 33.4px rgba(255, 255, 255, 0.086), 0 100px 80px rgba(255, 255, 255, 0.12); */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   border: 0;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -106,8 +108,8 @@ const FormItem = styled.input`
 const MultiLineForm = styled.textarea`
   width: 100%;
   height: 120px;
-  background: rgb(255 255 255 / 0.88);
-  box-shadow: 0 2.8px 2.2px rgba(255, 255, 255, 0.034), 0 6.7px 5.3px rgba(255, 255, 255, 0.048), 0 12.5px 10px rgba(255, 255, 255, 0.06), 0 22.3px 17.9px rgba(255, 255, 255, 0.072), 0 41.8px 33.4px rgba(255, 255, 255, 0.086), 0 100px 80px rgba(255, 255, 255, 0.12);
+  background: #1F1F1F;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   border: 0;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -118,23 +120,23 @@ const MultiLineForm = styled.textarea`
 `;
 
 export const SubmitButton = styled.input`
-  background: #e4e4e4;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 50px;
-  border: 2px solid transparent;
-  color: #757575;
+  color: #ffffffde;
+  background: #ffffff29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  height: 50px;
-  line-height: 50px;
-  width: 100px;
-  margin-left: auto;
-  margin-right: 20px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  padding: 12px 80px 5px;
+  font-size: 0.7em;
+  cursor: pointer;
+  border: none;
 
   &:hover {
-    color: ${colours.light};
-    background: #ccc;
+    background: ${colours.primary};
+    color: rgb(255 255 255 / 0.90);
   }
 `;
 

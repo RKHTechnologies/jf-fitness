@@ -1,6 +1,6 @@
 import React, { useState, FC, useEffect } from 'react';
 import styled from 'styled-components';
-import { colours } from '../Shared/SharedStyles';
+import { colours, SharedSettings } from '../Shared/SharedStyles';
 
 const Container = styled.div`
   width: 100%;
@@ -8,6 +8,11 @@ const Container = styled.div`
   display: flex; 
   align-items: center;
   justify-content: flex-end;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    justify-content: center;
+    margin-top: 40px;
+  }
 `;
 
 const TestimonialsSection = styled.div`
@@ -23,6 +28,12 @@ const TestimonialsSection = styled.div`
   justify-content: center;
   /* box-shadow: 0 2.8px 2.2px rgb(255 255 255 / 3%), 0 6.7px 5.3px rgb(255 255 255 / 5%), 0 12.5px 10px rgb(255 255 255 / 6%), 0 22.3px 17.9px rgb(255 255 255 / 7%), 0 41.8px 33.4px rgb(255 255 255 / 9%), 0 100px 80px rgb(255 255 255 / 12%); */
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
+
+  @media(max-width: 540px) {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px 50px; 
+  }
 `;
 
 const Testimonial = styled.div`
@@ -55,6 +66,20 @@ const Testimonial = styled.div`
     position: absolute;
     bottom: 15px;
     right: 50px;
+  }
+
+  @media(max-width: 540px) {
+    font-size: 1.2em;
+
+    &:before {
+      font-size: 2em;
+      margin-top: -22px;
+      margin-left: -24px;
+    }
+
+    &:after {
+      font-size: 2em;
+    }
   }
 `;
 

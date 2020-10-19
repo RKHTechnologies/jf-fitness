@@ -127,7 +127,7 @@ const NavItemsRightContainer = styled.div`
 const Burger = styled.div`
     height: 3px;
     width: 40px;
-    background: ${(p: menuProps) => p.menuOpen ? colours.primary : colours.dark};
+    background: ${(p: menuProps) => p.menuOpen ? colours.primary : colours.light};
     transition: all 0.5s ease;
     transition-property: height, width, transform;
     position: absolute;

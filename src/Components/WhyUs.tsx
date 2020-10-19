@@ -41,7 +41,7 @@ export const GridItem = styled.div`
   position: relative;
 
   @media(max-width: ${SharedSettings.mobile}) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 50px 1fr;
   }
 `;
 
@@ -53,6 +53,10 @@ export const Icon = styled(FontAwesomeIcon)`
   color: ${colours.primary};
   position: absolute;
   right: 0;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    margin: 7px 8px 0;
+  }
 `;
 
 export const Title = styled.h2`
@@ -63,6 +67,11 @@ export const Title = styled.h2`
   color: rgb(255 255 255 / 0.88);
   font-weight: 300;
   text-transform: uppercase;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    width: 95%;
+    padding-left: 15px;
+  }
 `;
 
 export const Description = styled.p`
