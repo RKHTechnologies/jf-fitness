@@ -3,14 +3,14 @@ import jf from '../img/JF_Logo.png';
 import gym from '../img/gym2.jpg';
 import gym1 from '../img/gym1.jpg';
 
-import boxJump from '../img/_boxJump.jpg';
-import pullUp from '../img/_pullUp.jpg';
-import holdUpBar from '../img/_holdUpBar.jpg';
-import holdUpBar2 from '../img/_holdUpBar2.jpg';
-import pushWeight from '../img/_pushWeight.jpg';
-import barResting from '../img/_barResting.jpg';
-import stretching from '../img/_stretching.jpg';
-import rowing from '../img/_rowing.jpg';
+import boxJump from '../img/boxJump.jpg';
+import pullUp from '../img/pullUp.jpg';
+import holdUpBar from '../img/holdUpBar.jpg';
+import holdUpBar2 from '../img/holdUpBar2.jpg';
+import pushWeight from '../img/pushWeight.jpg';
+import barResting from '../img/barResting.jpg';
+import stretching from '../img/stretching.jpg';
+import rowing from '../img/rowing.jpg';
 
 export const ImagesDesktop = {
   'rkh': rkh,
