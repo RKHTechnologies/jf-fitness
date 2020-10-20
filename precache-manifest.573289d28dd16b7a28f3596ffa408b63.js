@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7aef7f3c1584bf3df747062a2e486cc",
+    "revision": "672de0716916a596524234bbdc2e608d",
     "url": "/jf-fitness/index.html"
   },
   {
-    "revision": "9739724b4bc8416e4166",
+    "revision": "b8feb359f467097ae46d",
     "url": "/jf-fitness/static/css/main.cb2bad7b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jf-fitness/static/js/2.a42715cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9739724b4bc8416e4166",
-    "url": "/jf-fitness/static/js/main.3c1aa655.chunk.js"
+    "revision": "b8feb359f467097ae46d",
+    "url": "/jf-fitness/static/js/main.296346b8.chunk.js"
   },
   {
     "revision": "ca48e22de7e439ad5ce1",
@@ -69,35 +69,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "033e91d9f82be4344222d50b268966f9",
-    "url": "/jf-fitness/static/media/_barResting.033e91d9.jpg"
+    "url": "/jf-fitness/static/media/barResting.033e91d9.jpg"
   },
   {
     "revision": "645df28e317ca726bd4c627a3d37eb87",
-    "url": "/jf-fitness/static/media/_boxJump.645df28e.jpg"
-  },
-  {
-    "revision": "1ff7640a7d617a38b2f262e99e65b600",
-    "url": "/jf-fitness/static/media/_holdUpBar.1ff7640a.jpg"
-  },
-  {
-    "revision": "b910a9bdb7ae6d927e677d492d7d8dcb",
-    "url": "/jf-fitness/static/media/_holdUpBar2.b910a9bd.jpg"
-  },
-  {
-    "revision": "369ed3a065cdfb4c3ae72de5258cef04",
-    "url": "/jf-fitness/static/media/_pullUp.369ed3a0.jpg"
-  },
-  {
-    "revision": "3da93aafbff53b881239527e26f70620",
-    "url": "/jf-fitness/static/media/_pushWeight.3da93aaf.jpg"
-  },
-  {
-    "revision": "b35f924c2e2a502fecc64472892873fe",
-    "url": "/jf-fitness/static/media/_rowing.b35f924c.jpg"
-  },
-  {
-    "revision": "c84f372a0a0cc7598026fddb5a504c44",
-    "url": "/jf-fitness/static/media/_stretching.c84f372a.jpg"
+    "url": "/jf-fitness/static/media/boxJump.645df28e.jpg"
   },
   {
     "revision": "21030241a369b03e049bc8f91e5689b1",
@@ -108,7 +84,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jf-fitness/static/media/gym2.55fea5a6.jpg"
   },
   {
+    "revision": "1ff7640a7d617a38b2f262e99e65b600",
+    "url": "/jf-fitness/static/media/holdUpBar.1ff7640a.jpg"
+  },
+  {
+    "revision": "b910a9bdb7ae6d927e677d492d7d8dcb",
+    "url": "/jf-fitness/static/media/holdUpBar2.b910a9bd.jpg"
+  },
+  {
     "revision": "57fa89ce01646e7060a7687e8a268ac3",
     "url": "/jf-fitness/static/media/logo.57fa89ce.svg"
+  },
+  {
+    "revision": "369ed3a065cdfb4c3ae72de5258cef04",
+    "url": "/jf-fitness/static/media/pullUp.369ed3a0.jpg"
+  },
+  {
+    "revision": "3da93aafbff53b881239527e26f70620",
+    "url": "/jf-fitness/static/media/pushWeight.3da93aaf.jpg"
+  },
+  {
+    "revision": "b35f924c2e2a502fecc64472892873fe",
+    "url": "/jf-fitness/static/media/rowing.b35f924c.jpg"
+  },
+  {
+    "revision": "c84f372a0a0cc7598026fddb5a504c44",
+    "url": "/jf-fitness/static/media/stretching.c84f372a.jpg"
   }
 ]);
