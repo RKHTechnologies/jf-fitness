@@ -52,7 +52,7 @@ const MainHeader = styled.h1`
   letter-spacing: 5px;
 
   @media(max-width: ${SharedSettings.mobile}) {
-    font-size: 2.4em;
+    font-size: 2em;
   }
 `;
 
@@ -127,8 +127,6 @@ export const SubmitButton = styled.input`
   justify-content: center;
   border-radius: 5px;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 20px;
   padding: 12px 80px 5px;
   font-size: 0.7em;
   cursor: pointer;
