@@ -64,8 +64,6 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
       <Section id="whyus">
         <div className="wrapper">
           <WhyUs />
-          {/* <p>JF FITNESS is a high end online coaching brand that specialises in Functional Fitness, through delivering online monthly subscription programmes and 1-2-1 services for all abilities.</p> */}  
-          {/* <ProductCards /> */}
         </div>
       </Section>
 

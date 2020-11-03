@@ -69,7 +69,7 @@ const HeaderButton = styled.a`
     cursor: pointer;
     font-weight: 400;
     border-bottom: 2px solid transparent;
-    font-size: 1em;
+    font-size: 1.1em;
     text-decoration: none;
     
     &:hover {
