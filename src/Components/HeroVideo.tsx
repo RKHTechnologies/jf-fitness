@@ -84,9 +84,9 @@ const Fitness = styled.div`
   letter-spacing: 32px;
   text-indent: 32px;
   z-index: 1;
-  font-weight: 300;
+  font-weight: 400;
   color: ${colours.light};
-  animation: ${FadeIn} 1.8s ease;
+  animation: ${FadeIn} 2.5s ease;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 3em;
