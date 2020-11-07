@@ -25,8 +25,6 @@ const Container = styled.div`
 `;
 
 const Video = styled.video`
-  /* width: 100%; */
-  /* margin: auto; */
   display: block;
 `;
 
@@ -46,13 +44,6 @@ const Logo = styled.div`
     left: calc(50% - 40px);
     top: calc(50% - 60px);
   }
-
-  /* @media(max-width: 450px) {
-    width: 50px;
-    left: calc(50% - 25px);
-    top: calc(50% - 30px);
-  } */
-
 `;
 
 

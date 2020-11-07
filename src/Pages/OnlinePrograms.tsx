@@ -93,7 +93,7 @@ interface ImageProps {
   image: imageLib;
 }
 
-const Image = styled.div`
+export const Image = styled.div`
   width: 100%;
   background: url(${(p: ImageProps) => ImagesDesktop[p.image]});
   background-size: cover;
