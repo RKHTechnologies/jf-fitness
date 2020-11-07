@@ -11,6 +11,10 @@ export const Centered = styled.div`
   height: 100%;
 `;
 
+const CardsGrid = styled(ProductsGrid)`
+
+`;
+
 const EBooks: FC = () => {
   return (
     <PageBodyContainer>
@@ -18,9 +22,11 @@ const EBooks: FC = () => {
       <Overlay>
         <TextOverlay>E-BOOKS</TextOverlay>
       </Overlay>
-      <ProductsGrid>
-        test
-      </ProductsGrid>
+      <CardsGrid>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+      </CardsGrid>
     </PageBodyContainer>
   );
 }
