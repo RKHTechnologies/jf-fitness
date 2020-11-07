@@ -120,6 +120,14 @@ const Overview = styled.div`
   font-size: 1.2em;
 `;
 
+interface ISectionProps {
+  height: number;
+}
+
+const Section = styled.div`
+  min-height: ${(p: ISectionProps) => p.height}px;
+`;
+
 const SubHeading = styled.div`
   color: ${colours.light};
   font-weight: 400;
@@ -198,32 +206,40 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
-          <Overview>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
-          
-          <SubHeading>
-            <Icon icon={faCalendarCheck} />
-            <div>Requirements</div>
-          </SubHeading>
-          <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+          <Section height={140}>
+            <Overview>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
+          </Section>
 
-          <SubHeading>
-            <Icon icon={faDumbbell} />
-            <div>Equipment</div>
-          </SubHeading>
-          <Overview>You will access to at least one of the following, the more the better:</Overview>
-          <List>
-            <li>Dumbbell</li>
-            <li>Kettlebell</li>
-            <li>Pull Up Bar</li>
-            <li>Rowing Machine</li>
-            <li>Running Machine</li>
-          </List>
+          <Section height={140}>
+            <SubHeading>
+              <Icon icon={faCalendarCheck} />
+              <div>Requirements</div>
+            </SubHeading>
+            <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+          </Section>
 
-          <SubHeading>
-            <Icon icon={faHeartbeat} />
-            <div>What to Expect</div>
-          </SubHeading>
-          <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+          <Section height={270}>
+            <SubHeading>
+              <Icon icon={faDumbbell} />
+              <div>Equipment</div>
+            </SubHeading>
+            <Overview>You will access to at least one of the following, the more the better:</Overview>
+            <List>
+              <li>Dumbbell</li>
+              <li>Kettlebell</li>
+              <li>Pull Up Bar</li>
+              <li>Rowing Machine</li>
+              <li>Running Machine</li>
+            </List>
+          </Section>
+
+          <Section height={140}>
+            <SubHeading>
+              <Icon icon={faHeartbeat} />
+              <div>What to Expect</div>
+            </SubHeading>
+            <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+          </Section>
 
           <Price>
               <Icon icon={faPoundSign} />
@@ -237,32 +253,41 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"holdUpBar"} />
           <Title>Strength Building</Title>
-          <Overview>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
-          <SubHeading>
-            <Icon icon={faCalendarCheck} />
-            <div>Requirements</div>
-          </SubHeading>
-          <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+          <Section height={140}>
+            <Overview>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
+          </Section>
 
-          <SubHeading>
-            <Icon icon={faDumbbell} />
-            <div>Equipment</div>
-          </SubHeading>
-          <Overview>You will access to at least one of the following, the more the better:</Overview>
-          <List>
-            <li>Dumbbell</li>
-            <li>Kettlebell</li>
-            <li>Pull Up Bar</li>
-            <li>Rowing Machine</li>
-            <li>Running Machine</li>
-          </List>
+          <Section height={140}>
+            <SubHeading>
+              <Icon icon={faCalendarCheck} />
+              <div>Requirements</div>
+            </SubHeading>
+            <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+          </Section>
 
-          <SubHeading>
-            <Icon icon={faHeartbeat} />
-            <div>What to Expect</div>
-          </SubHeading>
-          <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
-        
+          <Section height={270}>
+            <SubHeading>
+              <Icon icon={faDumbbell} />
+              <div>Equipment</div>
+            </SubHeading>
+            <Overview>You will access to at least one of the following, the more the better:</Overview>
+            <List>
+              <li>Dumbbell</li>
+              <li>Kettlebell</li>
+              <li>Pull Up Bar</li>
+              <li>Rowing Machine</li>
+              <li>Running Machine</li>
+            </List>
+          </Section>
+
+          <Section height={140}>
+            <SubHeading>
+              <Icon icon={faHeartbeat} />
+              <div>What to Expect</div>
+            </SubHeading>
+            <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+          </Section>
+
           <Price>
             <Icon icon={faPoundSign} />
             <span>299</span>
@@ -276,32 +301,40 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"pushWeight"} />
           <Title>Performance Gains</Title>
-          <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
+          <Section height={140}>
+            <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
+          </Section>
+          
+          <Section height={140}>
+            <SubHeading>
+              <Icon icon={faCalendarCheck} />
+              <div>Requirements</div>
+            </SubHeading>
+            <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+          </Section>
 
-          <SubHeading>
-            <Icon icon={faCalendarCheck} />
-            <div>Requirements</div>
-          </SubHeading>
-          <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+          <Section height={270}>
+            <SubHeading>
+              <Icon icon={faDumbbell} />
+              <div>Equipment</div>
+            </SubHeading>
+            <Overview>You will access to at least one of the following, the more the better:</Overview>
+            <List>
+              <li>Dumbbell</li>
+              <li>Kettlebell</li>
+              <li>Pull Up Bar</li>
+              <li>Rowing Machine</li>
+              <li>Running Machine</li>
+            </List>
+          </Section>
 
-          <SubHeading>
-            <Icon icon={faDumbbell} />
-            <div>Equipment</div>
-          </SubHeading>
-          <Overview>You will access to at least one of the following, the more the better:</Overview>
-          <List>
-            <li>Dumbbell</li>
-            <li>Kettlebell</li>
-            <li>Pull Up Bar</li>
-            <li>Rowing Machine</li>
-            <li>Running Machine</li>
-          </List>
-
-          <SubHeading>
-            <Icon icon={faHeartbeat} />
-            <div>What to Expect</div>
-          </SubHeading>
-          <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+          <Section height={140}>
+            <SubHeading>
+              <Icon icon={faHeartbeat} />
+              <div>What to Expect</div>
+            </SubHeading>
+            <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+          </Section>
 
           <Price>
             <div>
