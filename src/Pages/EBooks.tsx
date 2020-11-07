@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { PageBodyContainer } from '../Shared/SharedStyles';
 import styled from 'styled-components';
+import Hero from '../Shared/Hero';
+import { Overlay, ProductsGrid, TextOverlay } from './OnlinePrograms';
 
 export const Centered = styled.div`
   display: flex;
@@ -12,9 +14,13 @@ export const Centered = styled.div`
 const EBooks: FC = () => {
   return (
     <PageBodyContainer>
-      <Centered>
-        EBooks page placeholder
-      </Centered>
+      <Hero image="barResting" small />
+      <Overlay>
+        <TextOverlay>E-BOOKS</TextOverlay>
+      </Overlay>
+      <ProductsGrid>
+        test
+      </ProductsGrid>
     </PageBodyContainer>
   );
 }

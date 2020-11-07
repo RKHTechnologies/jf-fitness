@@ -1,7 +1,5 @@
 import rkh from '../img/RKHT_logo.png';
 import jf from '../img/JF_Logo.png';
-import gym from '../img/gym2.jpg';
-import gym1 from '../img/gym1.jpg';
 
 import boxJump from '../img/boxJump.jpg';
 import pullUp from '../img/pullUp.jpg';
@@ -15,8 +13,6 @@ import rowing from '../img/rowing.jpg';
 export const ImagesDesktop = {
   'rkh': rkh,
   'jf': jf,
-  'gym': gym,
-  'gym1': gym1,
   'boxJump': boxJump,
   'pullUp': pullUp,
   'holdUpBar': holdUpBar,
@@ -30,8 +26,6 @@ export const ImagesDesktop = {
 export const ImagesMobile = {
   'rkh': rkh,
   'jf': jf,
-  'gym': gym,
-  'gym1': gym1,
   'boxJump': boxJump,
   'pullUp': pullUp,
   'holdUpBar': holdUpBar,
@@ -42,4 +36,4 @@ export const ImagesMobile = {
   'rowing': rowing,
 }
 
-export type imageLib = 'rkh' | 'jf' | 'gym' | 'gym1' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing';
+export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing';

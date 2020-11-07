@@ -13,7 +13,7 @@ export const Centered = styled.div`
   height: 100%;
 `;
 
-const Overlay = styled.div`
+export const Overlay = styled.div`
   width: 100%;
   height: 65%;
   background: rgba(255,255,255,0.15);
@@ -24,7 +24,7 @@ const Overlay = styled.div`
   justify-content: center;
 `;
 
-const TextOverlay = styled.div`
+export const TextOverlay = styled.div`
   font-size: 5vw;
   font-weight: 400;
   color: ${colours.light};
@@ -46,7 +46,7 @@ const TextOverlay = styled.div`
   }  
 `;
 
-const ProductsGrid = styled.div`
+export const ProductsGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -200,9 +200,7 @@ const OnlinePrograms: FC = () => {
         <TextOverlay>Online Programs</TextOverlay>
       </Overlay>
       
-
-      <ProductsGrid>
-        
+      <ProductsGrid>  
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
