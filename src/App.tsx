@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Home from './Pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
@@ -13,6 +13,11 @@ import EBooks from './Pages/EBooks';
 
 const App: FC = () => {
   const [stickyHeader, setStickyHeader] = useState(false);
+
+  useEffect(() => {
+    updateSticky();    
+  }, []);
+
     
   window.addEventListener("scroll", () => {
     if (window.location.pathname.split(process.env.PUBLIC_URL)[1]?.length > 1)

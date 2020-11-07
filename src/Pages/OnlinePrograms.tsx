@@ -13,18 +13,28 @@ export const Centered = styled.div`
   height: 100%;
 `;
 
-const TextOverlay = styled.div`
-  font-size: 6vw;
-  font-weight: 400;
+const Overlay = styled.div`
   width: 100%;
   height: 65%;
-  color: ${colours.light};
+  background: rgba(255,255,255,0.15);
   position: absolute;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.15);
+`;
+
+const TextOverlay = styled.div`
+  font-size: 5vw;
+  font-weight: 400;
+  color: ${colours.light};
+  text-transform: uppercase;
+
+  line-height: 56px;
+  background: #1f1f1f;
+  margin-top: 140px;
+  padding: 29px 19px 0;
+  font-weight: 200;
 
   @media(max-width: ${SharedSettings.mobile}) {
     font-size: 10vw;
@@ -178,8 +188,10 @@ const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
       <Hero image="barResting" small />
-      <TextOverlay>Online Programs</TextOverlay>
-
+      <Overlay>
+        <TextOverlay>Online Programs</TextOverlay>
+      </Overlay>
+      
 
       <ProductsGrid>
         
@@ -220,6 +232,8 @@ const OnlinePrograms: FC = () => {
           <BuyNow>Buy Now</BuyNow>
         </Product>
         
+
+
         <Product>
           <Image image={"holdUpBar"} />
           <Title>Strength Building</Title>
@@ -255,6 +269,9 @@ const OnlinePrograms: FC = () => {
           </Price>
           <BuyNow>Buy Now</BuyNow>
         </Product>
+
+
+
 
         <Product>
           <Image image={"pushWeight"} />
