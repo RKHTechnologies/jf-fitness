@@ -12,7 +12,7 @@ export const Centered = styled.div`
 `;
 
 const CardsGrid = styled(ProductsGrid)`
-
+  
 `;
 
 const EBooks: FC = () => {

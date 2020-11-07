@@ -101,11 +101,44 @@ const Fitness = styled.div`
   }
 `;
 
+const bounce = keyframes`
+  0% { transform: translate(0,0) rotate(45deg); }
+  25% { transform: translate(0, -25px) rotate(45deg); }
+  50% { transform: translate(0,0) rotate(45deg); }
+`;
+
+const Arrow = styled.div`
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  animation: ${bounce} 1.4s infinite;
+  cursor: pointer;
+`;
+
 
 
 
 const HeroVideo: FC = () => {
+  const handleNav = (link: string): void => {
+    let scrollPosition = document.getElementById(`${link}`)?.offsetTop ?? 0;
+
+    if (link !== "intro")
+        scrollPosition = scrollPosition - 100;
+    
+    window.scrollTo({
+        left: 0,
+        top: scrollPosition,
+        behavior: 'smooth',
+    });
+  };
+
   return (
+    <>
     <Container>
       <Video 
         src={`${process.env.PUBLIC_URL}/JF_Fitness_md.mp4`} 
@@ -116,6 +149,8 @@ const HeroVideo: FC = () => {
       <Logo />
       <Fitness>FITNESS</Fitness>
     </Container>
+    <Arrow onClick={() => handleNav("intro")} />
+    </>
   )
 }
 
