@@ -8,7 +8,8 @@ import Error404 from './Shared/Error404';
 import MetricTest from './Components/MetricTest';
 import OnlineCoaching from './Pages/OnlineCoaching';
 import OnlinePrograms from './Pages/OnlinePrograms';
-import EBooks from './Pages/EBooks';
+import EBooks from './Pages/E-Books/EBooks';
+import EBook from './Pages/E-Books/EBook';
 // import Contact from './Pages/Contact';
 
 const App: FC = () => {
@@ -45,6 +46,7 @@ const App: FC = () => {
           <Route exact path={`${process.env.PUBLIC_URL}/onlinecoaching`} component={OnlineCoaching} />
           <Route exact path={`${process.env.PUBLIC_URL}/onlineprograms`} component={OnlinePrograms} />
           <Route exact path={`${process.env.PUBLIC_URL}/ebooks`} component={EBooks} />
+          <Route exact path={`${process.env.PUBLIC_URL}/ebooks/1`} component={() => <EBook title={"Testfsfsd"}/>} />
           {/* <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} /> */}
           <Route exact path={`${process.env.PUBLIC_URL}/metric`} component={MetricTest} />
           <Route component={Error404} />

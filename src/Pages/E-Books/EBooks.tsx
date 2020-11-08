@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { colours, PageBodyContainer, SharedSettings } from '../Shared/SharedStyles';
+import { colours, PageBodyContainer, SharedSettings } from '../../Shared/SharedStyles';
 import styled from 'styled-components';
-import Hero from '../Shared/Hero';
-import { Overlay, TextOverlay } from './OnlinePrograms';
-import { Image } from '../Pages/OnlinePrograms';
+import Hero from '../../Shared/Hero';
+import { Overlay, TextOverlay } from '../OnlinePrograms';
+import { Image } from '../../Pages/OnlinePrograms';
 
 export const Centered = styled.div`
   display: flex;
@@ -55,10 +55,17 @@ const Heading = styled.h1`
   width: 100%;
   color: #FFF;
   font-size: 2.2em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 16px 0 5px;
   text-transform: uppercase;
   text-align: center;
+`;
+
+const Description = styled.div`
+    font-weight: 300;
+    text-align: justify;
+    padding: 0 6px 42px;
+    color: #818999;
 `;
 
 const Button = styled.div`
@@ -71,6 +78,9 @@ const Button = styled.div`
   text-transform: uppercase;
   padding: 14px 26px 5px;
   cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 75px);
 
   &:hover {
     background: ${colours.primary};
@@ -91,18 +101,27 @@ const EBooks: FC = () => {
         <Card>
           <Image image={"boxJump"} />
           <Heading>Home Workouts</Heading>
+          <Description>
+            Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </Description>
           <Button>Find out more</Button>
         </Card>
 
         <Card>
-          <Image image={"boxJump"} />
-          <Heading>Fitness Pro</Heading>
+          <Image image={"holdUpBar"} />
+          <Heading>Fitness Pro</Heading>  
+          <Description>
+            When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </Description>
           <Button>Find out more</Button>
         </Card>
 
         <Card>
-          <Image image={"boxJump"} />
+          <Image image={"pushWeight"} />
           <Heading>The Complete edition</Heading>
+          <Description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          </Description>
           <Button>Find out more</Button>
         </Card>
 
