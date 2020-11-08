@@ -91,32 +91,47 @@ const WhyUs: FC = () => {
       <Grid>
         <GridItem>
           <Icon icon={faCalendarCheck} size="2x" />
-          <Title>Programs to fit your schedule</Title>
+          <Title>Bespoke Programs to fit your schedule</Title>
         </GridItem>
         
         <GridItem>
           <Icon icon={faHeartbeat} size="2x" />
-          <Title>Focus on Health and Wellbeing</Title>
+          <Title>Journey centric training plans</Title>
         </GridItem>
 
         <GridItem>
           <Icon icon={faBalanceScaleRight} size="2x" />
-          <Title>Growth and Progression Tracking</Title>
+          <Title>Results driven</Title>
         </GridItem>
 
         <GridItem>
           <Icon icon={faPeopleArrows} size="2x" />
-          <Title>1-2-1 Coaching Available</Title>
+          <Title>Tried and tested workout</Title>
         </GridItem>
 
         <GridItem>
           <Icon icon={faBullseye} size="2x" />
-          <Title>We'll help you smash your Targets</Title>
+          <Title>1-2-1 online support</Title>
         </GridItem>
 
         <GridItem>
           <Icon icon={faDumbbell} size="2x" />
-          <Title>Focus your fitness around your needs</Title>
+          <Title>Accountability</Title>
+        </GridItem>
+
+        <GridItem>
+          <Icon icon={faPeopleArrows} size="2x" />
+          <Title>Growth and progression tracking</Title>
+        </GridItem>
+
+        <GridItem>
+          <Icon icon={faBullseye} size="2x" />
+          <Title>Workouts delivered direct to your phone</Title>
+        </GridItem>
+
+        <GridItem>
+          <Icon icon={faDumbbell} size="2x" />
+          <Title>Ephasis on functional fitness</Title>
         </GridItem>
       </Grid>
     </WhyUsSection>

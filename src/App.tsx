@@ -46,7 +46,7 @@ const App: FC = () => {
           <Route exact path={`${process.env.PUBLIC_URL}/onlinecoaching`} component={OnlineCoaching} />
           <Route exact path={`${process.env.PUBLIC_URL}/onlineprograms`} component={OnlinePrograms} />
           <Route exact path={`${process.env.PUBLIC_URL}/ebooks`} component={EBooks} />
-          <Route exact path={`${process.env.PUBLIC_URL}/ebooks/1`} component={() => <EBook title={"Testfsfsd"}/>} />
+          <Route exact path={`${process.env.PUBLIC_URL}/ebooks/1`} component={() => <EBook title={"Home Workouts"} description={"test description"} />} />
           {/* <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} /> */}
           <Route exact path={`${process.env.PUBLIC_URL}/metric`} component={MetricTest} />
           <Route component={Error404} />

@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
 import { colours } from '../../Shared/SharedStyles';
-
-interface IProps {
-  title: string;
-}
 
 const Container = styled.div`
   color: ${colours.light};
@@ -21,21 +18,32 @@ const Card = styled.div`
   width: 80%;
   height: 500px;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr 50px;
   grid-template-areas: 
     'ebookimage title'
-    'ebookimage description'
     'ebookimage description'
     'ebookimage button';
   grid-gap: 40px;
 `;
 
+interface ImageProps {
+  image: imageLib;
+}
+
 const Image = styled.div`
   grid-area: ebookimage;
-  background: red;
+  background: url(${(p: ImageProps) => ImagesDesktop[p.image]});
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   grid-area: title;
+  font-size: 3.5em;
+  margin: 0;
+  font-weight: 400;
+  height: 50px;
 `;
 
 const Description = styled.div`
@@ -47,15 +55,18 @@ const Button = styled.div`
 `;
 
 
+interface IProps {
+  title: string;
+  description: string;
+}
 
-
-const EBook: FC<IProps> = ({ title }: IProps) => {
+const EBook: FC<IProps> = ({ title, description }: IProps) => {
   return (
     <Container>
       <Card>
-        <Image />
+        <Image image={"boxJump"} />
         <Title>{title}</Title>
-        <Description></Description>
+        <Description>{ description }</Description>
         <Button></Button>
       </Card>
     </Container>
