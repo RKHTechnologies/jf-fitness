@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { SectionContainer, colours, SharedSettings } from '../Shared/SharedStyles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartbeat, faCalendarCheck, faBalanceScaleRight, faBullseye, faDumbbell, faPeopleArrows } from "@fortawesome/free-solid-svg-icons";
+import { faHeartbeat, faCalendarCheck, faBalanceScaleRight, faDumbbell, faPeopleArrows, faChartLine, faMobileAlt, faRoad, faUserCheck, faUserShield } from "@fortawesome/free-solid-svg-icons";
 
 const WhyUsSection = styled(SectionContainer)`
   min-height: 200px;
@@ -95,7 +95,7 @@ const WhyUs: FC = () => {
         </GridItem>
         
         <GridItem>
-          <Icon icon={faHeartbeat} size="2x" />
+          <Icon icon={faRoad} size="2x" />
           <Title>Journey centric training plans</Title>
         </GridItem>
 
@@ -105,32 +105,32 @@ const WhyUs: FC = () => {
         </GridItem>
 
         <GridItem>
-          <Icon icon={faPeopleArrows} size="2x" />
+          <Icon icon={faDumbbell} size="2x" />
           <Title>Tried and tested workout</Title>
         </GridItem>
 
         <GridItem>
-          <Icon icon={faBullseye} size="2x" />
+          <Icon icon={faPeopleArrows} size="2x" />
           <Title>1-2-1 online support</Title>
         </GridItem>
 
         <GridItem>
-          <Icon icon={faDumbbell} size="2x" />
+          <Icon icon={faUserShield} size="2x" />
           <Title>Accountability</Title>
         </GridItem>
 
         <GridItem>
-          <Icon icon={faPeopleArrows} size="2x" />
+          <Icon icon={faChartLine} size="2x" />
           <Title>Growth and progression tracking</Title>
         </GridItem>
 
         <GridItem>
-          <Icon icon={faBullseye} size="2x" />
+          <Icon icon={faMobileAlt} size="2x" />
           <Title>Workouts delivered direct to your phone</Title>
         </GridItem>
 
         <GridItem>
-          <Icon icon={faDumbbell} size="2x" />
+          <Icon icon={faHeartbeat} size="2x" />
           <Title>Ephasis on functional fitness</Title>
         </GridItem>
       </Grid>

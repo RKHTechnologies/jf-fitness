@@ -29,16 +29,19 @@ const About: React.FC = () => {
   return (
     <Container>
       <AboutUs>
-        JF FITNESS places health and wellbeing at the center of success.
+        JF FITNESS places functional fitness at the center of success.
         <br />
         <br />
-        With over 6 years of personal training expereince and a passion for seeing clients grow and progress, James Fisher has created a range of accessible online programmes for all breadth of abilities. From dynamic subscription-based training programmes through to bespoke 1-2-1 online plans, JF Fitness has the solution to help you reach - and break through - your goals in a supportive environment.
+        With over 6 years of personal training experience and a passion for seeing clients grow and progress, JF Fitness has created a range of accessible online programmes for all breadth of abilities.
         <br />
         <br />
-        With a considered and structured approach to each plan and session, JF Fitness focuses on functional fitness and movement and ensures this meets your intentions and needs.
+        From dynamic subscription-based training programmes through to bespoke 1-2-1 online plans, JF Fitness has the solution to help you reach and break through your goals in a supportive environment.
         <br />
         <br />
-        Everyone has their own, unique inner athlete. JF Fitness can help unlock and unleash yours.
+        With a considered and structured approach to each plan and session, JF Fitness focuses on functional fitness and movement and ensures this meets your intentions and needs. 
+        <br />
+        <br />
+        Everyone has their own, unique inner athlete. JF Fitness can help unlock and unleash yours.  
       </AboutUs>
       <Testimonials />
     </Container>
