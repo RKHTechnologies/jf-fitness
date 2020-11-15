@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Hero from '../../Shared/Hero';
 import { Overlay, TextOverlay } from '../OnlinePrograms';
 import { Image } from '../../Pages/OnlinePrograms';
+import { useHistory } from 'react-router';
 
 export const Centered = styled.div`
   display: flex;
@@ -90,6 +91,13 @@ const Button = styled.div`
 
 
 const EBooks: FC = () => {
+
+  const history = useHistory();
+
+  const handleNav = (link: string): void => {
+      history.push(`${process.env.PUBLIC_URL}${link}`);
+  }
+
   return (
     <PageBodyContainer>
       <Hero image="barResting" small />
@@ -104,7 +112,7 @@ const EBooks: FC = () => {
           <Description>
             Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Description>
-          <Button>Find out more</Button>
+          <Button onClick={() => handleNav("/ebooks/1")}>Find out more</Button>
         </Card>
 
         <Card>
@@ -113,7 +121,7 @@ const EBooks: FC = () => {
           <Description>
             When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Description>
-          <Button>Find out more</Button>
+          <Button onClick={() => handleNav("/ebooks/2")}>Find out more</Button>
         </Card>
 
         <Card>
@@ -122,7 +130,7 @@ const EBooks: FC = () => {
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           </Description>
-          <Button>Find out more</Button>
+          <Button onClick={() => handleNav("/ebooks/3")}>Find out more</Button>
         </Card>
 
       </CardsGrid>

@@ -205,7 +205,7 @@ const OnlinePrograms: FC = () => {
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
           <Section height={140}>
-            <Overview>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
+            <Overview>JF Fitness places functional fitness at the heart of success. This program is designed to improve the way you move, build more strength and improve your energy systems. </Overview>
           </Section>
 
           <Section height={140}>
@@ -213,7 +213,12 @@ const OnlinePrograms: FC = () => {
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
             </SubHeading>
-            <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+            <Overview>
+              <ul>
+                <li>Must not be new to exercise</li>
+                <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
+              </ul>
+            </Overview>
           </Section>
 
           <Section height={270}>
@@ -221,13 +226,11 @@ const OnlinePrograms: FC = () => {
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
             </SubHeading>
-            <Overview>You will access to at least one of the following, the more the better:</Overview>
             <List>
-              <li>Dumbbell</li>
+              <li>Barbell &amp; Plates</li>
               <li>Kettlebell</li>
-              <li>Pull Up Bar</li>
-              <li>Rowing Machine</li>
-              <li>Running Machine</li>
+              <li>Dumbbells</li>
+              <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
           </Section>
 
@@ -236,7 +239,12 @@ const OnlinePrograms: FC = () => {
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
             </SubHeading>
-            <Overview>This program is designed to take your fitness to the next level, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</Overview>
+            <Overview>
+              <ul>
+                <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
+                <li>Week by week progress</li>
+              </ul>
+            </Overview>
           </Section>
 
           <Price>
@@ -252,7 +260,13 @@ const OnlinePrograms: FC = () => {
           <Image image={"holdUpBar"} />
           <Title>Strength Building</Title>
           <Section height={140}>
-            <Overview>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Overview>
+            <Overview>
+              Strength training is the key to becoming more robust and is one of the fundamental pillars to all good programs.
+              <br /><br />
+              The purpose of this program is to create central nervous demand/stress, along with mechanical stress, to increase muscle size/density, bone and joint health, structural integrity, increased metabolism and many more benefits.
+              <br /><br />
+              If you are looking to push past plateaus, gain serious strength, follow a progressive and structured program, this is the program for you.
+            </Overview>
           </Section>
 
           <Section height={140}>
@@ -260,7 +274,12 @@ const OnlinePrograms: FC = () => {
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
             </SubHeading>
-            <Overview>You're keen to get started, Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </Overview>          
+            <Overview>
+              <ul>
+                <li>Must not be new to exercise</li>
+                <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
+              </ul>  
+            </Overview>          
           </Section>
 
           <Section height={270}>
