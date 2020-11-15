@@ -139,7 +139,7 @@ const Button = styled.div`
   text-transform: uppercase;
   padding: 14px 26px 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 40px;
 
   &:hover {
     background: ${colours.primary};
@@ -170,15 +170,12 @@ const Services: FC = ()  => {
           <Text>
             <Title>1-2-1 Online Coaching</Title>
             <Description>
-              Our bespoke 1-2-1 coaching program allows you Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              The bespoke 1-2-1 online coaching program is our top tiered product and is designed to suit your needs, no matter what your goal.
+              <br /><br />
+              This has <Highlight>YOU</Highlight> at the forefront, whether it’s your current training abilities, personal lifestyle, equipment access, routine, previous injuries, etc. we deliver a bespoke service that is journey centric and has a proven track record of getting you to where you want to be. 
+              <br /><br />
+              This service includes everything from onboarding, assessments, goal setting, bespoke training plans, weekly check ins, 1-2-1 support, nutritional advice, and more, so if this sounds like the plan for you, click below to find out more.  
             </Description>
-            <CheckList>
-              <li>Duis aute irure dolor in reprehenderit</li>
-              <li>In voluptate velit esse cillum dolore eu fugiat nulla pariatur</li>
-              <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip</li>
-              <li>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</li>
-              <li>Adipiscing et dolore magna aliqua</li>
-            </CheckList>
             <Button onClick={() => handleNav("/onlinecoaching")} >Find out More</Button>
           </Text>
         </Service>
@@ -186,16 +183,15 @@ const Services: FC = ()  => {
 
       <Strip alt id="onlinePrograms">
         <Service alt>
-          <Image image="stretching" alt short />
+          <Image image="stretching" alt />
           <Text alt>
             <Title alt>Online Programs</Title>
             <Description>
-              There are many different programs to <Highlight>fit your needs</Highlight>, quis nostrud exercitation ullamco commodo <Highlight>we understand</Highlight> ullamco laboris nisi ut aliquip.
+              The online programs are downloadable 8-12 week progressive plans, which are designed for those who are looking for exercise guidance and inspiration, whilst maintaining some aspects of control and accountability.   
               <br /><br />
-              JF FITNESS can help you to <Highlight>progress</Highlight> In voluptate velit esse cillum dolore eu fugiat nulla pariatur dipiscing et dolore magna aliqua.
-              We will be able to <Highlight>advise</Highlight> and personally recommend a <Highlight>great program</Highlight> fugiat nulla pariatur.
+              Whether you are looking to build strength, lose body fat, or improve performance, our plans will have you covered and steer you in the right direction to fitness success.  
               <br /><br />
-              Quis nostrud exercitation ullamco laboris nisi ut a <Highlight>fitness regime</Highlight> will guide you through the next steps, <Highlight>removing all hassle</Highlight> and stress!
+              Click below to see our latest plans
             </Description>
             <Button onClick={() => handleNav("/onlineprograms")}>View our different programs</Button>
           </Text>
@@ -208,15 +204,12 @@ const Services: FC = ()  => {
           <Text>
             <Title>Ebooks</Title>
             <Description>
-              We also have available a number of e-books to aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+              The JF Fitness downloadable E-Books can be a great addition to your workouts or be used as stand-alone sessions. 
+              <br /><br />
+              These are efficient, but effective workouts which are designed to inspire, challenge and push you to your limits.
+              <br /><br />
+              These are easily digestible workout plans at your fingertips, so click below to find out more.
             </Description>
-            <CheckList>
-              <li>Duis aute irure dolor in reprehenderit</li>
-              <li>In voluptate velit esse cillum dolore eu fugiat nulla pariatur</li>
-              <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip</li>
-              <li>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</li>
-              <li>Adipiscing et dolore magna aliqua</li>
-            </CheckList>
             <Button onClick={() => handleNav("/ebooks")}>See our range of ebooks</Button>
           </Text>
         </Service>
