@@ -117,7 +117,7 @@ const EBooks: FC = () => {
 
         <Card>
           <Image image={"holdUpBar"} />
-          <Heading>Fitness Pro</Heading>  
+          <Heading>AMRAP's &amp; EMOM's</Heading>  
           <Description>
             When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Description>
@@ -125,8 +125,8 @@ const EBooks: FC = () => {
         </Card>
 
         <Card>
-          <Image image={"pushWeight"} />
-          <Heading>The Complete edition</Heading>
+          <Image image={"i6969"} />
+          <Heading>DB Only Workouts</Heading>
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           </Description>

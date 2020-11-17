@@ -200,7 +200,7 @@ const Services: FC = ()  => {
 
       <Strip id="ebooks">
         <Service>
-          <Image image="rowing" />
+          <Image image="i5092" />
           <Text>
             <Title>Ebooks</Title>
             <Description>

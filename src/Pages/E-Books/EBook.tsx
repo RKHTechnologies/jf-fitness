@@ -25,6 +25,10 @@ const Card = styled.div`
     'ebookimage description'
     'ebookimage button';
   grid-gap: 40px;
+
+  @media(max-width: 1250px) {
+    width: 90%;
+  }
 `;
 
 interface ImageProps {
@@ -49,21 +53,26 @@ const Title = styled.h1`
 
 const Description = styled.div`
   grid-area: description;
+  color: #818999;
 `;
 
 const Button = styled.div`
   grid-area: button;
 `;
 
-
+interface IParams {
+  ebook: string;
+}
 
 const EBook: FC = () => {
-  let ebook = useParams();
+  let { ebook }: IParams = useParams();
   let title: string = "";
-  
+  let image: imageLib = "boxJump";
+
   switch(ebook) {
     case "1": 
       title = "Bodyweight Finishers";
+      image = "i6969";
       break;
     
     case "2":
@@ -78,10 +87,20 @@ const EBook: FC = () => {
   return (
     <Container>
       <Card>
-        <Image image={"boxJump"} />
+        <Image image={image} />
         <Title>{title}</Title>
         <Description>
-          
+          { ebook === "1" && (
+            <div>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          )}
+
+          { ebook === "2" && (
+            <div>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          )}
+
+          { ebook === "3" && (
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          )}
         </Description>
         <Button></Button>
       </Card>
