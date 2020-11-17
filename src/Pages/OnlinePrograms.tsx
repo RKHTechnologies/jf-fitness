@@ -150,7 +150,7 @@ export const Icon = styled(FontAwesomeIcon)`
   min-width: 32px;
 `;
 
-const Price = styled.div`
+export const Price = styled.div`
   color: ${colours.primary};
   font-size: 1.8em;
   position: absolute;

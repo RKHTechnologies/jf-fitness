@@ -69,7 +69,7 @@ const Description = styled.div`
     color: #818999;
 `;
 
-const Button = styled.div`
+export const Button = styled.div`
   color: ${colours.primary};
   background: ${colours.primary}40;
   display: flex;

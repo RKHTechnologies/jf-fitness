@@ -1,8 +1,11 @@
+import { faPoundSign } from '@fortawesome/free-solid-svg-icons';
 import React, { FC } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
 import { colours } from '../../Shared/SharedStyles';
+import { Icon, Price } from '../OnlinePrograms';
+import { Button } from './EBooks';
 
 const Container = styled.div`
   color: ${colours.light};
@@ -16,22 +19,45 @@ const Container = styled.div`
   padding-top: 100px;
 `;
 
-// const Card = styled.div`
-//   display: grid;
-//   width: 80%;
-//   height: 500px;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 50px 1fr 50px;
-//   grid-template-areas: 
-//     'ebookimage title'
-//     'ebookimage description'
-//     'ebookimage button';
-//   grid-gap: 40px;
+const Left = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
-//   @media(max-width: 1250px) {
-//     width: 90%;
-//   }
-// `;
+const Buy = styled.div`
+  color: ${colours.primary};
+  background: ${colours.primary}40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: calc(100% - 100px);
+  position: relative;
+  bottom: 10px;
+  padding: 12px 26px 5px;
+  margin: 20px 50px 0;
+  box-sizing: border-box;
+  font-size: 1.4em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transition: box-shadow 0.1s ease;
+
+  &:hover {
+    background: ${colours.primary};
+    color: rgb(255 255 255 / 0.90);
+    box-shadow: 5px 8px 4px rgba(0,0,0,0.5)
+  }
+`;
+
+const Right = styled.div`
+  width: 800px;
+  position: relative;
+`;
+
 
 interface ImageProps {
   image: imageLib;
@@ -57,6 +83,16 @@ const Title = styled.h1`
   color: rgb(255 255 255 / 0.88);
 `;
 
+const PriceContainer = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+`;
+
+const PriceHeader = styled(Price)`
+  position: unset;
+`;
+
 const SubHeading = styled.div`
   color: rgb(255 255 255 / 0.88);
   font-weight: 400;
@@ -72,6 +108,7 @@ const Description = styled.div`
   max-width: 800px;
   color: #818999;
   font-size: 1.1em;
+  text-align: justify;
 `;
 
 const Testimonial = styled.div`
@@ -86,7 +123,7 @@ const Testimonial = styled.div`
   margin-top: 20px;
   background: rgb(255 255 255 / 0.05);
   border-radius: 5px;
-  /* box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12); */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 
   &:before {
     content: '"';
@@ -129,9 +166,6 @@ const Testimonial = styled.div`
   }
 `;
 
-const Button = styled.div`
-`;
-
 interface IParams {
   ebook: string;
 }
@@ -160,32 +194,19 @@ const EBook: FC = () => {
 
   return (
     <Container>
-      {/* <Card>
+      <Left>
         <Image image={image} />
-        <Title>{title}</Title>
-        <Description>
-          { ebook === "1" && (
-            <div>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          )}
+        <Buy>BUY NOW</Buy>
+      </Left>
 
-          { ebook === "2" && (
-            <div>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-          )}
-
-          { ebook === "3" && (
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-          )}
-        </Description>
-        <h1>What the service offers</h1>
-        <p>test</p>
-        <Button></Button>
-      </Card> */}
-      
-      <div>
-        <Image image={image} />
-      </div>
-      <div>
+      <Right>
         <Title>{title}</Title>
+        <PriceContainer>
+          <PriceHeader>
+            <Icon icon={faPoundSign} />
+            <span>50</span>
+          </PriceHeader>
+        </PriceContainer>
         <Description>
           { ebook === "1" && (
             <>
@@ -217,11 +238,10 @@ const EBook: FC = () => {
 
         <Testimonial>
           I have been working with James for a few years now and every session is so enjoyable and fun. To top it off, I feel more body confident now, than ever before
-          <span>- Tilly &amp; Tom</span>
+          <span>- Basma</span>
         </Testimonial>
+      </Right>
 
-        <Button></Button>
-      </div>
     </Container>
   );  
 }
