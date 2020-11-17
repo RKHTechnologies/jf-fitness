@@ -13,6 +13,12 @@ export const Centered = styled.div`
   height: 100%;
 `;
 
+const PageDescription = styled.div`
+  color: rgb(255 255 255 / 0.88);
+  margin-top: 40px;
+  
+`;
+
 const CardsGrid = styled.div`
   width: 100%;
   display: grid;
@@ -104,6 +110,13 @@ const EBooks: FC = () => {
       <Overlay>
         <TextOverlay>E-BOOKS</TextOverlay>
       </Overlay>
+
+      <PageDescription>
+        Looking for workout inspiration?
+        These downloadable E-books which have been tried and tested by the JF Fitness team are a great addition to any workout or can be used separately as stand alone workouts.
+        They bring intensity, inspiration and a serious challenge to your sessions.
+      </PageDescription>
+
       <CardsGrid>
 
         <Card>
