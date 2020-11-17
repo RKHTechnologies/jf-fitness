@@ -10,54 +10,126 @@ const Container = styled.div`
   height: calc(100vh - 82px);
   margin-top: 82px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  box-sizing: border-box;
+  padding-top: 100px;
 `;
 
-const Card = styled.div`
-  display: grid;
-  width: 80%;
-  height: 500px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 1fr 50px;
-  grid-template-areas: 
-    'ebookimage title'
-    'ebookimage description'
-    'ebookimage button';
-  grid-gap: 40px;
+// const Card = styled.div`
+//   display: grid;
+//   width: 80%;
+//   height: 500px;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 50px 1fr 50px;
+//   grid-template-areas: 
+//     'ebookimage title'
+//     'ebookimage description'
+//     'ebookimage button';
+//   grid-gap: 40px;
 
-  @media(max-width: 1250px) {
-    width: 90%;
-  }
-`;
+//   @media(max-width: 1250px) {
+//     width: 90%;
+//   }
+// `;
 
 interface ImageProps {
   image: imageLib;
 }
 
 const Image = styled.div`
-  grid-area: ebookimage;
   background: url(${(p: ImageProps) => ImagesDesktop[p.image]});
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  width: 700px;
+  height: 500px;
+  margin: 0 50px;
+  box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
 `;
 
 const Title = styled.h1`
-  grid-area: title;
   font-size: 3.5em;
   margin: 0;
+  margin-bottom: 20px;
   font-weight: 400;
   height: 50px;
+  color: rgb(255 255 255 / 0.88);
+`;
+
+const SubHeading = styled.div`
+  color: rgb(255 255 255 / 0.88);
+  font-weight: 400;
+  font-size: 1.6em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 `;
 
 const Description = styled.div`
-  grid-area: description;
+  max-width: 800px;
   color: #818999;
+  font-size: 1.1em;
+`;
+
+const Testimonial = styled.div`
+  font-style: italic;
+  color: rgb(255 255 255 / 0.88);
+  font-size: 1.2em;
+  text-align: justify;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  max-width: 800px;
+  position: relative;
+  margin-top: 20px;
+  background: rgb(255 255 255 / 0.05);
+  border-radius: 5px;
+  /* box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12); */
+
+  &:before {
+    content: '"';
+    position: absolute;
+    color: ${colours.primary};
+    margin-top: -27px;
+    margin-left: -50px;
+    font-size: 3em;
+    font-family: fantasy;
+  }
+  
+  &:after {
+    content: '"';
+    position: absolute;
+    color: ${colours.primary};
+    margin-bottom: 27px;
+    margin-right: 50px;
+    font-size: 3em;
+    font-family: fantasy;
+  }
+
+  span {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+  }
+
+  @media(max-width: 540px) {
+    font-size: 1.2em;
+
+    &:before {
+      font-size: 2em;
+      margin-top: -22px;
+      margin-left: -24px;
+    }
+
+    &:after {
+      font-size: 2em;
+    }
+  }
 `;
 
 const Button = styled.div`
-  grid-area: button;
 `;
 
 interface IParams {
@@ -88,7 +160,7 @@ const EBook: FC = () => {
 
   return (
     <Container>
-      <Card>
+      {/* <Card>
         <Image image={image} />
         <Title>{title}</Title>
         <Description>
@@ -107,7 +179,49 @@ const EBook: FC = () => {
         <h1>What the service offers</h1>
         <p>test</p>
         <Button></Button>
-      </Card>
+      </Card> */}
+      
+      <div>
+        <Image image={image} />
+      </div>
+      <div>
+        <Title>{title}</Title>
+        <Description>
+          { ebook === "1" && (
+            <>
+              <div>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              <br />
+              <div>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Feugiat pretium nibh ipsum consequat. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Praesent tristique magna sit amet purus gravida quis. </div>
+            </>
+          )}
+
+          { ebook === "2" && (
+            <>
+              <div>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              <br />
+              <div>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Feugiat pretium nibh ipsum consequat. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Praesent tristique magna sit amet purus gravida quis. </div>
+            </>
+          )}
+
+          { ebook === "3" && (
+            <>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              <br />
+              <div>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Feugiat pretium nibh ipsum consequat. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Praesent tristique magna sit amet purus gravida quis. </div>
+            </>
+          )}
+        </Description>
+        
+        <SubHeading>What the service offers</SubHeading>
+        <Description>Pretium quam vulputate dignissim suspendisse in est ante in. Et tortor consequat id porta nibh venenatis cras sed. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Scelerisque purus semper eget duis at. Quis risus sed vulputate odio ut. Dolor morbi non arcu risus quis varius. Lacinia quis vel eros donec ac odio tempor orci. Netus et malesuada fames ac turpis egestas.</Description>
+
+        <Testimonial>
+          I have been working with James for a few years now and every session is so enjoyable and fun. To top it off, I feel more body confident now, than ever before
+          <span>- Tilly &amp; Tom</span>
+        </Testimonial>
+
+        <Button></Button>
+      </div>
     </Container>
   );  
 }
