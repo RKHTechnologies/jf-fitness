@@ -11,6 +11,8 @@ import stretching from '../img/stretching.jpg';
 import rowing from '../img/rowing.jpg';
 
 import i5024 from '../img/5024.jpg';
+import i6969 from '../img/6969.jpg';
+import i5092 from '../img/5092.jpg';
 
 export const ImagesDesktop = {
   'rkh': rkh,
@@ -23,7 +25,9 @@ export const ImagesDesktop = {
   'barResting': barResting,
   'stretching': stretching,
   'rowing': rowing,
-  'i5024': i5024,
+  'i5024': i5024,  
+  'i6969': i6969,
+  'i5092': i5092,
 }
 
 export const ImagesMobile = {
@@ -37,7 +41,9 @@ export const ImagesMobile = {
   'barResting': barResting,
   'stretching': stretching,
   'rowing': rowing,
-  'i5024': i5024,
+  'i5024': i5024,  
+  'i6969': i6969,
+  'i5092': i5092,
 }
 
-export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing' | 'i5024';
+export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing' | 'i5024' | 'i6969' | 'i5092';
