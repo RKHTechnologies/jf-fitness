@@ -77,10 +77,12 @@ const EBook: FC = () => {
     
     case "2":
       title = "AMRAP's & EMOM's";
+      image = "i5496";
       break;
 
     case "3":
       title = "DB Only Workouts";
+      image = "i6107";
       break;
   }
 
@@ -102,6 +104,8 @@ const EBook: FC = () => {
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
           )}
         </Description>
+        <h1>What the service offers</h1>
+        <p>test</p>
         <Button></Button>
       </Card>
     </Container>

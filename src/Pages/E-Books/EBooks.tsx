@@ -107,7 +107,7 @@ const EBooks: FC = () => {
       <CardsGrid>
 
         <Card>
-          <Image image={"boxJump"} />
+          <Image image={"i6969"} />
           <Heading>Bodyweight Finishers</Heading>
           <Description>
             Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -116,7 +116,7 @@ const EBooks: FC = () => {
         </Card>
 
         <Card>
-          <Image image={"holdUpBar"} />
+          <Image image={"i5496"} />
           <Heading>AMRAP's &amp; EMOM's</Heading>  
           <Description>
             When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -125,7 +125,7 @@ const EBooks: FC = () => {
         </Card>
 
         <Card>
-          <Image image={"i6969"} />
+          <Image image={"i6107"} />
           <Heading>DB Only Workouts</Heading>
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
