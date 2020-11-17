@@ -108,7 +108,7 @@ const EBooks: FC = () => {
 
         <Card>
           <Image image={"boxJump"} />
-          <Heading>Home Workouts</Heading>
+          <Heading>Bodyweight Finishers</Heading>
           <Description>
             Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </Description>

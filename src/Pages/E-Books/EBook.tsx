@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useParams } from 'react-router';
 import styled from 'styled-components';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
 import { colours } from '../../Shared/SharedStyles';
@@ -55,18 +56,33 @@ const Button = styled.div`
 `;
 
 
-interface IProps {
-  title: string;
-  description: string;
-}
 
-const EBook: FC<IProps> = ({ title, description }: IProps) => {
+const EBook: FC = () => {
+  let ebook = useParams();
+  let title: string = "";
+  
+  switch(ebook) {
+    case "1": 
+      title = "Bodyweight Finishers";
+      break;
+    
+    case "2":
+      title = "AMRAP's & EMOM's";
+      break;
+
+    case "3":
+      title = "DB Only Workouts";
+      break;
+  }
+
   return (
     <Container>
       <Card>
         <Image image={"boxJump"} />
         <Title>{title}</Title>
-        <Description>{ description }</Description>
+        <Description>
+          
+        </Description>
         <Button></Button>
       </Card>
     </Container>
