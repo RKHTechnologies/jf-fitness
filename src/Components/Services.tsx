@@ -43,15 +43,17 @@ interface ImageProps {
   alt?: boolean;
   short?: boolean;
   right?: boolean;
+  contain?: boolean;
 }
 
 const Image = styled.div`
   grid-area: image;
   width: 80%;
   height: ${(p: ImageProps) => p.short ? "400px" : "500px"};
-  background: lightgrey;
+  background-color: transparent;
   background-image: url(${(p: ImageProps) => ImagesDesktop[p.image]});
-  background-size: cover;
+  background-size: ${(p: ImageProps) => p.contain ? "contain" : "cover"};
+  background-repeat: no-repeat;
   background-position: center;
   background-position-x: ${(p: ImageProps) => p.right ? "right" : null};
   text-align: right;
@@ -166,7 +168,7 @@ const Services: FC = ()  => {
 
       <Strip id="onlineCoaching">
         <Service>
-          <Image image="holdUpBar2" right />
+          <Image image="i5024" />
           <Text>
             <Title>1-2-1 Online Coaching</Title>
             <Description>

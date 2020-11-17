@@ -10,6 +10,8 @@ import barResting from '../img/barResting.jpg';
 import stretching from '../img/stretching.jpg';
 import rowing from '../img/rowing.jpg';
 
+import i5024 from '../img/5024.jpg';
+
 export const ImagesDesktop = {
   'rkh': rkh,
   'jf': jf,
@@ -21,6 +23,7 @@ export const ImagesDesktop = {
   'barResting': barResting,
   'stretching': stretching,
   'rowing': rowing,
+  'i5024': i5024,
 }
 
 export const ImagesMobile = {
@@ -34,6 +37,7 @@ export const ImagesMobile = {
   'barResting': barResting,
   'stretching': stretching,
   'rowing': rowing,
+  'i5024': i5024,
 }
 
-export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing';
+export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing' | 'i5024';
