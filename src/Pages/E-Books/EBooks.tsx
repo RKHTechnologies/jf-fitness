@@ -30,16 +30,6 @@ const CardsGrid = styled.div`
   position: relative;
   color: white;
 
-  &:before { 
-    content: '';
-    position: absolute;
-    top: -200px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgb(18 18 18) 100%);
-  }
-
   @media(max-width: ${SharedSettings.mobile}) {
     grid-template-columns: 1fr;
   }

@@ -22,6 +22,16 @@ export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:after { 
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgb(18 18 18) 100%);
+  }
 `;
 
 export const TextOverlay = styled.div`
@@ -57,7 +67,7 @@ export const ProductsGrid = styled.div`
   background: #121212;
   position: relative;
 
-  &:before { 
+  /* &:before { 
     content: '';
     position: absolute;
     top: -200px;
@@ -65,7 +75,7 @@ export const ProductsGrid = styled.div`
     width: 100%;
     height: 200px;
     background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgb(18 18 18) 100%);
-  }
+  } */
 
   @media(max-width: ${SharedSettings.mobile}) {
     grid-template-columns: 1fr;
