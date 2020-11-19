@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2d9a62ded714be0e6233b29e9517aa0",
+    "revision": "f8994a688ba9ead5444b347d97504ff4",
     "url": "/jf-fitness/index.html"
   },
   {
-    "revision": "9421cfa75d9f3c1a3554",
+    "revision": "004cb7c66b3a364888db",
     "url": "/jf-fitness/static/css/main.2e23ef6e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jf-fitness/static/js/2.5ccfa345.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9421cfa75d9f3c1a3554",
-    "url": "/jf-fitness/static/js/main.92807329.chunk.js"
+    "revision": "004cb7c66b3a364888db",
+    "url": "/jf-fitness/static/js/main.1eb1d75f.chunk.js"
   },
   {
     "revision": "ca48e22de7e439ad5ce1",
