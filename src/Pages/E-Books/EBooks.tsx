@@ -105,7 +105,7 @@ const EBooks: FC = () => {
 
   return (
     <PageBodyContainer>
-      <Hero image="barResting" small />
+      <Hero image="i5478" small imageHeight="0" />
       <Overlay>
         <TextOverlay>E-BOOKS</TextOverlay>
       </Overlay>

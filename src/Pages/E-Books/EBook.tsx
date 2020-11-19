@@ -30,17 +30,18 @@ const Left = styled.div`
 const Buy = styled.div`
   color: ${colours.primary};
   background: ${colours.primary}40;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  text-align: center;
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
-  width: calc(100% - 100px);
-  position: relative;
-  bottom: 10px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   padding: 12px 26px 5px;
-  margin: 20px 50px 0;
   box-sizing: border-box;
   font-size: 1.4em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -86,9 +87,7 @@ export const Title = styled.h1`
 `;
 
 const PriceContainer = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
+  margin-top: 30px;
 `;
 
 const PriceHeader = styled(Price)`
@@ -198,17 +197,10 @@ const EBook: FC = () => {
     <Container>
       <Left>
         <Image image={image} />
-        <Buy>BUY NOW</Buy>
       </Left>
 
       <Right>
         <Title>{title}</Title>
-        <PriceContainer>
-          <PriceHeader>
-            <Icon icon={faPoundSign} />
-            <span>50</span>
-          </PriceHeader>
-        </PriceContainer>
         <Description>
           { ebook === "1" && (
             <>
@@ -242,6 +234,17 @@ const EBook: FC = () => {
           I have been working with James for a few years now and every session is so enjoyable and fun. To top it off, I feel more body confident now, than ever before
           <span>- Basma</span>
         </Testimonial>
+
+        <PriceContainer>
+          <PriceHeader>
+            <Icon icon={faPoundSign} />
+            <span>50</span>
+          </PriceHeader>
+
+          <Buy>BUY NOW</Buy>
+        </PriceContainer>
+
+        
       </Right>
 
     </Container>
