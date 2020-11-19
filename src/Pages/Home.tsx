@@ -20,7 +20,7 @@ interface SectionProps {
   topSpace?: boolean;
 }
 
-const Section = styled.div`
+export const Section = styled.div`
   width: 100%;
   min-height: 200px;
   margin: 20px 0 100px;

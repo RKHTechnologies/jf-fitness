@@ -5,6 +5,8 @@ import Hero from '../../Shared/Hero';
 import { Overlay, TextOverlay } from '../OnlinePrograms';
 import { Image } from '../../Pages/OnlinePrograms';
 import { useHistory } from 'react-router';
+import { Title } from './EBook';
+import { Section } from '../Home';
 
 export const Centered = styled.div`
   display: flex;
@@ -14,16 +16,18 @@ export const Centered = styled.div`
 `;
 
 const PageDescription = styled.div`
-  color: rgb(255 255 255 / 0.88);
-  margin-top: 40px;
-  
+  text-align: justify;
+  font-size: 1.8em;
+  font-weight: 100;
+  color: rgb(255 255 255 / 0.7);
+  margin-top: 20px;
 `;
 
 const CardsGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px 250px 100px;
+  padding: 0 250px 100px;
   box-sizing: border-box;
   grid-gap: 50px;
   background: #121212;
@@ -46,6 +50,11 @@ const Card = styled.div`
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
   padding: 12px;
   position: relative;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.10);
+  }
 `;
 
 const Heading = styled.h1`
@@ -101,15 +110,21 @@ const EBooks: FC = () => {
         <TextOverlay>E-BOOKS</TextOverlay>
       </Overlay>
 
-      <PageDescription>
-        Looking for workout inspiration?
-        These downloadable E-books which have been tried and tested by the JF Fitness team are a great addition to any workout or can be used separately as stand alone workouts.
-        They bring intensity, inspiration and a serious challenge to your sessions.
-      </PageDescription>
+      <Section id="description" lastItem>
+        <div className="wrapper">
+          <Title>
+            Looking for workout inspiration?
+          </Title>
+          <PageDescription>
+            These downloadable E-books which have been tried and tested by the JF Fitness team are a great addition to any workout or can be used separately as stand alone workouts.
+            <br /><br />
+            They bring intensity, inspiration and a serious challenge to your sessions.
+          </PageDescription>
+        </div>
+      </Section>
 
       <CardsGrid>
-
-        <Card>
+        <Card onClick={() => handleNav("/ebooks/1")}>
           <Image image={"i6969"} />
           <Heading>Bodyweight Finishers</Heading>
           <Description>
@@ -118,7 +133,7 @@ const EBooks: FC = () => {
           <Button onClick={() => handleNav("/ebooks/1")}>Find out more</Button>
         </Card>
 
-        <Card>
+        <Card onClick={() => handleNav("/ebooks/2")}>
           <Image image={"i5496"} />
           <Heading>AMRAP's &amp; EMOM's</Heading>  
           <Description>
@@ -127,7 +142,7 @@ const EBooks: FC = () => {
           <Button onClick={() => handleNav("/ebooks/2")}>Find out more</Button>
         </Card>
 
-        <Card>
+        <Card onClick={() => handleNav("/ebooks/3")}>
           <Image image={"i6107"} />
           <Heading>DB Only Workouts</Heading>
           <Description>
