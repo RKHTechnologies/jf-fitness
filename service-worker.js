@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jf-fitness/precache-manifest.0d8a1a02455e03ca3173079ae78748d5.js"
+  "/jf-fitness/precache-manifest.e4b860c354957593e43d8375ca3a88c7.js"
 );
 
 self.addEventListener('message', (event) => {
