@@ -76,6 +76,7 @@ const Image = styled.div`
 `;
 
 export const Title = styled.h1`
+  width: 100%;
   font-size: 3.5em;
   margin: 0;
   margin-bottom: 20px;

@@ -25,18 +25,15 @@ export const PageDescription = styled.div`
 
 const CardsGrid = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 250px 100px;
+  padding: 0 2% 100px;
   box-sizing: border-box;
   grid-gap: 50px;
   background: #121212;
   position: relative;
   color: white;
-
-  @media(max-width: ${SharedSettings.mobile}) {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   @media(max-width: 800px) {
     padding: 0 10px;
@@ -51,6 +48,7 @@ const Card = styled.div`
   padding: 12px;
   position: relative;
   transition: transform 0.3s ease;
+  width: 400px;
 
   &:hover {
     transform: scale(1.10);
@@ -107,11 +105,11 @@ const EBooks: FC = () => {
     <PageBodyContainer>
       <Hero image="i5478" small imageHeight="0" />
       <Overlay>
-        <TextOverlay>E-BOOKS</TextOverlay>
       </Overlay>
 
       <Section id="description" lastItem>
         <div className="wrapper">
+          <TextOverlay>E-BOOKS</TextOverlay>
           <Title>
             Looking for workout inspiration?
           </Title>

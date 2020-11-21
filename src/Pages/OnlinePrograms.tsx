@@ -39,12 +39,11 @@ export const Overlay = styled.div`
 export const TextOverlay = styled.div`
   font-size: 5vw;
   font-weight: 400;
-  color: ${colours.light};
+  color: ${colours.primary};
   text-transform: uppercase;
-
   line-height: 56px;
   background: #1f1f1f;
-  margin-top: 140px;
+  margin: 10px auto 40px;
   padding: 29px 19px 0;
   font-weight: 200;
 
@@ -61,23 +60,13 @@ export const TextOverlay = styled.div`
 export const ProductsGrid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 0 40px;
   padding-top: 20px;
   box-sizing: border-box;
   grid-gap: 20px;
   background: #121212;
   position: relative;
-
-  /* &:before { 
-    content: '';
-    position: absolute;
-    top: -200px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgb(18 18 18) 100%);
-  } */
 
   @media(max-width: ${SharedSettings.mobile}) {
     grid-template-columns: 1fr;
@@ -96,9 +85,8 @@ const HashTag = styled.div`
 `;
 
 const Product = styled.div`
-  display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   padding-bottom: 100px;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -106,6 +94,16 @@ const Product = styled.div`
   background: rgba(255,255,255, 0.12);
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
   position: relative;
+  display: grid;  
+  grid-template-areas: 
+    'image title'
+    'image overview'
+    'image requirements'
+    'image equipment'
+    'image expect';
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-row-gap: 0;
 `;
 
 interface ImageProps {
@@ -113,6 +111,7 @@ interface ImageProps {
 }
 
 export const Image = styled.div`
+  grid-area: image;
   width: 100%;
   background: url(${(p: ImageProps) => ImagesDesktop[p.image]});
   background-size: cover;
@@ -124,11 +123,12 @@ export const Image = styled.div`
 `;
 
 const Title = styled.h1`
+  grid-area: title;
   width: 100%;
-  color: ${colours.light};
-  font-size: 2.6em;
-  font-weight: 400;
-  margin: 10px 0;
+  color: ${colours.primary};
+  font-size: 4em;
+  font-weight: 300;
+  margin: 0;
   text-transform: uppercase;
 `;
 
@@ -147,11 +147,24 @@ const ProductSection = styled.div`
   min-height: ${(p: ISectionProps) => p.height}px;
 `;
 
+const OverviewSection = styled(ProductSection)`
+  grid-area: overview;
+`;
+const Requirements = styled(ProductSection)`
+  grid-area: requirements;
+`;
+const Equipment = styled(ProductSection)`
+  grid-area: equipment;
+`;
+const Expect = styled(ProductSection)`
+  grid-area: expect;
+`;
+
 const SubHeading = styled.div`
   color: ${colours.light};
   font-weight: 400;
   font-size: 1.8em;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -214,16 +227,13 @@ const List = styled.ul`
 const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
-      <Hero image="i5317" small />
+      <Hero image="i5325" small />
       <Overlay>
-        <TextOverlay>Online Programs</TextOverlay>
       </Overlay>
 
       <Section id="description" lastItem>
         <div className="wrapper">
-          {/* <Title>
-            Looking for workout inspiration?
-          </Title> */}
+          <TextOverlay>Online Programs</TextOverlay>
           <PageDescription>
             JF Fitness has designed several pre-recorded programmes which are centred around moving well, building strength and muscle, losing body fat, and performing better.
             <br /><br />
@@ -239,11 +249,11 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
-          <ProductSection height={210}>
+          <OverviewSection height={210}>
             <Overview>JF Fitness places functional fitness at the heart of success. This program is designed to improve the way you move, build more strength and improve your energy systems. </Overview>
-          </ProductSection>
+          </OverviewSection>
 
-          <ProductSection height={140}>
+          <Requirements height={140}>
             <SubHeading>
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
@@ -254,9 +264,9 @@ const OnlinePrograms: FC = () => {
                 <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
               </ul>
             </Overview>
-          </ProductSection>
+          </Requirements>
 
-          <ProductSection height={160}>
+          <Equipment height={160}>
             <SubHeading>
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
@@ -267,9 +277,9 @@ const OnlinePrograms: FC = () => {
               <li>Dumbbells</li>
               <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
-          </ProductSection>
+          </Equipment>
 
-          <ProductSection height={140}>
+          <Expect height={140}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -280,7 +290,7 @@ const OnlinePrograms: FC = () => {
                 <li>Week by week progress</li>
               </ul>
             </Overview>
-          </ProductSection>
+          </Expect>
 
           <Price>
               <Icon icon={faPoundSign} />
@@ -294,7 +304,7 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"holdUpBar"} />
           <Title>Strength</Title>
-          <ProductSection height={210}>
+          <OverviewSection height={210}>
             <Overview>
               Strength training is the key to becoming more robust and is one of the fundamental pillars to all good programs.
               <br /><br />
@@ -302,9 +312,9 @@ const OnlinePrograms: FC = () => {
               <br /><br />
               If you are looking to push past plateaus, gain serious strength, follow a progressive and structured program, this is the program for you.
             </Overview>
-          </ProductSection>
+          </OverviewSection>
 
-          <ProductSection height={140}>
+          <Requirements height={140}>
             <SubHeading>
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
@@ -315,9 +325,9 @@ const OnlinePrograms: FC = () => {
                 <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
               </ul>  
             </Overview>          
-          </ProductSection>
+          </Requirements>
 
-          <ProductSection height={160}>
+          <Equipment height={160}>
             <SubHeading>
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
@@ -329,9 +339,9 @@ const OnlinePrograms: FC = () => {
               <li>Dumbbells</li>
               <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
-          </ProductSection>
+          </Equipment>
 
-          <ProductSection height={140}>
+          <Expect height={140}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -341,7 +351,7 @@ const OnlinePrograms: FC = () => {
                 <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
               </ul>
             </Overview>
-          </ProductSection>
+          </Expect>
 
           <Price>
             <Icon icon={faPoundSign} />
@@ -356,11 +366,11 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"pushWeight"} />
           <Title>Fat Loss</Title>
-          <ProductSection height={210}>
+          <OverviewSection height={210}>
             <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
-          </ProductSection>
+          </OverviewSection>
           
-          <ProductSection height={140}>
+          <Requirements height={140}>
             <SubHeading>
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
@@ -371,9 +381,9 @@ const OnlinePrograms: FC = () => {
                 <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
               </ul>  
             </Overview>
-          </ProductSection>
+          </Requirements>
 
-          <ProductSection height={160}>
+          <Equipment height={160}>
             <SubHeading>
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
@@ -385,9 +395,9 @@ const OnlinePrograms: FC = () => {
               <li>Dumbbells</li>
               <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
-          </ProductSection>
+          </Equipment>
 
-          <ProductSection height={140}>
+          <Expect height={140}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -397,7 +407,7 @@ const OnlinePrograms: FC = () => {
                 <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
               </ul>
             </Overview>
-          </ProductSection>
+          </Expect>
 
           <Price>
             <div>
