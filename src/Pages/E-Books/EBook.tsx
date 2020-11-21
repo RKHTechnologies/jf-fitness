@@ -87,12 +87,16 @@ export const Title = styled.h1`
 `;
 
 const PriceContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 65px;
+
+  & > div {
+    bottom: 0;
+  }
 `;
 
-const PriceHeader = styled(Price)`
-  position: unset;
-`;
+// const PriceHeader = styled(Price)`
+//   position: unset;
+// `;
 
 const SubHeading = styled.div`
   color: rgb(255 255 255 / 0.88);
@@ -236,10 +240,10 @@ const EBook: FC = () => {
         </Testimonial>
 
         <PriceContainer>
-          <PriceHeader>
+          <Price>
             <Icon icon={faPoundSign} />
             <span>50</span>
-          </PriceHeader>
+          </Price>
 
           <Buy>BUY NOW</Buy>
         </PriceContainer>

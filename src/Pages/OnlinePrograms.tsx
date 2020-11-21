@@ -5,6 +5,8 @@ import Hero from '../Shared/Hero';
 import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarCheck, faDumbbell, faHeartbeat, faPoundSign } from '@fortawesome/free-solid-svg-icons';
+import { PageDescription } from './E-Books/EBooks';
+import { Section } from './Home';
 
 export const Centered = styled.div`
   display: flex;
@@ -86,6 +88,13 @@ export const ProductsGrid = styled.div`
   }
 `;
 
+const HashTag = styled.div`
+  font-size: 1.6em;
+  color: ${colours.primary};
+  margin-top: 30px;
+  font-style: italic;
+`;
+
 const Product = styled.div`
   display: flex;
   flex-direction: column;
@@ -134,7 +143,7 @@ interface ISectionProps {
   height: number;
 }
 
-const Section = styled.div`
+const ProductSection = styled.div`
   min-height: ${(p: ISectionProps) => p.height}px;
 `;
 
@@ -205,20 +214,36 @@ const List = styled.ul`
 const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
-      <Hero image="barResting" small />
+      <Hero image="i5317" small />
       <Overlay>
         <TextOverlay>Online Programs</TextOverlay>
       </Overlay>
+
+      <Section id="description" lastItem>
+        <div className="wrapper">
+          {/* <Title>
+            Looking for workout inspiration?
+          </Title> */}
+          <PageDescription>
+            JF Fitness has designed several pre-recorded programmes which are centred around moving well, building strength and muscle, losing body fat, and performing better.
+            <br /><br />
+            These programs follow an 8-12 week progressive programme, designed to meet your goals, whilst ensuring fundamental movement patterns are present throughout.
+            <br /><br />
+            If you are looking for structure, guidance, and a program that will deliver results, then this is the product for you.
+          </PageDescription>
+          <HashTag>#TagLineExample</HashTag>
+        </div>
+      </Section>
       
       <ProductsGrid>  
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
-          <Section height={210}>
+          <ProductSection height={210}>
             <Overview>JF Fitness places functional fitness at the heart of success. This program is designed to improve the way you move, build more strength and improve your energy systems. </Overview>
-          </Section>
+          </ProductSection>
 
-          <Section height={140}>
+          <ProductSection height={140}>
             <SubHeading>
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
@@ -229,9 +254,9 @@ const OnlinePrograms: FC = () => {
                 <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
               </ul>
             </Overview>
-          </Section>
+          </ProductSection>
 
-          <Section height={160}>
+          <ProductSection height={160}>
             <SubHeading>
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
@@ -242,9 +267,9 @@ const OnlinePrograms: FC = () => {
               <li>Dumbbells</li>
               <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
-          </Section>
+          </ProductSection>
 
-          <Section height={140}>
+          <ProductSection height={140}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -255,7 +280,7 @@ const OnlinePrograms: FC = () => {
                 <li>Week by week progress</li>
               </ul>
             </Overview>
-          </Section>
+          </ProductSection>
 
           <Price>
               <Icon icon={faPoundSign} />
@@ -268,8 +293,8 @@ const OnlinePrograms: FC = () => {
 
         <Product>
           <Image image={"holdUpBar"} />
-          <Title>Strength Building</Title>
-          <Section height={210}>
+          <Title>Strength</Title>
+          <ProductSection height={210}>
             <Overview>
               Strength training is the key to becoming more robust and is one of the fundamental pillars to all good programs.
               <br /><br />
@@ -277,9 +302,9 @@ const OnlinePrograms: FC = () => {
               <br /><br />
               If you are looking to push past plateaus, gain serious strength, follow a progressive and structured program, this is the program for you.
             </Overview>
-          </Section>
+          </ProductSection>
 
-          <Section height={140}>
+          <ProductSection height={140}>
             <SubHeading>
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
@@ -290,9 +315,9 @@ const OnlinePrograms: FC = () => {
                 <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
               </ul>  
             </Overview>          
-          </Section>
+          </ProductSection>
 
-          <Section height={160}>
+          <ProductSection height={160}>
             <SubHeading>
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
@@ -304,9 +329,9 @@ const OnlinePrograms: FC = () => {
               <li>Dumbbells</li>
               <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
-          </Section>
+          </ProductSection>
 
-          <Section height={140}>
+          <ProductSection height={140}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -316,7 +341,7 @@ const OnlinePrograms: FC = () => {
                 <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
               </ul>
             </Overview>
-          </Section>
+          </ProductSection>
 
           <Price>
             <Icon icon={faPoundSign} />
@@ -331,11 +356,11 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"pushWeight"} />
           <Title>Fat Loss</Title>
-          <Section height={210}>
+          <ProductSection height={210}>
             <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
-          </Section>
+          </ProductSection>
           
-          <Section height={140}>
+          <ProductSection height={140}>
             <SubHeading>
               <Icon icon={faCalendarCheck} />
               <div>Requirements</div>
@@ -346,9 +371,9 @@ const OnlinePrograms: FC = () => {
                 <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
               </ul>  
             </Overview>
-          </Section>
+          </ProductSection>
 
-          <Section height={160}>
+          <ProductSection height={160}>
             <SubHeading>
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
@@ -360,9 +385,9 @@ const OnlinePrograms: FC = () => {
               <li>Dumbbells</li>
               <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
             </List>
-          </Section>
+          </ProductSection>
 
-          <Section height={140}>
+          <ProductSection height={140}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -372,7 +397,7 @@ const OnlinePrograms: FC = () => {
                 <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
               </ul>
             </Overview>
-          </Section>
+          </ProductSection>
 
           <Price>
             <div>

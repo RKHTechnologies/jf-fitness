@@ -15,7 +15,7 @@ export const Centered = styled.div`
   height: 100%;
 `;
 
-const PageDescription = styled.div`
+export const PageDescription = styled.div`
   text-align: justify;
   font-size: 1.8em;
   font-weight: 100;

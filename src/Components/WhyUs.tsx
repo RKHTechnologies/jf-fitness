@@ -106,7 +106,7 @@ const WhyUs: FC = () => {
 
         <GridItem>
           <Icon icon={faDumbbell} size="2x" />
-          <Title>Tried and tested workout</Title>
+          <Title>Tried and tested workouts</Title>
         </GridItem>
 
         <GridItem>
@@ -131,7 +131,7 @@ const WhyUs: FC = () => {
 
         <GridItem>
           <Icon icon={faHeartbeat} size="2x" />
-          <Title>Ephasis on functional fitness</Title>
+          <Title>Functional fitness</Title>
         </GridItem>
       </Grid>
     </WhyUsSection>
