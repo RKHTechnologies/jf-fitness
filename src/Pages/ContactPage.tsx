@@ -9,6 +9,9 @@ const Container = styled.div`
     right: 0;
     left: 0;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const ContactPage: FC = () => {

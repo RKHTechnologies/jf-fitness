@@ -87,7 +87,6 @@ const HashTag = styled.div`
 const Product = styled.div`
   flex-direction: column;
   padding: 20px;
-  padding-bottom: 100px;
   border-radius: 10px;
   transition: transform 0.3s ease;
   margin-bottom: 80px;
@@ -100,7 +99,8 @@ const Product = styled.div`
     'image overview'
     'image requirements'
     'image equipment'
-    'image expect';
+    'image expect'
+    'image price';
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   grid-row-gap: 0;
@@ -183,11 +183,10 @@ export const Icon = styled(FontAwesomeIcon)`
 `;
 
 export const Price = styled.div`
+  grid-area: price;
   color: ${colours.primary};
   font-size: 1.8em;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  margin-top: 20px;
 
   ${Icon} {
     color: ${colours.primary};
@@ -208,7 +207,7 @@ const BuyNow = styled.div`
   position: absolute;
   bottom: 20px;
   right: 20px;
-  padding: 14px 26px 5px;
+  padding: 12px 26px 6px;
   cursor: pointer;
 
   &:hover {
@@ -249,7 +248,7 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
-          <OverviewSection height={210}>
+          <OverviewSection height={100}>
             <Overview>JF Fitness places functional fitness at the heart of success. This program is designed to improve the way you move, build more strength and improve your energy systems. </Overview>
           </OverviewSection>
 
