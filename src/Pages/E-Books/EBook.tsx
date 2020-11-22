@@ -5,11 +5,10 @@ import styled from 'styled-components';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
 import { colours } from '../../Shared/SharedStyles';
 import { Icon, Price } from '../OnlinePrograms';
-import { Button } from './EBooks';
 
 const Container = styled.div`
   color: ${colours.light};
-  width: 100vw;
+  max-width: 98vw;
   height: calc(100vh - 82px);
   margin-top: 82px;
   display: flex;
