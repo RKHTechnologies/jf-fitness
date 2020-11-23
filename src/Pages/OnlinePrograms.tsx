@@ -134,9 +134,10 @@ const Title = styled.h1`
 
 const Overview = styled.div`
   width: 100%;
-  color: ${colours.darkGrey};
+  color: rgb(255 255 255 / 0.7);
   text-align: justify;
   font-size: 1.2em;
+  font-weight: 100;
 `;
 
 interface ISectionProps {
