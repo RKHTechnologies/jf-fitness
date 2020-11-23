@@ -10,7 +10,7 @@ import OnlineCoaching from './Pages/OnlineCoaching';
 import OnlinePrograms from './Pages/OnlinePrograms';
 import EBooks from './Pages/E-Books/EBooks';
 import EBook from './Pages/E-Books/EBook';
-// import Contact from './Pages/Contact';
+import ContactPage from './Pages/ContactPage';
 
 const App: FC = () => {
   const [stickyHeader, setStickyHeader] = useState(false);
@@ -47,7 +47,7 @@ const App: FC = () => {
           <Route exact path={`${process.env.PUBLIC_URL}/onlineprograms`} component={OnlinePrograms} />
           <Route exact path={`${process.env.PUBLIC_URL}/ebooks`} component={EBooks} />
           <Route exact path={`${process.env.PUBLIC_URL}/ebooks/:ebook`} component={EBook} />
-          {/* <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} /> */}
+          <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={ContactPage} />
           <Route exact path={`${process.env.PUBLIC_URL}/metric`} component={MetricTest} />
           <Route component={Error404} />
         </Switch>
