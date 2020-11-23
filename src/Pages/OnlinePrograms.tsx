@@ -218,7 +218,7 @@ const BuyNow = styled.div`
 `;
 
 const List = styled.ul`
-  color: ${colours.darkGrey};
+  color: rgb(255 255 255 / 0.7);
   font-size: 1.2em;
 `;
 
@@ -271,12 +271,14 @@ const OnlinePrograms: FC = () => {
               <Icon icon={faDumbbell} />
               <div>Equipment</div>
             </SubHeading>
-            <List>
-              <li>Barbell &amp; Plates</li>
-              <li>Kettlebell</li>
-              <li>Dumbbells</li>
-              <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
-            </List>
+            <Overview>
+              <ul>
+                <li>Barbell &amp; Plates</li>
+                <li>Kettlebell</li>
+                <li>Dumbbells</li>
+                <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
+              </ul>
+            </Overview>
           </Equipment>
 
           <Expect height={140}>
@@ -333,12 +335,14 @@ const OnlinePrograms: FC = () => {
               <div>Equipment</div>
             </SubHeading>
             {/* <Overview>You will access to at least one of the following, the more the better:</Overview> */}
-            <List>
-              <li>Barbell &amp; Plates</li>
-              <li>Kettlebell</li>
-              <li>Dumbbells</li>
-              <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
-            </List>
+            <Overview>
+              <ul>
+                <li>Barbell &amp; Plates</li>
+                <li>Kettlebell</li>
+                <li>Dumbbells</li>
+                <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
+              </ul>
+            </Overview>
           </Equipment>
 
           <Expect height={140}>
@@ -389,12 +393,14 @@ const OnlinePrograms: FC = () => {
               <div>Equipment</div>
             </SubHeading>
             {/* <Overview>You will access to at least one of the following, the more the better:</Overview> */}
-            <List>
-              <li>Barbell &amp; Plates</li>
-              <li>Kettlebell</li>
-              <li>Dumbbells</li>
-              <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
-            </List>
+            <Overview>
+              <ul>
+                <li>Barbell &amp; Plates</li>
+                <li>Kettlebell</li>
+                <li>Dumbbells</li>
+                <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
+              </ul>
+            </Overview>
           </Equipment>
 
           <Expect height={140}>

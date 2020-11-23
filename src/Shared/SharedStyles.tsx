@@ -12,8 +12,8 @@ interface ColoursProps {
 }
 
 export const colours: ColoursProps = {
-    light: "#FFFFFF",
-    // light: "rgb(255 255 255 / 0.88)",
+    // light: "#FFFFFF",
+    light: "rgb(255 255 255 / 0.88)",
     dark: "#000000",
     primary: "#0D98E9",
     secondary: "E6E7EA",

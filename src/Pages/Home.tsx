@@ -9,6 +9,7 @@ import WhyUs from '../Components/WhyUs';
 import Contact from '../Components/Contact';
 import HeroVideo from '../Components/HeroVideo';
 import Services from '../Components/Services';
+import FunctionalFitness from '../Components/FunctionalFitness';
 
 const Container = styled(PageBodyContainer)`
   top: 0;
@@ -56,8 +57,14 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
       <HeroVideo />
       
       <Section id="intro" topSpace>
-        <div className="wrapper">
+      <div className="wrapper">
           <About />
+        </div>
+      </Section>
+      
+      <Section id="functionalFitness">
+        <div className="wrapper">
+          <FunctionalFitness />
         </div>
       </Section>
 

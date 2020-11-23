@@ -18,6 +18,7 @@ import i5325 from '../img/5325.jpg';
 import i5478 from '../img/5478.jpg';
 import i5496 from '../img/5496.jpg';
 import i6107 from '../img/6107.jpg';
+import i6211 from '../img/6211.jpg';
 
 export const ImagesDesktop = {
   'rkh': rkh,
@@ -37,6 +38,7 @@ export const ImagesDesktop = {
   'i5478': i5478,
   'i5496': i5496,
   'i6107': i6107,
+  'i6211': i6211,
   'i6969': i6969,
 }
 
@@ -58,7 +60,8 @@ export const ImagesMobile = {
   'i5478': i5478,
   'i5496': i5496,
   'i6107': i6107,
+  'i6211': i6211,
   'i6969': i6969,
 }
 
-export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing' | 'i5024' | 'i5317' | 'i5325' | 'i6969' | 'i5092' | 'i5478' | 'i5496' | 'i6107';
+export type imageLib = 'rkh' | 'jf' | 'boxJump' | 'pullUp' | 'holdUpBar' | 'holdUpBar2' | 'pushWeight' | 'barResting' | 'stretching' | 'rowing' | 'i5024' | 'i5317' | 'i5325' | 'i6969' | 'i5092' | 'i5478' | 'i5496' | 'i6107' | 'i6211';
