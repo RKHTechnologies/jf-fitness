@@ -101,7 +101,8 @@ const Title = styled.h1`
 const Description = styled.div`
   text-align: justify;
   font-size: 1.2em;
-  color: #818999;
+  color: rgb(255 255 255 / 0.7);
+  font-weight: 100;
 `;
 
 const CheckList = styled.div`

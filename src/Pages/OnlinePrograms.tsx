@@ -58,7 +58,7 @@ export const TextOverlay = styled.div`
 `;
 
 export const ProductsGrid = styled.div`
-  width: 100%;
+  width: 94%;
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 40px;
@@ -67,6 +67,7 @@ export const ProductsGrid = styled.div`
   grid-gap: 20px;
   background: #121212;
   position: relative;
+  margin: auto;
 
   @media(max-width: ${SharedSettings.mobile}) {
     grid-template-columns: 1fr;
@@ -138,6 +139,11 @@ const Overview = styled.div`
   text-align: justify;
   font-size: 1.2em;
   font-weight: 100;
+
+  & > ul {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
 `;
 
 interface ISectionProps {
@@ -165,8 +171,6 @@ const SubHeading = styled.div`
   color: ${colours.light};
   font-weight: 400;
   font-size: 1.8em;
-  margin-top: 10px;
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
 
@@ -249,7 +253,7 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
-          <OverviewSection height={100}>
+          <OverviewSection height={80}>
             <Overview>JF Fitness places functional fitness at the heart of success. This program is designed to improve the way you move, build more strength and improve your energy systems. </Overview>
           </OverviewSection>
 
@@ -281,7 +285,7 @@ const OnlinePrograms: FC = () => {
             </Overview>
           </Equipment>
 
-          <Expect height={140}>
+          <Expect height={100}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -306,7 +310,7 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"holdUpBar"} />
           <Title>Strength</Title>
-          <OverviewSection height={210}>
+          <OverviewSection height={180}>
             <Overview>
               Strength training is the key to becoming more robust and is one of the fundamental pillars to all good programs.
               <br /><br />
@@ -345,7 +349,7 @@ const OnlinePrograms: FC = () => {
             </Overview>
           </Equipment>
 
-          <Expect height={140}>
+          <Expect height={100}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>
@@ -370,7 +374,7 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"pushWeight"} />
           <Title>Fat Loss</Title>
-          <OverviewSection height={210}>
+          <OverviewSection height={100}>
             <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
           </OverviewSection>
           
@@ -403,7 +407,7 @@ const OnlinePrograms: FC = () => {
             </Overview>
           </Equipment>
 
-          <Expect height={140}>
+          <Expect height={100}>
             <SubHeading>
               <Icon icon={faHeartbeat} />
               <div>What to Expect</div>

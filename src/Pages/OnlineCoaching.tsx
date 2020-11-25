@@ -5,6 +5,7 @@ import { Overlay, ProductsGrid, TextOverlay } from './OnlinePrograms';
 import Hero from '../Shared/Hero';
 import { Section } from './Home';
 import { PageDescription } from './E-Books/EBooks';
+import { PageHeading } from '../Components/WhyUs';
 
 export const Centered = styled.div`
   display: flex;
@@ -32,6 +33,19 @@ const OnlineCoaching: FC = () => {
             <br /><br />
             Everyone deserves to have a successful relationship with fitness, so sign up today and start your journey.
           </PageDescription>
+          
+          <PageHeading>What the Service Offers</PageHeading>
+          <ul>
+            <li>Onboarding call and mobility assessment</li>
+            <li>Bespoke weekly workouts tailored towards your needs and wants</li>
+            <li>Access to Truecoach app where your workouts will be delivered daily</li>
+            <li>Video demonstrations</li>
+            <li>Exercise history and trackable progress</li>
+            <li>20 minute monthly check in calls</li>
+            <li>Additional training support</li>
+            <li>Nutritional advice</li>
+            <li>Option of additional online PT sessions via Zoom (£70 per session)</li>
+          </ul>
 
           
         </div>

@@ -26,7 +26,6 @@ const TestimonialsSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* box-shadow: 0 2.8px 2.2px rgb(255 255 255 / 3%), 0 6.7px 5.3px rgb(255 255 255 / 5%), 0 12.5px 10px rgb(255 255 255 / 6%), 0 22.3px 17.9px rgb(255 255 255 / 7%), 0 41.8px 33.4px rgb(255 255 255 / 9%), 0 100px 80px rgb(255 255 255 / 12%); */
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
 
   @media(max-width: 540px) {
@@ -41,26 +40,6 @@ const Testimonial = styled.div`
   color: rgb(255 255 255 / 0.88);
   font-size: 1.4em;
   text-align: justify;
-
-  &:before {
-    content: '"';
-    position: absolute;
-    color: ${colours.primary};
-    margin-top: -27px;
-    margin-left: -50px;
-    font-size: 3em;
-    font-family: fantasy;
-  }
-  
-  &:after {
-    content: '"';
-    position: absolute;
-    color: ${colours.primary};
-    margin-bottom: 27px;
-    margin-right: 50px;
-    font-size: 3em;
-    font-family: fantasy;
-  }
 
   span {
     position: absolute;
@@ -82,6 +61,35 @@ const Testimonial = styled.div`
     }
   }
 `;
+
+const BeforeQuote = styled.div`
+  &:before, &:after {
+    content: '“';
+    color: ${colours.primary};
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 7em;
+    z-index: -1;
+    font-family: 'Oswald';
+    opacity: 0.3;
+  }
+  
+`;
+
+
+const AfterQuote = styled.div`
+  content: '”';
+  color: ${colours.primary};
+  position: absolute;
+  font-size: 7em;
+  z-index: -1;
+  font-family: 'Oswald';
+  opacity: 0.3;
+  bottom: -40px;
+  right: 0;
+`;
+
 
 interface CarouselProps {
   xPos?: number;
@@ -134,6 +142,8 @@ const Testimonials: FC = () => {
           We have been working with James for 3 years and have seen great improvements in overall fitness and strength levels. He always creates effective plans tailored to our goals and we love the encouragement and energy that he brings to each session, as well as the constant learning of new techniques
           <span>- Tilly &amp; Tom</span>
         </Testimonial>
+        <BeforeQuote />
+        <AfterQuote />
         {/* <Testimonial>
           I've really enjoyed working with James over the past few years and feel stronger, more mobile and fitter than ever before
           <span>- Reem</span>
