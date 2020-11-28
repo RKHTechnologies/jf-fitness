@@ -63,13 +63,13 @@ const Testimonial = styled.div`
 `;
 
 const BeforeQuote = styled.div`
-  &:before, &:after {
+  &:before {
     content: '“';
     color: ${colours.primary};
     position: absolute;
-    top: -40px;
-    left: 0;
-    font-size: 7em;
+    top: -20px;
+    left: 30px;
+    font-size: 8em;
     z-index: -1;
     font-family: 'Oswald';
     opacity: 0.3;
@@ -79,15 +79,17 @@ const BeforeQuote = styled.div`
 
 
 const AfterQuote = styled.div`
-  content: '”';
-  color: ${colours.primary};
-  position: absolute;
-  font-size: 7em;
-  z-index: -1;
-  font-family: 'Oswald';
-  opacity: 0.3;
-  bottom: -40px;
-  right: 0;
+  &:after {
+    content: '”';
+    color: ${colours.primary};
+    position: absolute;
+    font-size: 8em;
+    z-index: -1;
+    font-family: 'Oswald';
+    opacity: 0.3;
+    bottom: -40px;
+    right: 23px;
+  }
 `;
 
 
@@ -142,12 +144,14 @@ const Testimonials: FC = () => {
           We have been working with James for 3 years and have seen great improvements in overall fitness and strength levels. He always creates effective plans tailored to our goals and we love the encouragement and energy that he brings to each session, as well as the constant learning of new techniques
           <span>- Tilly &amp; Tom</span>
         </Testimonial>
+
+        {/* <Testimonial>
+        I have been working with James for a few years now and every session is so enjoyable and fun. To top it off, I feel more body confident now, than ever before
+          <span>- Basma</span>
+        </Testimonial> */}
+
         <BeforeQuote />
         <AfterQuote />
-        {/* <Testimonial>
-          I've really enjoyed working with James over the past few years and feel stronger, more mobile and fitter than ever before
-          <span>- Reem</span>
-        </Testimonial> */}
       </TestimonialsSection>
     </Container>
   );

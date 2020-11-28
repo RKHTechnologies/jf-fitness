@@ -101,6 +101,7 @@ const Product = styled.div`
     'image requirements'
     'image equipment'
     'image expect'
+    'image price'
     'image price';
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -253,8 +254,12 @@ const OnlinePrograms: FC = () => {
         <Product>
           <Image image={"boxJump"} />
           <Title>Functional Fitness</Title>
-          <OverviewSection height={80}>
-            <Overview>JF Fitness places functional fitness at the heart of success. This program is designed to improve the way you move, build more strength and improve your energy systems. </Overview>
+          <OverviewSection height={160}>
+            <Overview>
+              Functional fitness is at the heart of what we do. This program is designed to improve the way you move, build strength and develop energy systems.
+              <br /><br />
+              Whether you choose the 8 or 12 week plan, functional fitness incorporates structured progressions week on week to ensure continuous improvement and motivation, whilst developing aesthetics and athletic ability.  
+            </Overview>
           </OverviewSection>
 
           <Requirements height={140}>
@@ -264,8 +269,9 @@ const OnlinePrograms: FC = () => {
             </SubHeading>
             <Overview>
               <ul>
-                <li>Must not be new to exercise</li>
-                <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
+                <li>Able to perform fundamental movement patterns adequately (squat, deadlift, bench, pull up, plank, lunge, carrys, etc)</li>
+                <li>A strong cardio base</li>
+                <li>A good training age</li>
               </ul>
             </Overview>
           </Requirements>
@@ -292,17 +298,30 @@ const OnlinePrograms: FC = () => {
             </SubHeading>
             <Overview>
               <ul>
-                <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
+                <li>4 weekly workouts</li>
+                <li>Workouts delivered via the Truecoach app</li>
+                <li>Video demonstrations</li>
                 <li>Week by week progress</li>
+                <li>Online support</li>
               </ul>
             </Overview>
           </Expect>
 
-          <Price>
-              <Icon icon={faPoundSign} />
-              <span>125</span>
-          </Price>
-          <BuyNow>Buy Now</BuyNow>
+          <div>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>150 <small>- 12 Week Plan</small></span>
+            </Price>
+            <BuyNow>Buy Now</BuyNow>
+          </div>
+
+          <div>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120 <small>- 8 Week Plan</small></span>
+            </Price>
+            <BuyNow>Buy Now</BuyNow>
+          </div>
         </Product>
         
 
