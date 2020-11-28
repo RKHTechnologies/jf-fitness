@@ -16,27 +16,43 @@ const Container = styled.div`
   }
 `;
 
+interface IProps {
+  flipped: boolean;
+}
+
 const TestimonialsSection = styled.div`
   position: relative;
   width: 500px;
-  min-height: 100px;
+  min-height: 250px;
   background: rgb(255 255 255 / 0.08);
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
-
   
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  transform: ${(p: IProps) => p.flipped ? "rotateY(180deg)" : "rotateY(0)"};
 
   @media(max-width: 540px) {
     width: 100%;
     height: auto;
     padding: 30px 20px 50px; 
   }
+`;
+
+const CardFront = styled.div`
+  padding: 50px;
+  backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  position: absolute;
+  transform: rotateY(0deg);
+`;
+
+const CardBack = styled(CardFront)`
+  transform: rotateY(-180deg);
 `;
 
 const Testimonial = styled.div`
@@ -103,9 +119,18 @@ const Testimonials: FC = () => {
   const [content, setContent] = useState<string>(testimonialContent[0].content);
   const [name, setName] = useState<string>(testimonialContent[0].name);
 
-  const [hidden, setHidden] = useState(false);
+  const flipped = useRef(false);
 
   let updatedSeconds = seconds;
+  
+  
+  const handleFlip = () => {
+    const flipInterval = setInterval(() => {
+      setContent(testimonialContent[contentIndex.current]?.content);
+      setName(testimonialContent[contentIndex.current]?.name);
+    }, 300);
+    return () => clearInterval(flipInterval);
+  }
   
   const nextIndex = () => {
     console.log("Next index: ", contentIndex.current);
@@ -113,10 +138,9 @@ const Testimonials: FC = () => {
     if (contentIndex.current > 2)
       contentIndex.current = 0;    
 
-    setContent(testimonialContent[contentIndex.current]?.content);
-    setName(testimonialContent[contentIndex.current]?.name);
+    flipped.current = !flipped.current;
+    handleFlip();
   }
-
 
   const updateTime = () => {
     if (updatedSeconds > 0) {
@@ -138,13 +162,24 @@ const Testimonials: FC = () => {
 
   return (
     <Container>
-      <TestimonialsSection >
-        <Testimonial>
-          {content}
-          <span>{name}</span>
-        </Testimonial>
-        <BeforeQuote />
-        <AfterQuote />
+      <TestimonialsSection flipped={flipped.current}>
+        <CardFront>
+          <Testimonial>
+            {content}
+            <span>{name}</span>
+          </Testimonial>
+          <BeforeQuote />
+          <AfterQuote />
+        </CardFront>
+
+        <CardBack>
+          <Testimonial>
+            {content}
+            <span>{name}</span>
+          </Testimonial>
+          <BeforeQuote />
+          <AfterQuote />
+        </CardBack>
       </TestimonialsSection>
     </Container>
   );
