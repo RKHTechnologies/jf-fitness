@@ -1,6 +1,7 @@
-import React, { useState, FC, useEffect } from 'react';
+import React, { useState, FC, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
+import { testimonialContent } from './TestimonialContent';
 
 const Container = styled.div`
   width: 100%;
@@ -18,7 +19,7 @@ const Container = styled.div`
 const TestimonialsSection = styled.div`
   position: relative;
   width: 500px;
-  height: 290px;
+  min-height: 100px;
   background: rgb(255 255 255 / 0.08);
   border-radius: 5px;
   box-sizing: border-box;
@@ -26,6 +27,7 @@ const TestimonialsSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
 
   @media(max-width: 540px) {
@@ -87,62 +89,58 @@ const AfterQuote = styled.div`
     z-index: -1;
     font-family: 'Oswald';
     opacity: 0.3;
-    bottom: -40px;
-    right: 23px;
+    bottom: -54px;
+    right: 26px;
   }
-`;
-
-
-interface CarouselProps {
-  xPos?: number;
-}
-
-const Carousel = styled.div`
-    display: flex;
-    width: 200%;
-    padding-top: 12px;
-    transition: all 0.5s ease;
-    transform: ${(p: CarouselProps) => p.xPos ? `translateX(-${p.xPos}%)` : 0};
 `;
 
 const Testimonials: FC = () => {
   
-  const [seconds, setSeconds] = useState(5);
-  const [xPos, setXPos] = useState(50);
+  const [seconds, setSeconds] = useState(2);
+  const contentIndex = useRef(0);
+
+  const [content, setContent] = useState<string>(testimonialContent[0].content);
+  const [name, setName] = useState<string>(testimonialContent[0].name);
 
   let updatedSeconds = seconds;
-  let updatedXPos = xPos;
+  // let updatedIndex = contentIndex.current;
+
+  
+  const nextIndex = () => {
+    console.log("Next index: ", contentIndex.current);
+    contentIndex.current += 1;
+    if (contentIndex.current > 2)
+      contentIndex.current = 0;    
+
+    setContent(testimonialContent[contentIndex.current]?.content);
+    setName(testimonialContent[contentIndex.current]?.name);
+  }
+
 
   const updateTime = () => {
     if (updatedSeconds > 0) {
       updatedSeconds--;
-      console.log(`Updated Seconds: ${updatedSeconds}, xPos: ${updatedXPos}`);
+      console.log("Seconds: ", updatedSeconds);
     } else {
-      updatedSeconds = 5;
-      if (updatedXPos === 50) {
-        setXPos(0);
-        updatedXPos = 0;
-      } else {
-        setXPos(50);
-        updatedXPos = 50;
-      } 
+      updatedSeconds = 2;
+      nextIndex();
     }
     return setSeconds(updatedSeconds);
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     updateTime();
-  //   }, 1000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      updateTime();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []); 
 
   return (
     <Container>
       <TestimonialsSection>
         <Testimonial>
-          We have been working with James for 3 years and have seen great improvements in overall fitness and strength levels. He always creates effective plans tailored to our goals and we love the encouragement and energy that he brings to each session, as well as the constant learning of new techniques
-          <span>- Tilly &amp; Tom</span>
+          {content}
+          <span>{name}</span>
         </Testimonial>
 
         {/* <Testimonial>
