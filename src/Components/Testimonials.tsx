@@ -30,6 +30,8 @@ const TestimonialsSection = styled.div`
   transition: all 0.3s ease;
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
 
+  
+
   @media(max-width: 540px) {
     width: 100%;
     height: auto;
@@ -76,7 +78,6 @@ const BeforeQuote = styled.div`
     font-family: 'Oswald';
     opacity: 0.3;
   }
-  
 `;
 
 
@@ -102,9 +103,9 @@ const Testimonials: FC = () => {
   const [content, setContent] = useState<string>(testimonialContent[0].content);
   const [name, setName] = useState<string>(testimonialContent[0].name);
 
-  let updatedSeconds = seconds;
-  // let updatedIndex = contentIndex.current;
+  const [hidden, setHidden] = useState(false);
 
+  let updatedSeconds = seconds;
   
   const nextIndex = () => {
     console.log("Next index: ", contentIndex.current);
@@ -137,17 +138,11 @@ const Testimonials: FC = () => {
 
   return (
     <Container>
-      <TestimonialsSection>
+      <TestimonialsSection >
         <Testimonial>
           {content}
           <span>{name}</span>
         </Testimonial>
-
-        {/* <Testimonial>
-        I have been working with James for a few years now and every session is so enjoyable and fun. To top it off, I feel more body confident now, than ever before
-          <span>- Basma</span>
-        </Testimonial> */}
-
         <BeforeQuote />
         <AfterQuote />
       </TestimonialsSection>

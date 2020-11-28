@@ -85,6 +85,11 @@ const HashTag = styled.div`
   font-style: italic;
 `;
 
+const HashTagMini = styled(HashTag)`
+  font-size: 1.2em;
+  margin: 15px 0;
+`;
+
 const Product = styled.div`
   flex-direction: column;
   padding: 20px;
@@ -331,11 +336,12 @@ const OnlinePrograms: FC = () => {
           <Title>Strength</Title>
           <OverviewSection height={180}>
             <Overview>
-              Strength training is the key to becoming more robust and is one of the fundamental pillars to all good programs.
+              Strength training is key to becoming more robust and should be fundamental in all training programs.
               <br /><br />
-              The purpose of this program is to create central nervous demand/stress, along with mechanical stress, to increase muscle size/density, bone and joint health, structural integrity, increased metabolism and many more benefits.
+              The purpose of this program is to create central nervous demand/stress, along with mechanical stress, to increase muscle size/density, bone and joint health, structural integrity, and an increased metabolism.
               <br /><br />
-              If you are looking to push past plateaus, gain serious strength, follow a progressive and structured program, this is the program for you.
+              If you are looking to push past plateaus, gain serious strength and muscle, whilst adhering to a carefully structured and progressive program, this is the program for you.
+              <HashTagMini>#BeYourOwnAthlete</HashTagMini>
             </Overview>
           </OverviewSection>
 
@@ -347,7 +353,8 @@ const OnlinePrograms: FC = () => {
             <Overview>
               <ul>
                 <li>Must not be new to exercise</li>
-                <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
+                <li>Able to perform fundamental movement patterns adequately (squat, deadlift, bench, pull up, plank, lunge, carrys, etc)</li>
+                <li>Training level - Beginner/Intermediate/Advanced</li>
               </ul>  
             </Overview>          
           </Requirements>
