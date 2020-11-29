@@ -2,6 +2,7 @@ import React, { useState, FC, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
 import { testimonialContent } from './TestimonialContent';
+import $ from 'jquery';
 
 const Container = styled.div`
   width: 100%;
@@ -9,6 +10,7 @@ const Container = styled.div`
   display: flex; 
   align-items: center;
   justify-content: flex-end;
+  perspective: 1000px;
 
   @media(max-width: ${SharedSettings.mobile}) {
     justify-content: center;
@@ -113,52 +115,51 @@ const AfterQuote = styled.div`
 
 const Testimonials: FC = () => {
   
-  const [seconds, setSeconds] = useState(2);
+  const timerSeconds = 4;
+  const seconds = useRef(timerSeconds);
   const contentIndex = useRef(0);
-
+  const flipped = useRef(false);
   const [content, setContent] = useState<string>(testimonialContent[0].content);
   const [name, setName] = useState<string>(testimonialContent[0].name);
-
-  const flipped = useRef(false);
-
-  let updatedSeconds = seconds;
+  const [contentFlip, setContentFlip] = useState<string>(testimonialContent[1].content);
+  const [nameFlip, setNameFlip] = useState<string>(testimonialContent[1].name);
   
-  
-  const handleFlip = () => {
-    const flipInterval = setInterval(() => {
+
+  const nextIndex = () => {    
+    contentIndex.current += 1;
+    if (contentIndex.current > 4) contentIndex.current = 0;    
+
+    console.log("next index");
+    flipped.current = !flipped.current;
+
+    setTimeout(function() {
+      console.log("delay");
       setContent(testimonialContent[contentIndex.current]?.content);
       setName(testimonialContent[contentIndex.current]?.name);
-    }, 300);
-    return () => clearInterval(flipInterval);
-  }
-  
-  const nextIndex = () => {
-    console.log("Next index: ", contentIndex.current);
-    contentIndex.current += 1;
-    if (contentIndex.current > 2)
-      contentIndex.current = 0;    
-
-    flipped.current = !flipped.current;
-    handleFlip();
+    }, 500);
   }
 
-  const updateTime = () => {
-    if (updatedSeconds > 0) {
-      updatedSeconds--;
-      console.log("Seconds: ", updatedSeconds);
-    } else {
-      updatedSeconds = 2;
-      nextIndex();
-    }
-    return setSeconds(updatedSeconds);
-  }
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      updateTime();
+  const timer = () => {
+    setTimeout(() => {
+      seconds.current--;
+      console.log("Seconds: ", seconds.current);
+
+      if (seconds.current <= 0) {
+        seconds.current = timerSeconds;
+        nextIndex();
+      }
+
+      timer();
     }, 1000);
-    return () => clearInterval(interval);
-  }, []); 
+  }
+
+
+  // Init
+  useEffect(() => {
+    timer();
+  }, []);
+  
 
   return (
     <Container>
