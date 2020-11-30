@@ -2,7 +2,6 @@ import React, { useState, FC, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
 import { testimonialContent } from './TestimonialContent';
-import $ from 'jquery';
 
 const Container = styled.div`
   width: 100%;

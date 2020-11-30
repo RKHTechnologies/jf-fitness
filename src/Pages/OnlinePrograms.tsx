@@ -107,6 +107,7 @@ const Product = styled.div`
     'image equipment'
     'image expect'
     'image price'
+    'image price'
     'image price';
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -173,6 +174,41 @@ const Expect = styled(ProductSection)`
   grid-area: expect;
 `;
 
+const ProgramDetail = styled.div`
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    color: rgb(255 255 255 / 0.7);
+    font-size: 1.2em;
+    width: 600px;
+    margin: 12px auto 6px 6px;
+
+    span {
+      color: ${colours.primary};
+    }
+  }
+`;
+
+const Button = styled.div`
+  color: ${colours.primary};
+  background: ${colours.primary}40;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 12px 26px 6px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+
+  &:hover {
+    background: ${colours.primary};
+    color: rgb(255 255 255 / 0.90);
+  }
+`;
+
 const SubHeading = styled.div`
   color: ${colours.light};
   font-weight: 400;
@@ -215,11 +251,11 @@ const BuyNow = styled.div`
   justify-content: center;
   border-radius: 5px;
   text-transform: uppercase;
+  padding: 12px 26px 6px;
+  cursor: pointer;
   position: absolute;
   bottom: 20px;
   right: 20px;
-  padding: 12px 26px 6px;
-  cursor: pointer;
 
   &:hover {
     background: ${colours.primary};
@@ -312,21 +348,28 @@ const OnlinePrograms: FC = () => {
             </Overview>
           </Expect>
 
-          <div>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>150 <small>- 12 Week Plan</small></span>
-            </Price>
-            <BuyNow>Buy Now</BuyNow>
-          </div>
+          <ProgramDetail>
+            <p>For further information or if you have any questions, please get in touch <span>contact@jf-fitness.com</span></p>
+            <Button>EMAIL US</Button>
+          </ProgramDetail>
 
-          <div>
+          <ProgramDetail>
             <Price>
                 <Icon icon={faPoundSign} />
-                <span>120 <small>- 8 Week Plan</small></span>
+                <span>150</span>
             </Price>
-            <BuyNow>Buy Now</BuyNow>
-          </div>
+            <p>- 12 Week Plan</p>
+            <Button>Buy Now</Button>
+          </ProgramDetail>
+
+          <ProgramDetail>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120</span>
+            </Price>
+            <p>- 8 Week Plan</p>
+            <Button>Buy Now</Button>
+          </ProgramDetail>
         </Product>
         
 
