@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import styled from 'styled-components';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
 import { colours } from '../../Shared/SharedStyles';
-import { Icon, Price } from '../OnlinePrograms';
+import { HashTagMini, Icon, Price } from '../OnlinePrograms';
 
 const Container = styled.div`
   color: ${colours.light};
@@ -111,8 +111,9 @@ const SubHeading = styled.div`
 
 const Description = styled.div`
   max-width: 800px;
-  color: #818999;
-  font-size: 1.1em;
+  color: rgb(255 255 255 / 0.7);
+  font-size: 1.2em;
+  font-weight: 100;
   text-align: justify;
 `;
 
@@ -187,12 +188,12 @@ const EBook: FC = () => {
       break;
     
     case "2":
-      title = "AMRAP's & EMOM's";
+      title = "DB Only Workouts";
       image = "i5496";
       break;
 
     case "3":
-      title = "DB Only Workouts";
+      title = "KB Only Workouts";
       image = "i6107";
       break;
   }
@@ -208,31 +209,44 @@ const EBook: FC = () => {
         <Description>
           { ebook === "1" && (
             <>
-              <div>Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              <div>Bodyweight finishers is the perfect addition to any workout. They can be used as add ons to the end of your existing workouts or standalone sessions. </div>
               <br />
-              <div>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Feugiat pretium nibh ipsum consequat. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Praesent tristique magna sit amet purus gravida quis. </div>
+              <div>Expect a full range of movements and a series of challenges that will test you to your limits.</div>
+              <br />
+              <div>Each session is designed to last between 5-30 minutes. No equipment needed and can be performed anywhere.</div>
+              <HashTagMini>#BeYourOwnAthlete</HashTagMini>
             </>
           )}
 
           { ebook === "2" && (
             <>
-              <div>When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              <div>DB only workouts is a great addition to the E-Book series and is designed to pack some serious punch.</div>
               <br />
-              <div>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Feugiat pretium nibh ipsum consequat. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Praesent tristique magna sit amet purus gravida quis. </div>
+              <div>Expect EMOM’s and AMRAPs, Circuits and Intensity, and be prepared to develop some serious conditioning.</div>
+              <br />
+              <div>There are 20 high energy workouts which can complement your existing programme or be used solely on their own.</div>
+              <br />
+              <div>Expect to test your limits for 5-30 minutes and unlock that inner athlete.</div>
+              <HashTagMini>#BeYourOwnAthlete</HashTagMini>
             </>
           )}
 
           { ebook === "3" && (
             <>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              <div>KB only workouts is a great addition to the E-Book series and is designed to pack some serious punch.</div>
               <br />
-              <div>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Feugiat pretium nibh ipsum consequat. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Praesent tristique magna sit amet purus gravida quis. </div>
+              <div>Expect EMOM’s and AMRAPs, Circuits and Intensity, and be prepared to develop some serious conditioning.</div>
+              <br />
+              <div>There are 20 high energy workouts which can complement your existing programme or be used solely on their own.</div>
+              <br />
+              <div>Expect to test your limits for 5-30 minutes and unlock that inner athlete.</div>
+              <HashTagMini>#BeYourOwnAthlete</HashTagMini>
             </>
           )}
         </Description>
         
-        <SubHeading>What the service offers</SubHeading>
-        <Description>Pretium quam vulputate dignissim suspendisse in est ante in. Et tortor consequat id porta nibh venenatis cras sed. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Scelerisque purus semper eget duis at. Quis risus sed vulputate odio ut. Dolor morbi non arcu risus quis varius. Lacinia quis vel eros donec ac odio tempor orci. Netus et malesuada fames ac turpis egestas.</Description>
+        {/* <SubHeading>What the service offers</SubHeading>
+        <Description>Pretium quam vulputate dignissim suspendisse in est ante in. Et tortor consequat id porta nibh venenatis cras sed. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Scelerisque purus semper eget duis at. Quis risus sed vulputate odio ut. Dolor morbi non arcu risus quis varius. Lacinia quis vel eros donec ac odio tempor orci. Netus et malesuada fames ac turpis egestas.</Description> */}
 
         <Testimonial>
           I have been working with James for a few years now and every session is so enjoyable and fun. To top it off, I feel more body confident now, than ever before
