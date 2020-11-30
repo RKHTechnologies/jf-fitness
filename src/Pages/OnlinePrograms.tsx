@@ -303,7 +303,7 @@ const OnlinePrograms: FC = () => {
             <br /><br />
             If you are looking for structure, guidance, and a program that will deliver results, then this is the product for you.
           </PageDescription>
-          <HashTag>#TagLineExample</HashTag>
+          <HashTag>#BeYourOwnAthlete</HashTag>
         </div>
       </Section>
       
@@ -317,6 +317,7 @@ const OnlinePrograms: FC = () => {
               <br /><br />
               Whether you choose the 8 or 12 week plan, functional fitness incorporates structured progressions week on week to ensure continuous improvement and motivation, whilst developing aesthetics and athletic ability.  
             </Overview>
+            <HashTagMini>#BeYourOwnAthlete</HashTagMini>
           </OverviewSection>
 
           <Requirements height={140}>
@@ -446,11 +447,29 @@ const OnlinePrograms: FC = () => {
             </Overview>
           </Expect>
 
-          <Price>
-            <Icon icon={faPoundSign} />
-            <span>299</span>
-          </Price>
-          <BuyNow>Buy Now</BuyNow>
+          
+          <ProgramDetail>
+            <p>For further information or if you have any questions, please get in touch</p>
+            <Button secondary>EMAIL US</Button>
+          </ProgramDetail>
+
+          <ProgramDetail>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>150</span>
+            </Price>
+            <Detail>12 Week Plan</Detail>
+            <Button>Buy Now</Button>
+          </ProgramDetail>
+
+          <ProgramDetail>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120</span>
+            </Price>
+            <Detail>8 Week Plan</Detail>
+            <Button>Buy Now</Button>
+          </ProgramDetail>
         </Product>
 
 
@@ -504,14 +523,29 @@ const OnlinePrograms: FC = () => {
             </Overview>
           </Expect>
 
-          <Price>
-            <div>
-              <Icon icon={faPoundSign} />
-              <span>349</span>
-            </div>
-            
-          </Price>
-          <BuyNow>Buy Now</BuyNow>
+          
+          <ProgramDetail>
+            <p>For further information or if you have any questions, please get in touch</p>
+            <Button secondary>EMAIL US</Button>
+          </ProgramDetail>
+
+          <ProgramDetail>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>150</span>
+            </Price>
+            <Detail>12 Week Plan</Detail>
+            <Button>Buy Now</Button>
+          </ProgramDetail>
+
+          <ProgramDetail>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120</span>
+            </Price>
+            <Detail>8 Week Plan</Detail>
+            <Button>Buy Now</Button>
+          </ProgramDetail>
         </Product>
 
       </ProductsGrid>
