@@ -158,7 +158,7 @@ interface ISectionProps {
 }
 
 const ProductSection = styled.div`
-  min-height: ${(p: ISectionProps) => p.height}px;
+  /* min-height: ${(p: ISectionProps) => p.height}px; */
 `;
 
 const OverviewSection = styled(ProductSection)`
