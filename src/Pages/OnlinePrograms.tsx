@@ -78,14 +78,14 @@ export const ProductsGrid = styled.div`
   }
 `;
 
-const HashTag = styled.div`
+export const HashTag = styled.div`
   font-size: 1.6em;
   color: ${colours.primary};
   margin-top: 30px;
   font-style: italic;
 `;
 
-const HashTagMini = styled(HashTag)`
+export const HashTagMini = styled(HashTag)`
   font-size: 1.2em;
   margin: 15px 0;
 `;
@@ -366,10 +366,14 @@ const OnlinePrograms: FC = () => {
           </Expect>
 
           <ProgramDetail>
-            <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary>EMAIL US</Button>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120</span>
+            </Price>
+            <Detail>8 Week Plan</Detail>
+            <Button>Buy Now</Button>
           </ProgramDetail>
-
+          
           <ProgramDetail>
             <Price>
                 <Icon icon={faPoundSign} />
@@ -380,12 +384,8 @@ const OnlinePrograms: FC = () => {
           </ProgramDetail>
 
           <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>120</span>
-            </Price>
-            <Detail>8 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <p>For further information or if you have any questions, please get in touch</p>
+            <Button secondary>EMAIL US</Button>
           </ProgramDetail>
         </Product>
         
@@ -449,10 +449,14 @@ const OnlinePrograms: FC = () => {
 
           
           <ProgramDetail>
-            <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary>EMAIL US</Button>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120</span>
+            </Price>
+            <Detail>8 Week Plan</Detail>
+            <Button>Buy Now</Button>
           </ProgramDetail>
-
+          
           <ProgramDetail>
             <Price>
                 <Icon icon={faPoundSign} />
@@ -463,12 +467,8 @@ const OnlinePrograms: FC = () => {
           </ProgramDetail>
 
           <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>120</span>
-            </Price>
-            <Detail>8 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <p>For further information or if you have any questions, please get in touch</p>
+            <Button secondary>EMAIL US</Button>
           </ProgramDetail>
         </Product>
 
@@ -525,10 +525,14 @@ const OnlinePrograms: FC = () => {
 
           
           <ProgramDetail>
-            <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary>EMAIL US</Button>
+            <Price>
+                <Icon icon={faPoundSign} />
+                <span>120</span>
+            </Price>
+            <Detail>8 Week Plan</Detail>
+            <Button>Buy Now</Button>
           </ProgramDetail>
-
+          
           <ProgramDetail>
             <Price>
                 <Icon icon={faPoundSign} />
@@ -539,12 +543,8 @@ const OnlinePrograms: FC = () => {
           </ProgramDetail>
 
           <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>120</span>
-            </Price>
-            <Detail>8 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <p>For further information or if you have any questions, please get in touch</p>
+            <Button secondary>EMAIL US</Button>
           </ProgramDetail>
         </Product>
 

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { colours, PageBodyContainer, SharedSettings } from '../../Shared/SharedStyles';
 import styled from 'styled-components';
 import Hero from '../../Shared/Hero';
-import { Overlay, TextOverlay } from '../OnlinePrograms';
+import { HashTag, Overlay, TextOverlay } from '../OnlinePrograms';
 import { Image } from '../../Pages/OnlinePrograms';
 import { useHistory } from 'react-router';
 import { Title } from './EBook';
@@ -118,6 +118,7 @@ const EBooks: FC = () => {
             <br /><br />
             They bring intensity, inspiration and a serious challenge to your sessions.
           </PageDescription>
+          <HashTag>#BeYourOwnAthlete</HashTag>
         </div>
       </Section>
 
@@ -126,25 +127,25 @@ const EBooks: FC = () => {
           <Image image={"i6969"} />
           <Heading>Bodyweight Finishers</Heading>
           <Description>
-            Train the JF Fitness way, learn to use Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Bodyweight Finishers is a series of high-intensity, functional bodyweight movements, which is designed to push you to your limits and pack a serious challenge to your workouts.
           </Description>
           <Button onClick={() => handleNav("/ebooks/1")}>Find out more</Button>
         </Card>
 
         <Card onClick={() => handleNav("/ebooks/2")}>
           <Image image={"i5496"} />
-          <Heading>AMRAP's &amp; EMOM's</Heading>  
+          <Heading>DB Only Workouts</Heading>  
           <Description>
-            When it comes to building core strength, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            DB only workouts is a great addition to the E-Book series and is designed to pack some serious punch. Expect EMOM’s and AMRAP’s, Circuits and Intensity and be prepared to develop some serious conditioning. 
           </Description>
           <Button onClick={() => handleNav("/ebooks/2")}>Find out more</Button>
         </Card>
 
         <Card onClick={() => handleNav("/ebooks/3")}>
           <Image image={"i6107"} />
-          <Heading>DB Only Workouts</Heading>
+          <Heading>KB Only Workouts</Heading>
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            KB only workouts is a great addition to the E-Book series and is designed to pack some serious punch. Expect EMOM’s and AMRAP’s, Circuits and Intensity and be prepared to develop some serious conditioning.
           </Description>
           <Button onClick={() => handleNav("/ebooks/3")}>Find out more</Button>
         </Card>
