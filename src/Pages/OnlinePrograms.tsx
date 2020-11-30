@@ -193,20 +193,28 @@ const ProgramDetail = styled.div`
   }
 `;
 
+interface IButtonProps {
+  secondary?: boolean;
+}
+
 const Button = styled.div`
-  color: ${colours.primary};
-  background: ${colours.primary}40;
+  color: ${(p: IButtonProps) => p.secondary ? "#868686" : colours.primary};
+  background: ${(p: IButtonProps) => p.secondary ? "transparent" : `${colours.primary}40`};
   border-radius: 5px;
   text-transform: uppercase;
   padding: 12px 26px 6px;
   cursor: pointer;
   width: 100px;
   text-align: center;
+  border: 2px solid ${(p: IButtonProps) => p.secondary ? "#696969" : "#26495D"};
 
   &:hover {
-    background: ${colours.primary};
+    background: ${(p: IButtonProps) => p.secondary ? "#868686" : colours.primary};
+    border-color: ${(p: IButtonProps) => p.secondary ? "#868686" : colours.primary};
     color: rgb(255 255 255 / 0.90);
   }
+
+
 `;
 
 const SubHeading = styled.div`
@@ -233,7 +241,7 @@ export const Price = styled.div`
   grid-area: price;
   color: ${colours.primary};
   font-size: 1.8em;
-  margin-top: 20px;
+  margin-top: 5px;
 
   ${Icon} {
     color: ${colours.primary};
@@ -241,6 +249,14 @@ export const Price = styled.div`
     margin-right: 0;
     height: 26px;
   }
+`;
+
+const Detail = styled.div`
+  color: rgb(255 255 255 / 0.7);
+  text-align: left;
+  width: calc(100% - 250px);
+  margin: 15px auto 8px;
+  font-size: 1.2em;
 `;
 
 const BuyNow = styled.div`
@@ -349,8 +365,8 @@ const OnlinePrograms: FC = () => {
           </Expect>
 
           <ProgramDetail>
-            <p>For further information or if you have any questions, please get in touch <span>contact@jf-fitness.com</span></p>
-            <Button>EMAIL US</Button>
+            <p>For further information or if you have any questions, please get in touch</p>
+            <Button secondary>EMAIL US</Button>
           </ProgramDetail>
 
           <ProgramDetail>
@@ -358,7 +374,7 @@ const OnlinePrograms: FC = () => {
                 <Icon icon={faPoundSign} />
                 <span>150</span>
             </Price>
-            <p>- 12 Week Plan</p>
+            <Detail>12 Week Plan</Detail>
             <Button>Buy Now</Button>
           </ProgramDetail>
 
@@ -367,7 +383,7 @@ const OnlinePrograms: FC = () => {
                 <Icon icon={faPoundSign} />
                 <span>120</span>
             </Price>
-            <p>- 8 Week Plan</p>
+            <Detail>8 Week Plan</Detail>
             <Button>Buy Now</Button>
           </ProgramDetail>
         </Product>
