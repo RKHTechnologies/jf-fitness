@@ -294,7 +294,12 @@ const List = styled.ul`
   font-size: 1.2em;
 `;
 
-
+const handleEmail = () => {
+  window.open(
+    'mailto:contact@jf-fitness.com',
+    '_blank'
+  );
+}
 
 const OnlinePrograms: FC = () => {
   return (
@@ -395,7 +400,7 @@ const OnlinePrograms: FC = () => {
 
           <ProgramDetail>
             <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary>EMAIL US</Button>
+            <Button secondary onClick={handleEmail}>EMAIL US</Button>
           </ProgramDetail>
         </Product>
         
@@ -478,7 +483,7 @@ const OnlinePrograms: FC = () => {
 
           <ProgramDetail>
             <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary>EMAIL US</Button>
+            <Button secondary onClick={handleEmail}>EMAIL US</Button>
           </ProgramDetail>
         </Product>
 
@@ -554,7 +559,7 @@ const OnlinePrograms: FC = () => {
 
           <ProgramDetail>
             <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary>EMAIL US</Button>
+            <Button secondary onClick={handleEmail}>EMAIL US</Button>
           </ProgramDetail>
         </Product>
 
