@@ -101,17 +101,27 @@ const Product = styled.div`
   position: relative;
   display: grid;  
   grid-template-areas: 
-    'image title'
+    /* 'image title'
+    'image overview'
     'image overview'
     'image requirements'
     'image equipment'
-    'image expect'
-    'image price'
-    'image price'
-    'image price';
+    'price expect'
+    'price expect'
+    'price expect'; */
+    'title image'
+    'overview image'
+    'overview image'
+    'requirements image'
+    'equipment image'
+    'expect price'
+    'expect price'
+    'expect price';
+    
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   grid-row-gap: 0;
+  grid-template-columns: 600px auto;
 `;
 
 interface ImageProps {
