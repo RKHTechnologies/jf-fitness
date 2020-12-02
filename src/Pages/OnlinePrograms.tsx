@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarCheck, faDumbbell, faHeartbeat, faPoundSign } from '@fortawesome/free-solid-svg-icons';
 import { PageDescription } from './E-Books/EBooks';
 import { Section } from './Home';
+import PurchaseOverlay from '../Components/PurchaseOverlay';
 
 export const Centered = styled.div`
   display: flex;
@@ -205,18 +206,19 @@ const ProgramDetail = styled.div`
 
 interface IButtonProps {
   secondary?: boolean;
+  wide?: boolean;
 }
 
-const Button = styled.div`
+export const Button = styled.div`
   color: ${(p: IButtonProps) => p.secondary ? "#868686" : colours.primary};
   background: ${(p: IButtonProps) => p.secondary ? "transparent" : `${colours.primary}40`};
   border-radius: 5px;
   text-transform: uppercase;
   padding: 12px 26px 6px;
   cursor: pointer;
-  width: 100px;
+  width: ${(p: IButtonProps) => p.wide ? '200px' : '100px'};
   text-align: center;
-  border: 2px solid ${(p: IButtonProps) => p.secondary ? "#696969" : "#26495D"};
+  border: 2px solid ${(p: IButtonProps) => p.secondary ? "#696969" : "transparent"};
 
   &:hover {
     background: ${(p: IButtonProps) => p.secondary ? "#868686" : colours.primary};
@@ -304,6 +306,7 @@ const handleEmail = () => {
 const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
+      <PurchaseOverlay />
       <Hero image="i5325" small />
       <Overlay>
       </Overlay>

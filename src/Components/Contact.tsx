@@ -43,7 +43,7 @@ const Container = styled.div`
   font-size: 1.6em;
 `;
 
-const MainHeader = styled.h1`
+export const MainHeader = styled.h1`
   font-weight: 300;
   font-size: 3em;
   margin: 0;
