@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Pages/OnlinePrograms';
+import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import { colours } from '../Shared/SharedStyles';
 import { MainHeader } from './Contact';
 
@@ -119,6 +120,24 @@ const MasterCard = styled.div`
   }
 `;
 
+interface ImageProps {
+  image: imageLib;
+}
+
+const Image = styled.div`
+  width: 100%;
+  height: 220px;
+  background: url(${(p: ImageProps) => ImagesDesktop[p.image]});
+  border-radius: 6px;
+  margin-top: 16px;
+  background-size: cover;
+  background-position: center;
+`;
+
+interface IHeaderTextProps {
+  right?: boolean;
+}
+
 const HeaderText = styled.div`
   width: 100%;
   color: rgb(255 255 255 / 0.7);
@@ -129,6 +148,32 @@ const HeaderText = styled.div`
   margin-top: 14px;
   margin-bottom: 8px;
   font-size: 1.2em;
+  text-align: ${(p: IHeaderTextProps) => p.right ? "right" : "left"};
+`;
+
+const H1Text = styled(HeaderText)`
+  font-size: 2em;
+  color: rgb(255 255 255 / 0.88);
+`;
+
+const SubtotalRow = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+`;
+
+const TotalRow = styled(SubtotalRow)`
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(255 255 255 / 0.5);
+
+
+  & > div {
+    font-size: 1.4em;
+    color: rgb(255 255 255 / 0.88);
+  }
 `;
 
 const ButtonsContainer = styled.div`
@@ -183,11 +228,31 @@ const PurchaseOverlay: FC<IProps> = ({ open }: IProps) => {
               <FormItem placeholder="Postcode" name="postcode" />
             </ItemContainer>
             <Card>
-              <MasterCard />
+              <MasterCard>
+
+              </MasterCard>
             </Card>
           </Column>
           <Column>
-            test
+            <Image image={"i6107"} />
+            <H1Text>Bodyweight Finishers</H1Text>
+            <SubtotalRow>
+              <HeaderText>Subtotal</HeaderText>
+              <HeaderText right>£100</HeaderText>
+            </SubtotalRow>
+            <SubtotalRow>
+              <HeaderText>Shipping</HeaderText>
+              <HeaderText right>Free</HeaderText>
+            </SubtotalRow>
+            {/* <SubtotalRow>
+              <HeaderText>VAT</HeaderText>
+              <HeaderText right>£0.00</HeaderText>
+            </SubtotalRow> */}
+  
+            <TotalRow>
+              <HeaderText>Total (Ex. VAT)</HeaderText>
+              <HeaderText right>£100</HeaderText>
+            </TotalRow>
           </Column>
         </FormContainer>
 
