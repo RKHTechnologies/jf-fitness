@@ -2,13 +2,16 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Pages/OnlinePrograms';
 import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
-import { colours } from '../Shared/SharedStyles';
 import { MainHeader } from './Contact';
+
+interface IPageBackgroundProps {
+  open?: boolean;
+} 
 
 const PageBackground = styled.div`
   position: fixed;
   top: 0;
-  bottom: 0;
+  bottom: ${(p: IPageBackgroundProps) => p.open ? "0" : "null"};
   right: 0;
   left: 0;
   backdrop-filter: blur(12px);
@@ -18,18 +21,24 @@ const PageBackground = styled.div`
   justify-content: center;
 `;
 
+interface IPurchaseProps {
+  open?: boolean;
+}
+
 const PurchaseContainer = styled.div`
-  width: 60%;
-  height: calc(100% - 150px);
+  width: 1200px;
+  height: ${(p: IPurchaseProps) => p.open ? "calc(100% - 150px)" : "0"};
   background: #121212;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 40px;
+  padding: ${(p: IPurchaseProps) => p.open ? "40px" : "0"};
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 `;
 
 const CloseButton = styled.div`
@@ -91,11 +100,15 @@ const ItemContainer = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  height: 180px;
+  height: 210px;
   background: #353535;
   margin-top: 20px;
   border-radius: 7px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 const MasterCard = styled.div`
@@ -118,6 +131,40 @@ const MasterCard = styled.div`
     background: rgb(255 165 0 / 0.7);
     right: 32px;
   }
+`;
+
+const LongNumber = styled.input`
+  width: 80%;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  font-size: 2em;
+  margin-top: 50px;
+  color: #757575;
+  height: 18px;
+  padding-top: 10px;
+  border-bottom: 2px solid;
+  margin-left: 20px;
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:before {
+    content: 'Card Number';
+    position: absolute;
+    color: white;
+  }
+`;
+
+const Date = styled(LongNumber)`
+  width: 62px;
+  margin-top: -16px;
+  font-size: 1.8em;
+`;
+
+const CVV = styled(Date)`
+  width: 50px;
 `;
 
 interface ImageProps {
@@ -167,7 +214,7 @@ const SubtotalRow = styled.div`
 const TotalRow = styled(SubtotalRow)`
   margin-top: 40px;
   padding-top: 10px;
-  border-top: 1px solid rgb(255 255 255 / 0.5);
+  border-top: 2px solid #353535;
 
 
   & > div {
@@ -206,14 +253,15 @@ const FormItem = styled.input`
 
 interface IProps { 
   open?: boolean;
+  CloseOverlay: () => void;
 }
 
-const PurchaseOverlay: FC<IProps> = ({ open }: IProps) => {
+const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay }: IProps) => {
   return (
-    <PageBackground>
-      <PurchaseContainer>
+    <PageBackground open={open}>
+      <PurchaseContainer open={open}>
         <MainHeader>Order Summary</MainHeader>
-        <CloseButton />
+        <CloseButton onClick={CloseOverlay} />
 
         <FormContainer>
           <Column>
@@ -228,9 +276,11 @@ const PurchaseOverlay: FC<IProps> = ({ open }: IProps) => {
               <FormItem placeholder="Postcode" name="postcode" />
             </ItemContainer>
             <Card>
-              <MasterCard>
-
-              </MasterCard>
+              <label></label>
+              <LongNumber placeholder="0000 0000 0000 0000" name="longnumber" type="number" maxLength={16} />
+              <Date placeholder="01/01" name="date" />
+              <CVV placeholder="000" name="cvv" />
+              <MasterCard />
             </Card>
           </Column>
           <Column>
@@ -244,13 +294,13 @@ const PurchaseOverlay: FC<IProps> = ({ open }: IProps) => {
               <HeaderText>Shipping</HeaderText>
               <HeaderText right>Free</HeaderText>
             </SubtotalRow>
-            {/* <SubtotalRow>
+            <SubtotalRow>
               <HeaderText>VAT</HeaderText>
-              <HeaderText right>£0.00</HeaderText>
-            </SubtotalRow> */}
+              <HeaderText right>£0</HeaderText>
+            </SubtotalRow>
   
             <TotalRow>
-              <HeaderText>Total (Ex. VAT)</HeaderText>
+              <HeaderText>Total</HeaderText>
               <HeaderText right>£100</HeaderText>
             </TotalRow>
           </Column>
