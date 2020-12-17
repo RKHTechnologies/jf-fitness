@@ -303,7 +303,7 @@ const handleEmail = () => {
   );
 }
 
-interface IOverlayContent {
+export interface IOverlayContent {
   image: imageLib;
   title: string;
   total: number;

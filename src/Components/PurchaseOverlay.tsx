@@ -11,14 +11,17 @@ interface IPageBackgroundProps {
 const PageBackground = styled.div`
   position: fixed;
   top: 0;
-  bottom: ${(p: IPageBackgroundProps) => p.open ? "0" : "null"};
+  bottom: ${(p: IPageBackgroundProps) => p.open ? "0" : "100vh"};
   right: 0;
   left: 0;
-  backdrop-filter: blur(12px);
+  /* backdrop-filter: blur(12px); */
+  backdrop-filter: blur(${(p: IPageBackgroundProps) => p.open ? "12px" : "0"});
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* display: ${(p: IPageBackgroundProps) => p.open ? "auto" : "none"}; */
+  transition: all 0.3s ease;
 `;
 
 interface IPurchaseProps {
@@ -27,7 +30,8 @@ interface IPurchaseProps {
 
 const PurchaseContainer = styled.div`
   width: 1200px;
-  height: ${(p: IPurchaseProps) => p.open ? "calc(100% - 150px)" : "0"};
+  height: calc(100% - 150px);
+  height: ${(p: IPurchaseProps) => p.open ? "null" : "0"};
   background: #121212;
   border-radius: 10px;
   display: flex;
@@ -284,8 +288,8 @@ const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay, image, title, total }
             <Card>
               <label></label>
               <LongNumber placeholder="Card Number" name="longnumber" type="number" maxLength={16} />
-              <Date placeholder="MM/YY" name="date" />
-              <CVV placeholder="CVC" name="cvc" />
+              <Date placeholder="MM/YY" name="date" maxLength={5} />
+              <CVV placeholder="CVC" name="cvc" type="number" maxLength={3} />
               <MasterCard />
             </Card>
           </Column>

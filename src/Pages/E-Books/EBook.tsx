@@ -1,10 +1,11 @@
 import { faPoundSign } from '@fortawesome/free-solid-svg-icons';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
+import PurchaseOverlay from '../../Components/PurchaseOverlay';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
 import { colours } from '../../Shared/SharedStyles';
-import { HashTagMini, Icon, Price } from '../OnlinePrograms';
+import { HashTagMini, Icon, IOverlayContent, Price } from '../OnlinePrograms';
 
 const Container = styled.div`
   color: ${colours.light};
@@ -198,8 +199,25 @@ const EBook: FC = () => {
       break;
   }
 
+  const [OverlayOpen, setOverlayOpen] = useState(false);
+  const [OverlayContent, setOverlayContent] = useState<IOverlayContent>({image: "i6107", title: "Order Summary", total: 0})
+
+  const CloseOverlay = () => {
+    setOverlayOpen(false);
+  }
+
+  const OpenOverlay = (Image: imageLib, Title: string, Total: number) => {
+    setOverlayContent({
+      image: Image,
+      title: Title,
+      total: Total
+    })
+    setOverlayOpen(true);
+  }
+
   return (
     <Container>
+      <PurchaseOverlay open={OverlayOpen} image={OverlayContent.image} title={OverlayContent.title} total={OverlayContent.total} CloseOverlay={CloseOverlay} />
       <Left>
         <Image image={image} />
       </Left>
@@ -259,7 +277,7 @@ const EBook: FC = () => {
             <span>50</span>
           </Price>
 
-          <Buy>BUY NOW</Buy>
+          <Buy onClick={() => OpenOverlay(image, title, 50)}>BUY NOW</Buy>
         </PriceContainer>
 
         
