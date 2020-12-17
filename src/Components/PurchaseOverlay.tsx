@@ -256,9 +256,12 @@ const FormItem = styled.input`
 interface IProps { 
   open?: boolean;
   CloseOverlay: () => void;
+  image: imageLib;
+  title: string;
+  total: number;
 }
 
-const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay }: IProps) => {
+const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay, image, title, total }: IProps) => {
   return (
     <PageBackground open={open}>
       <PurchaseContainer open={open}>
@@ -287,11 +290,11 @@ const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay }: IProps) => {
             </Card>
           </Column>
           <Column>
-            <Image image={"i6107"} />
-            <H1Text>Bodyweight Finishers</H1Text>
+            <Image image={image} />
+            <H1Text>{title}</H1Text>
             <SubtotalRow>
               <HeaderText>Subtotal</HeaderText>
-              <HeaderText right>£100</HeaderText>
+              <HeaderText right>£{total}</HeaderText>
             </SubtotalRow>
             <SubtotalRow>
               <HeaderText>Shipping</HeaderText>
@@ -304,7 +307,7 @@ const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay }: IProps) => {
   
             <TotalRow>
               <HeaderText>Total</HeaderText>
-              <HeaderText right>£100</HeaderText>
+              <HeaderText right>£{total}</HeaderText>
             </TotalRow>
             <ButtonsContainer>
               <Button wide>Checkout</Button>
