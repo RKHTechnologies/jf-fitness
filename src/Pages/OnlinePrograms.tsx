@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useState } from 'react';
 import { colours, PageBodyContainer, SharedSettings } from '../Shared/SharedStyles';
 import styled from 'styled-components';
 import Hero from '../Shared/Hero';
@@ -216,7 +216,7 @@ export const Button = styled.div`
   text-transform: uppercase;
   padding: 12px 26px 6px;
   cursor: pointer;
-  width: ${(p: IButtonProps) => p.wide ? '200px' : '100px'};
+  width: ${(p: IButtonProps) => p.wide ? '100%' : '100px'};
   text-align: center;
   border: 2px solid ${(p: IButtonProps) => p.secondary ? "#696969" : "transparent"};
 
@@ -305,20 +305,20 @@ const handleEmail = () => {
 
 const OnlinePrograms: FC = () => {
   
-  const OverlayOpen = useRef(true);
+  const [OverlayOpen, setOverlayOpen] = useState(true);
 
   const CloseOverlay = () => {
     console.log("clicked");
-    OverlayOpen.current = false;
+    setOverlayOpen(false);
   }
 
   const OpenOverlay = () => {
-    OverlayOpen.current = true;
+    setOverlayOpen(true);
   }
 
   return (
     <PageBodyContainer>
-      <PurchaseOverlay open={OverlayOpen.current} CloseOverlay={CloseOverlay} />
+      <PurchaseOverlay open={OverlayOpen} CloseOverlay={CloseOverlay} />
       <Hero image="i5325" small />
       <Overlay />
 
@@ -400,7 +400,7 @@ const OnlinePrograms: FC = () => {
                 <span>120</span>
             </Price>
             <Detail>8 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <Button onClick={OpenOverlay}>Buy Now</Button>
           </ProgramDetail>
           
           <ProgramDetail>
@@ -409,7 +409,7 @@ const OnlinePrograms: FC = () => {
                 <span>150</span>
             </Price>
             <Detail>12 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <Button onClick={OpenOverlay}>Buy Now</Button>
           </ProgramDetail>
 
           <ProgramDetail>
@@ -483,7 +483,7 @@ const OnlinePrograms: FC = () => {
                 <span>120</span>
             </Price>
             <Detail>8 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <Button onClick={OpenOverlay}>Buy Now</Button>
           </ProgramDetail>
           
           <ProgramDetail>
@@ -492,7 +492,7 @@ const OnlinePrograms: FC = () => {
                 <span>150</span>
             </Price>
             <Detail>12 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <Button onClick={OpenOverlay}>Buy Now</Button>
           </ProgramDetail>
 
           <ProgramDetail>
@@ -559,7 +559,7 @@ const OnlinePrograms: FC = () => {
                 <span>120</span>
             </Price>
             <Detail>8 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <Button onClick={OpenOverlay}>Buy Now</Button>
           </ProgramDetail>
           
           <ProgramDetail>
@@ -568,7 +568,7 @@ const OnlinePrograms: FC = () => {
                 <span>150</span>
             </Price>
             <Detail>12 Week Plan</Detail>
-            <Button>Buy Now</Button>
+            <Button onClick={OpenOverlay}>Buy Now</Button>
           </ProgramDetail>
 
           <ProgramDetail>

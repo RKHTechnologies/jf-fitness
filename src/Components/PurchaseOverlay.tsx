@@ -84,6 +84,7 @@ const Column = styled.div`
   width: 45%;
   padding: 0 50px;
   box-sizing: border-box;
+  position: relative;
 
   @media(max-width: 1100px) {
     width: 100%;
@@ -100,9 +101,9 @@ const ItemContainer = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  height: 210px;
+  height: 200px;
   background: #353535;
-  margin-top: 20px;
+  margin-top: 50px;
   border-radius: 7px;
   position: relative;
   display: flex;
@@ -138,8 +139,8 @@ const LongNumber = styled.input`
   height: 40px;
   background: transparent;
   border: 0;
-  font-size: 2em;
-  margin-top: 50px;
+  font-size: 1.8em;
+  margin-top: 40px;
   color: #757575;
   height: 18px;
   padding-top: 10px;
@@ -158,13 +159,13 @@ const LongNumber = styled.input`
 `;
 
 const Date = styled(LongNumber)`
-  width: 62px;
+  width: 65px;
   margin-top: -16px;
-  font-size: 1.8em;
+  font-size: 1.4em;
 `;
 
 const CVV = styled(Date)`
-  width: 50px;
+  width: 40px;
 `;
 
 interface ImageProps {
@@ -225,11 +226,11 @@ const TotalRow = styled(SubtotalRow)`
 
 const ButtonsContainer = styled.div`
   height: 50px;
-  width: 100%;
+  width: 404px;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 20px;
+  bottom: -4px;
   position: absolute;
 `;
 
@@ -275,12 +276,13 @@ const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay }: IProps) => {
               <FormItem placeholder="Address Line 1" name="address1" />
               <FormItem placeholder="Address Line 2" name="address2" />
               <FormItem placeholder="Postcode" name="postcode" />
+              <HeaderText>Card Details</HeaderText>
             </ItemContainer>
             <Card>
               <label></label>
-              <LongNumber placeholder="0000 0000 0000 0000" name="longnumber" type="number" maxLength={16} />
-              <Date placeholder="01/01" name="date" />
-              <CVV placeholder="000" name="cvv" />
+              <LongNumber placeholder="Card Number" name="longnumber" type="number" maxLength={16} />
+              <Date placeholder="MM/YY" name="date" />
+              <CVV placeholder="CVC" name="cvc" />
               <MasterCard />
             </Card>
           </Column>
@@ -304,12 +306,12 @@ const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay }: IProps) => {
               <HeaderText>Total</HeaderText>
               <HeaderText right>£100</HeaderText>
             </TotalRow>
-          </Column> 
+            <ButtonsContainer>
+              <Button wide>Checkout</Button>
+            </ButtonsContainer>
+          </Column>     
         </FormContainer>
-
-        <ButtonsContainer>
-          <Button wide>Checkout</Button>
-        </ButtonsContainer>
+        
       </PurchaseContainer>
     </PageBackground>
   );
