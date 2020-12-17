@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import { colours, PageBodyContainer, SharedSettings } from '../Shared/SharedStyles';
 import styled from 'styled-components';
 import Hero from '../Shared/Hero';
@@ -304,12 +304,23 @@ const handleEmail = () => {
 }
 
 const OnlinePrograms: FC = () => {
+  
+  const OverlayOpen = useRef(true);
+
+  const CloseOverlay = () => {
+    console.log("clicked");
+    OverlayOpen.current = false;
+  }
+
+  const OpenOverlay = () => {
+    OverlayOpen.current = true;
+  }
+
   return (
     <PageBodyContainer>
-      <PurchaseOverlay />
+      <PurchaseOverlay open={OverlayOpen.current} CloseOverlay={CloseOverlay} />
       <Hero image="i5325" small />
-      <Overlay>
-      </Overlay>
+      <Overlay />
 
       <Section id="description" lastItem>
         <div className="wrapper">
