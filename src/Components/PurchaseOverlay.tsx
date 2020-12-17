@@ -202,6 +202,7 @@ const FormItem = styled.input`
   font-size: 1.2em;
   font-weight: 400;
   padding-top: 6px;
+  color: #707070;
 `;
 
 interface IProps { 
@@ -244,16 +245,16 @@ const PurchaseOverlay: FC<IProps> = ({ open }: IProps) => {
               <HeaderText>Shipping</HeaderText>
               <HeaderText right>Free</HeaderText>
             </SubtotalRow>
-            {/* <SubtotalRow>
+            <SubtotalRow>
               <HeaderText>VAT</HeaderText>
-              <HeaderText right>£0.00</HeaderText>
-            </SubtotalRow> */}
+              <HeaderText right>£0</HeaderText>
+            </SubtotalRow>
   
             <TotalRow>
-              <HeaderText>Total (Ex. VAT)</HeaderText>
+              <HeaderText>Total</HeaderText>
               <HeaderText right>£100</HeaderText>
             </TotalRow>
-          </Column>
+          </Column> 
         </FormContainer>
 
         <ButtonsContainer>
