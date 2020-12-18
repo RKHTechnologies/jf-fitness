@@ -17,10 +17,16 @@ export const Centered = styled.div`
 
 export const PageDescription = styled.div`
   text-align: justify;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 100;
   color: rgb(255 255 255 / 0.7);
   margin-top: 20px;
+
+  @media(max-width: 1100px) {
+    font-size: 1.2em;
+    margin: 0 20px;
+    font-weight: 300;
+  }
 `;
 
 const CardsGrid = styled.div`

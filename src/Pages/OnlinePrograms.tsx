@@ -77,6 +77,10 @@ export const ProductsGrid = styled.div`
   @media(max-width: 800px) {
     padding: 0 10px;
   }
+
+  @media(max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const HashTag = styled.div`
@@ -84,16 +88,21 @@ export const HashTag = styled.div`
   color: ${colours.primary};
   margin-top: 30px;
   font-style: italic;
+  
+  @media(max-width: 1100px) {
+    margin: 30px 20px 0;
+    font-size: 1.4em;
+  }
 `;
 
 export const HashTagMini = styled(HashTag)`
-  font-size: 1.2em;
-  margin: 15px 0;
+  font-size: 1.2em !important;
+  margin: 15px 0 !important;
 `;
 
 const Product = styled.div`
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   transition: transform 0.3s ease;
   margin-bottom: 80px;
@@ -102,14 +111,6 @@ const Product = styled.div`
   position: relative;
   display: grid;  
   grid-template-areas: 
-    /* 'image title'
-    'image overview'
-    'image overview'
-    'image requirements'
-    'image equipment'
-    'price expect'
-    'price expect'
-    'price expect'; */
     'title image'
     'overview image'
     'overview image'
@@ -123,6 +124,19 @@ const Product = styled.div`
   grid-gap: 20px;
   grid-row-gap: 0;
   grid-template-columns: 600px auto;
+
+  @media(max-width: 1170px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'image'
+      'overview'
+      'requirements'
+      'equipment'
+      'expect'
+      'price';
+  }
+  
 `;
 
 interface ImageProps {
@@ -139,6 +153,16 @@ export const Image = styled.div`
   margin-bottom: 10px;
   border-radius: 5px;
   min-height: 400px;
+
+  @media(max-width: 1170px) {
+    min-height: 450px;
+  }
+
+  @media(max-width: 700px) {
+    min-height: 300px;
+  }
+
+
 `;
 
 const Title = styled.h1`
@@ -149,6 +173,11 @@ const Title = styled.h1`
   font-weight: 300;
   margin: 0;
   text-transform: uppercase;
+
+  @media(max-width: 700px) {
+    font-size: 3em;
+    text-align: center;
+  }
 `;
 
 const Overview = styled.div`
@@ -174,6 +203,11 @@ const ProductSection = styled.div`
 
 const OverviewSection = styled(ProductSection)`
   grid-area: overview;
+  
+  @media(max-width: 700px) {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
 `;
 const Requirements = styled(ProductSection)`
   grid-area: requirements;
@@ -192,16 +226,48 @@ const ProgramDetail = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media(max-width: 450px) {
+    flex-wrap: wrap;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  
   p {
     color: rgb(255 255 255 / 0.7);
     font-size: 1.2em;
-    width: 600px;
+    width: calc(100% - 168px);
     margin: 12px auto 6px 6px;
+
+    @media(max-width: 1280px) {
+      height: 80px;
+      margin-top: 50px;
+      font-size: 1em;
+    }
+
+    @media(max-width: 450px) {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
 
     span {
       color: ${colours.primary};
     }
   }
+`;
+
+const LastProgramDetail = styled(ProgramDetail)`
+  margin-bottom: 0 !important;
+
+  @media(max-width: 450px) {
+    margin-top: 10px;
+
+    p {
+      margin-top: -10px;
+    }
+  }
+
+  
 `;
 
 interface IButtonProps {
@@ -226,7 +292,10 @@ export const Button = styled.div`
     color: rgb(255 255 255 / 0.90);
   }
 
-
+  @media(max-width: 450px) {
+    width: 100%;
+    margin-top: -10px;
+  }
 `;
 
 const SubHeading = styled.div`
@@ -269,6 +338,11 @@ const Detail = styled.div`
   width: calc(100% - 250px);
   margin: 15px auto 8px;
   font-size: 1.2em;
+
+  @media(max-width: 450px) {
+    width: calc(100% - 72px);
+    text-align: center;
+  }
 `;
 
 const BuyNow = styled.div`
@@ -423,10 +497,10 @@ const OnlinePrograms: FC = () => {
             <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   12 Week plan", 150)}>Buy Now</Button>
           </ProgramDetail>
 
-          <ProgramDetail>
+          <LastProgramDetail>
             <p>For further information or if you have any questions, please get in touch</p>
             <Button secondary onClick={handleEmail}>EMAIL US</Button>
-          </ProgramDetail>
+          </LastProgramDetail>
         </Product>
         
 
@@ -506,10 +580,10 @@ const OnlinePrograms: FC = () => {
             <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 12 Week plan", 150)}>Buy Now</Button>
           </ProgramDetail>
 
-          <ProgramDetail>
+          <LastProgramDetail>
             <p>For further information or if you have any questions, please get in touch</p>
             <Button secondary onClick={handleEmail}>EMAIL US</Button>
-          </ProgramDetail>
+          </LastProgramDetail>
         </Product>
 
 
@@ -582,10 +656,10 @@ const OnlinePrograms: FC = () => {
             <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 12 Week plan", 150)}>Buy Now</Button>
           </ProgramDetail>
 
-          <ProgramDetail>
+          <LastProgramDetail>
             <p>For further information or if you have any questions, please get in touch</p>
             <Button secondary onClick={handleEmail}>EMAIL US</Button>
-          </ProgramDetail>
+          </LastProgramDetail>
         </Product>
 
       </ProductsGrid>
