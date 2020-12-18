@@ -10,19 +10,29 @@ interface IPageBackgroundProps {
 
 const PageBackground = styled.div`
   position: fixed;
-  top: 0;
-  bottom: ${(p: IPageBackgroundProps) => p.open ? "0" : "100vh"};
+  top: ${(p: IPageBackgroundProps) => p.open ? "0" : "25%"};
+  bottom: ${(p: IPageBackgroundProps) => p.open ? "0" : "75%"};
   right: 0;
   left: 0;
-  /* backdrop-filter: blur(12px); */
-  backdrop-filter: blur(${(p: IPageBackgroundProps) => p.open ? "12px" : "0"});
-  z-index: 5;
+  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* display: ${(p: IPageBackgroundProps) => p.open ? "auto" : "none"}; */
   transition: all 0.3s ease;
 `;
+
+
+const PageBlur = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  backdrop-filter: blur(${(p: IPageBackgroundProps) => p.open ? "12px" : "0"});
+  display: ${(p: IPageBackgroundProps) => p.open ? "auto" : "none"};
+  z-index: 5;
+`;
+
 
 interface IPurchaseProps {
   open?: boolean;
@@ -31,18 +41,18 @@ interface IPurchaseProps {
 const PurchaseContainer = styled.div`
   width: 1200px;
   height: calc(100% - 150px);
-  height: ${(p: IPurchaseProps) => p.open ? "null" : "0"};
   background: #121212;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding: ${(p: IPurchaseProps) => p.open ? "40px" : "0"};
+  padding: ${(p: IPurchaseProps) => p.open ? "40px" : "0 px"};
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  z-index: 7;
 `;
 
 const CloseButton = styled.div`
@@ -268,6 +278,7 @@ interface IProps {
 const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay, image, title, total }: IProps) => {
   return (
     <PageBackground open={open}>
+      <PageBlur open={open} />
       <PurchaseContainer open={open}>
         <MainHeader>Order Summary</MainHeader>
         <CloseButton onClick={CloseOverlay} />
