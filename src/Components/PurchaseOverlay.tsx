@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Pages/OnlinePrograms';
 import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
+import { SharedSettings } from '../Shared/SharedStyles';
 import { MainHeader } from './Contact';
 
 interface IPageBackgroundProps {
@@ -53,6 +54,12 @@ const PurchaseContainer = styled.div`
   overflow: hidden;
   transition: all 0.2s ease;
   z-index: 7;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    width: 98%;
+    height: 98%;
+    overflow-y: scroll;
+  }
 `;
 
 const CloseButton = styled.div`
@@ -92,6 +99,7 @@ const FormContainer = styled.form`
   justify-content: space-around;
   height: calc(100% - 150px);
   margin-bottom: 50px;
+  /* flex-direction: row-reverse; */
 `;
 
 const Column = styled.div`

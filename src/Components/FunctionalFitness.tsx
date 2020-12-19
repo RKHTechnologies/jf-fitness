@@ -20,10 +20,6 @@ const TextContent = styled.div`
 
 const FunctionalFitness: FC = () => {
   return (
-    // <Container>
-    //   <PageHeading>What is Functional Fitness?</PageHeading>
-    //   <TextContent></TextContent>
-    // </Container>
     <JumboCard 
       title="What is Functional Fitness?" 
       text="" 

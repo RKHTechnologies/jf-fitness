@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ImagesDesktop } from '../Shared/ImageLib';
 import { SharedSettings } from '../Shared/SharedStyles';
-import Testimonials from './Testimonials';
 
 const Container = styled.div`
   width: 100%;
@@ -25,6 +25,14 @@ const AboutUs = styled.div`
   }
 `;
 
+const SideImage = styled.div`
+  width: 96%;
+  height: 96%;
+  background: url(${ImagesDesktop['boxJump']});
+  background-size: cover;
+  margin: auto 0 auto auto;
+`;
+
 const About: React.FC = () => {
   return (
     <Container>
@@ -43,7 +51,7 @@ const About: React.FC = () => {
         <br />
         Everyone has their own, unique inner athlete. JF Fitness can help unlock and unleash yours.  
       </AboutUs>
-      <Testimonials />
+      <SideImage />
     </Container>
   );
 }

@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionContainer, SharedSettings, PageBodyContainer } from '../Shared/SharedStyles';
+import { SharedSettings, PageBodyContainer } from '../Shared/SharedStyles';
 import About from '../Components/About';
-// import Testimonials from '../Components/Testimonials';
-// import Hero from '../Shared/Hero';
-// import ProductCards from '../Components/ProductCards';
 import WhyUs from '../Components/WhyUs';
 import Contact from '../Components/Contact';
 import HeroVideo from '../Components/HeroVideo';
 import Services from '../Components/Services';
 import FunctionalFitness from '../Components/FunctionalFitness';
+import Testimonials from '../Components/Testimonials';
 
 const Container = styled(PageBodyContainer)`
   top: 0;
@@ -65,6 +63,12 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
       <Section id="functionalFitness">
         <div className="wrapper">
           <FunctionalFitness />
+        </div>
+      </Section>
+
+      <Section id="testimonials">
+        <div className="wrapper">
+          <Testimonials />
         </div>
       </Section>
 

@@ -8,7 +8,7 @@ const Container = styled.div`
   height: 100%;
   display: flex; 
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   perspective: 1000px;
 
   @media(max-width: ${SharedSettings.mobile}) {

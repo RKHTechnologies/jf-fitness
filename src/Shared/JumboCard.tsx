@@ -9,10 +9,15 @@ const JumboCardContainer = styled.div`
   margin: auto;
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
+  /* grid-template-areas:
+    'side image image'
+    'side image image'
+    'side image image'; */
+  grid-template-columns: 2fr 2fr 3fr;
   grid-template-areas:
-    'side image image'
-    'side image image'
-    'side image image';
+    'image image side'
+    'image image side'
+    'image image side';
 
   h3 {
       grid-area: title;
@@ -78,22 +83,25 @@ const SideContainer = styled.div`
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
     border-left: 22px solid ${colours.primary};
-    right: -22px;
+    left: -22px;
     top: calc(50% - 22px);
+    transform: rotate(180deg);
   }
 
   @media(max-width: ${SharedSettings.mobile}) {
     padding: 10px;
     text-align: center;
+    padding-bottom: 40px;
     
     &:after {
       border-top: 22px solid ${colours.primary};
       border-bottom: none;
       border-left: 22px solid transparent;
       border-right: 22px solid transparent;
-      right: calc(50% - 22px);
+      left: calc(50% - 22px);
       bottom: -22px;
       top: auto;
+      transform: rotate(0deg);
     }
   }
 `;
@@ -110,7 +118,8 @@ const Button = styled.div`
   width: calc(100% - 105px);
   text-align: center;
   position: absolute;
-  bottom: 25px;  
+  bottom: 10px;  
+  left: 26px;
   cursor: pointer;
 
   &:hover {
@@ -134,11 +143,9 @@ const MainImage = styled.div`
   background-size: cover;
   height: 500px;
   background-position: center;
-  background-size: 110%;
-
+  
   @media(max-width: ${SharedSettings.mobile}) {
     height: 300px;
-
   }  
 `;
 
