@@ -17,6 +17,10 @@ const Container = styled.div`
   justify-content: center;
   box-sizing: border-box;
   padding-top: 100px;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Left = styled.div`
@@ -26,7 +30,21 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+  
+  @media(max-width: ${SharedSettings.mobile}) {
+    width: 100%;
+  }
 `;
+
+const Right = styled.div`
+  width: 800px;
+  position: relative;
+
+  @media(max-width: ${SharedSettings.mobile}) {
+    width: 100%;
+  }
+`;
+
 
 const Buy = styled.div`
   color: ${colours.primary};
@@ -54,12 +72,6 @@ const Buy = styled.div`
     box-shadow: 5px 8px 4px rgba(0,0,0,0.5)
   }
 `;
-
-const Right = styled.div`
-  width: 800px;
-  position: relative;
-`;
-
 
 interface ImageProps {
   image: imageLib;
