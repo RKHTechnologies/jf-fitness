@@ -9,7 +9,7 @@ import { HashTagMini, Icon, IOverlayContent, Price } from '../OnlinePrograms';
 
 const Container = styled.div`
   color: ${colours.light};
-  max-width: 98vw;
+  max-width: 92vw;
   height: calc(100vh - 82px);
   margin-top: 82px;
   display: flex;
@@ -20,6 +20,8 @@ const Container = styled.div`
 
   @media(max-width: ${SharedSettings.mobile}) {
     flex-wrap: wrap;
+    margin-top: 0;
+    margin: auto;
   }
 `;
 
@@ -33,6 +35,7 @@ const Left = styled.div`
   
   @media(max-width: ${SharedSettings.mobile}) {
     width: 100%;
+    margin-bottom: 20px;
   }
 `;
 
@@ -71,6 +74,10 @@ const Buy = styled.div`
     color: rgb(255 255 255 / 0.90);
     box-shadow: 5px 8px 4px rgba(0,0,0,0.5)
   }
+
+  @media(max-width: 500px) {
+    width: calc(100% - 80px);:5
+  }
 `;
 
 interface ImageProps {
@@ -87,6 +94,11 @@ const Image = styled.div`
   height: 500px;
   margin: 0 50px;
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12);
+
+  @media(max-width: 700px) {
+    height: 350px;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -98,10 +110,12 @@ export const Title = styled.h1`
   color: rgb(255 255 255 / 0.88);
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin: auto;
   
   @media(max-width: ${SharedSettings.mobile}) {
-    margin: 0 20px 20px;
+    margin: 0 0 20px;
     font-size: 2.8em;
+    text-align: center;
   }
 
   @media(max-width: 850px) {
@@ -121,11 +135,16 @@ const PriceContainer = styled.div`
   & > div {
     bottom: 0;
   }
-`;
 
-// const PriceHeader = styled(Price)`
-//   position: unset;
-// `;
+  @media(max-width: 500px) {
+    margin: 30px auto 20px;
+
+    & > div {
+      bottom: 22px;
+    }
+  }
+
+`;
 
 const SubHeading = styled.div`
   color: rgb(255 255 255 / 0.88);
@@ -144,6 +163,7 @@ const Description = styled.div`
   font-size: 1.2em;
   font-weight: 100;
   text-align: justify;
+  margin: auto;
 `;
 
 const Testimonial = styled.div`
@@ -151,7 +171,7 @@ const Testimonial = styled.div`
   color: rgb(255 255 255 / 0.88);
   font-size: 1.2em;
   text-align: justify;
-  padding: 30px 50px;
+  padding: 30px 50px 50px;
   box-sizing: border-box;
   max-width: 800px;
   position: relative;
@@ -159,6 +179,7 @@ const Testimonial = styled.div`
   background: rgb(255 255 255 / 0.05);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  margin: auto;
 
   &:before {
     content: '"';
@@ -188,6 +209,7 @@ const Testimonial = styled.div`
 
   @media(max-width: 540px) {
     font-size: 1.2em;
+    padding: 30px 30px 50px;
 
     &:before {
       font-size: 2em;

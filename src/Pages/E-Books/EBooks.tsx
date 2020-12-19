@@ -63,6 +63,10 @@ const Card = styled.div`
   &:hover {
     transform: scale(1.10);
   }
+
+  @media(max-width: 800px) {
+    margin-top: 0;
+  }
 `;
 
 const Heading = styled.h1`
