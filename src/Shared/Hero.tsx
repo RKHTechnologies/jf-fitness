@@ -21,7 +21,7 @@ const HeroBanner = styled.div`
     background-position-x: center;
 
     @media(max-width: 700px) {
-        height: 300px;
+        height: 40%;
     }
 `;
 

@@ -27,6 +27,10 @@ export const PageDescription = styled.div`
     margin: 0 20px;
     font-weight: 300;
   }
+
+  @media(max-width: 500px) {
+    margin: 0;
+  }
 `;
 
 const CardsGrid = styled.div`
@@ -110,8 +114,7 @@ const EBooks: FC = () => {
   return (
     <PageBodyContainer>
       <Hero image="i5478" small imageHeight="0" />
-      <Overlay>
-      </Overlay>
+      <Overlay />
 
       <Section id="description" lastItem>
         <div className="wrapper">

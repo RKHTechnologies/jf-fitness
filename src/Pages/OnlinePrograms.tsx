@@ -29,33 +29,38 @@ export const Overlay = styled.div`
   &:after { 
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 200px;
     background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgb(18 18 18) 100%);
   }
+
+  @media(max-width: 700px) {
+        height: 40%;
+    }
 `;
 
 export const TextOverlay = styled.div`
-  font-size: 5vw;
+  font-size: 5em;
   font-weight: 400;
   color: ${colours.primary};
   text-transform: uppercase;
   line-height: 56px;
   background: #1f1f1f;
   margin: 10px auto 40px;
-  padding: 29px 19px 0;
+  padding: 26px 19px 0;
   font-weight: 200;
-
-  @media(max-width: ${SharedSettings.mobile}) {
-    font-size: 10vw;
-    font-weight: 600;
-  }
+  text-align: center;
 
   @media(max-width: 700px) {
-    height: 300px;
+    font-size: 4em;
+    padding: 22px 15px 0;
   }  
+
+  @media(max-width: 450px) {
+    font-size: 3em;
+  }
 `;
 
 export const ProductsGrid = styled.div`
@@ -92,6 +97,10 @@ export const HashTag = styled.div`
   @media(max-width: 1100px) {
     margin: 30px 20px 0;
     font-size: 1.4em;
+  }
+  
+  @media(max-width: 500px) {
+    margin: 30px 0 0;
   }
 `;
 
@@ -190,6 +199,10 @@ const Overview = styled.div`
   & > ul {
     margin-top: 5px;
     margin-left: 15px;
+
+    @media(max-width: 700px) {
+      margin-left: -22px;
+    }
   }
 `;
 

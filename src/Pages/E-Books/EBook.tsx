@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import styled from 'styled-components';
 import PurchaseOverlay from '../../Components/PurchaseOverlay';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
-import { colours } from '../../Shared/SharedStyles';
+import { colours, SharedSettings } from '../../Shared/SharedStyles';
 import { HashTagMini, Icon, IOverlayContent, Price } from '../OnlinePrograms';
 
 const Container = styled.div`
@@ -81,10 +81,24 @@ export const Title = styled.h1`
   margin: 0;
   margin-bottom: 20px;
   font-weight: 300;
-  height: 50px;
   color: rgb(255 255 255 / 0.88);
   text-transform: uppercase;
   letter-spacing: 2px;
+  
+  @media(max-width: ${SharedSettings.mobile}) {
+    margin: 0 20px 20px;
+    font-size: 2.8em;
+  }
+
+  @media(max-width: 850px) {
+    font-size: 2.2em;
+  }
+
+  @media(max-width: 500px) {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 20px;
+  }
 `;
 
 const PriceContainer = styled.div`
