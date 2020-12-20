@@ -5,23 +5,23 @@ import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
 import checkIcon from '../img/Check_Icon.svg';
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-const Strip = styled.div`
-  width: 100%;
-  background:  ${(p: ServiceProps) => p.alt ? "transparent" : "#252525"};
-`;
-
 interface ServiceProps {
   alt?: boolean;
 }
 
-const Service = styled.div`
+export const Strip = styled.div`
+  width: 100%;
+  background:  ${(p: ServiceProps) => p.alt ? "transparent" : "#252525"};
+`;
+
+export const Service = styled.div`
   width: 100%;
   max-width: 1800px;
   margin: auto;
@@ -46,7 +46,7 @@ interface ImageProps {
   contain?: boolean;
 }
 
-const Image = styled.div`
+export const Image = styled.div`
   grid-area: image;
   width: 80%;
   height: ${(p: ImageProps) => p.short ? "400px" : "500px"};
@@ -67,9 +67,7 @@ const Image = styled.div`
   }
 `;
 
-
-
-const Text = styled.div`
+export const Text = styled.div`
   grid-area: text;
   padding: 50px 100px;
   text-align: ${(p: ServiceProps) => p.alt ? "right" : null};
@@ -82,8 +80,7 @@ const Text = styled.div`
 `;
 
 
-
-const Title = styled.h1`
+export const Title = styled.h1`
   font-weight: 300;
   margin-top: 0;
   font-size: 2.5em;
@@ -98,7 +95,7 @@ const Title = styled.h1`
   }
 `;
 
-const Description = styled.div`
+export const Description = styled.div`
   text-align: justify;
   font-size: 1.2em;
   color: rgb(255 255 255 / 0.7);
