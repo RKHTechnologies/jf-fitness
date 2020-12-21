@@ -4,6 +4,9 @@ import { Button } from '../Pages/OnlinePrograms';
 import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import { SharedSettings } from '../Shared/SharedStyles';
 import { MainHeader } from './Contact';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51I0mfdKMKjJVMuaybe4I3l0JoAypvpUQsn57Cs6kogWUkji67AYZMeTEfSBZRfxP2a4vDEZQ82IBj7JsOAy480tz00jojMFWRA');
 
 interface IPageBackgroundProps {
   open?: boolean;
@@ -283,6 +286,26 @@ interface IProps {
   total: number;
 }
 
+const HandleSubmit = async (e: any) => {
+
+  let error;
+
+  const stripe = await stripePromise;
+  stripe && (
+    { error } = await stripe.redirectToCheckout({
+      lineItems: [{
+        price: 'price_1I0nrfKMKjJVMuayIfBrjo2H', // Replace with the ID of your price
+        quantity: 1,
+      }],
+      mode: 'payment',
+      successUrl: 'http://localhost:3000/jf-fitness/success',
+      cancelUrl: 'http://localhost:3000/jf-fitness/cancel',
+    })
+  );
+
+  console.log("Checkout Clicked");
+}
+
 const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay, image, title, total }: IProps) => {
   return (
     <PageBackground open={open}>
@@ -333,7 +356,7 @@ const PurchaseOverlay: FC<IProps> = ({ open, CloseOverlay, image, title, total }
               <HeaderText right>£{total}</HeaderText>
             </TotalRow>
             <ButtonsContainer>
-              <Button wide>Checkout</Button>
+              <Button wide onClick={HandleSubmit}>Checkout</Button>
             </ButtonsContainer>
           </Column>     
         </FormContainer>
