@@ -170,8 +170,6 @@ export const Image = styled.div`
   @media(max-width: 700px) {
     min-height: 300px;
   }
-
-
 `;
 
 const Title = styled.h1`
