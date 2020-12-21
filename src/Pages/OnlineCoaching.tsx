@@ -5,6 +5,8 @@ import { HashTagMini, Overlay, TextOverlay } from './OnlinePrograms';
 import Hero from '../Shared/Hero';
 import { Section } from './Home';
 import { PageDescription } from './E-Books/EBooks';
+import Testimonials from '../Components/Testimonials';
+import Contact from '../Components/Contact';
 
 export const Centered = styled.div`
   display: flex;
@@ -97,11 +99,42 @@ const OnlineCoaching: FC = () => {
               <ul>
                 <li>Access to a gym</li>
               </ul>
-
-
             </Card>
           </div>
         </Section>
+
+        <Section id="testimonials">
+          <div className="wrapper">
+            <Testimonials />
+          </div>
+        </Section>
+
+        <Section id="journey">
+          <div className="wrapper">
+            Consultation Call
+            Onboarding
+            Goal Setting
+            Assessnents
+            Weekly checkins
+          </div>
+        </Section>
+
+        <Section id="buyNow">
+          <div className="wrapper">
+            Buy now
+          </div>
+        </Section>
+
+        <Section id="buyNow">
+          <div className="wrapper">
+            Buy now
+          </div>
+        </Section>
+
+        <Section id="ContactUs" fullwidth lastItem>
+          <Contact />
+        </Section>
+
       </PageBodyContainer>
 
       {/* <PageHeading>What the Service Offers</PageHeading>
