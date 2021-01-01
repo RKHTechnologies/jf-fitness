@@ -343,7 +343,7 @@ export const Price = styled.div`
   }
 `;
 
-const Detail = styled.div`
+export const Detail = styled.div`
   color: rgb(255 255 255 / 0.7);
   text-align: left;
   width: calc(100% - 250px);
