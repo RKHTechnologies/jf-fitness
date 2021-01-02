@@ -98,7 +98,7 @@ const HowItWorks = styled.div`
 const CheckList = styled.div`
   li {
     list-style: none;
-    margin: 5px 34px 0;
+    margin: 5px 36px 0;
 
     &:before {
       content: '';
@@ -179,7 +179,7 @@ const OnlineCoaching: FC = () => {
       <Hero image="barResting" small />
       <Overlay />
 
-      <Section id="description">
+      <Section id="description" lastItem>
         <div className="wrapper">
           <TextOverlay>1-2-1 Online Coaching</TextOverlay>
           <CoachingDescription>
