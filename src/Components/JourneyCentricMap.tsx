@@ -16,17 +16,13 @@ const MapItem = styled.div`
   border-radius: 50%;
 `;
 
-const ItemTitle = styled.div`
-
-`;
-
 const ItemCount = styled.div`
   
 `;
 
-
-
-
+const ItemTitle = styled.div`
+  
+`;
 
 const JourneyCentricMap: FC = () => {
   return (
@@ -36,29 +32,23 @@ const JourneyCentricMap: FC = () => {
         <ItemTitle>Consultation Call</ItemTitle>
       </MapItem>
       <MapItem>
-        <ItemTitle>Consultation Call</ItemTitle>
+        <ItemCount>2</ItemCount>
+        <ItemTitle>Onboarding</ItemTitle>
       </MapItem>
       <MapItem>
-        <ItemTitle>Consultation Call</ItemTitle>
+        <ItemCount>3</ItemCount>
+        <ItemTitle>Goal Setting</ItemTitle>
       </MapItem>
       <MapItem>
-        <ItemTitle>Consultation Call</ItemTitle>
+        <ItemCount>4</ItemCount>
+        <ItemTitle>Assessnents</ItemTitle>
       </MapItem>
       <MapItem>
-        <ItemTitle>Consultation Call</ItemTitle>
+        <ItemCount>5</ItemCount>
+        <ItemTitle>Weekly Checkins</ItemTitle>
       </MapItem>
     </Container>
   );
 };
 
 export default JourneyCentricMap;
-
-{/* Consultation Call
-      -
-      Onboarding
-      -
-      Goal Setting
-      -
-      Assessnents
-      -
-      Weekly checkins */}
