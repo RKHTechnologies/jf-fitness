@@ -8,6 +8,7 @@ import HeroVideo from '../Components/HeroVideo';
 import Services from '../Components/Services';
 import FunctionalFitness from '../Components/FunctionalFitness';
 import Testimonials from '../Components/Testimonials';
+import Footer from '../Shared/Footer';
 
 const Container = styled(PageBodyContainer)`
   top: 0;
@@ -86,6 +87,8 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
       <Section id="ContactUs" fullwidth lastItem>
         <Contact />
       </Section>
+
+      <Footer />
     </Container>
   );
 }

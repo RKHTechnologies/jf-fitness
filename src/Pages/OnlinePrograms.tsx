@@ -8,6 +8,7 @@ import { faCalendarCheck, faDumbbell, faHeartbeat, faPoundSign } from '@fortawes
 import { PageDescription } from './E-Books/EBooks';
 import { Section } from './Home';
 import PurchaseOverlay from '../Components/PurchaseOverlay';
+import Footer from '../Shared/Footer';
 
 export const Centered = styled.div`
   display: flex;
@@ -674,6 +675,8 @@ const OnlinePrograms: FC = () => {
         </Product>
 
       </ProductsGrid>
+
+      <Footer />
     </PageBodyContainer>
   );
 }

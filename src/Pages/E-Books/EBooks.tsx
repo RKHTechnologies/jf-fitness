@@ -7,6 +7,7 @@ import { Image } from '../../Pages/OnlinePrograms';
 import { useHistory } from 'react-router';
 import { Title } from './EBook';
 import { Section } from '../Home';
+import Footer from '../../Shared/Footer';
 
 export const Centered = styled.div`
   display: flex;
@@ -169,6 +170,8 @@ const EBooks: FC = () => {
         </Card>
 
       </CardsGrid>
+
+      <Footer />
     </PageBodyContainer>
   );
 }

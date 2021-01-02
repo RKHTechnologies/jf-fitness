@@ -11,6 +11,7 @@ import JourneyCentricMap from '../Components/JourneyCentricMap';
 import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import checkIcon from '../img/Check_Icon.svg';
 import { faPoundSign } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../Shared/Footer';
 
 export const Centered = styled.div`
   display: flex;
@@ -250,6 +251,7 @@ const OnlineCoaching: FC = () => {
         <Contact />
       </Section>
 
+      <Footer />
     </PageBodyContainer>
   );
 }
