@@ -36,16 +36,26 @@ const Card = styled.div`
   font-size: 1.2em;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const Left = styled.div`
   width: 50%;
   padding: 25px;
   box-sizing: border-box;
+  
+  @media(max-width: 900px) {
+    width: 100%;
+    padding: 0;
+  } 
 `;
 
 const Right = styled.div`
   width: 50%;
+
+  @media(max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 
@@ -83,6 +93,10 @@ const ItemTitle = styled.h1`
 
   &:not(:first-child) {
     margin-top: 30px;
+  }
+
+  @media(max-width: 450px) {
+    font-size: 1.4em;
   }
 `;
 
@@ -159,12 +173,23 @@ const OverallPrice = styled.span`
 
 const CoachingDetail = styled(Detail)`
   font-size: 1em;
+
+  @media(max-width: 450px) {
+    width: calc(100% - 90px);
+    text-align: left;
+    margin: 0;
+    margin-bottom: -15px;
+  }
 `;
 
 const CoachingButton = styled(Button)`
   font-size: 0.8em;
   font-weight: 400;
   margin-right: -8px;
+
+  @media(max-width: 450px) { 
+    margin-top: 15px;
+  }
 `;
 
 
