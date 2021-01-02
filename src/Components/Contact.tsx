@@ -195,6 +195,7 @@ const Contact: React.FC = () => {
           </FormContainer>
 
         </Container>
+        
         {/* <InfoOverlay open={overlayOpen} close={() => setOverlayOpen(false)} text={overlayText} /> */}
     </Section>
   );
