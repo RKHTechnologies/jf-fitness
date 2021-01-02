@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { colours } from '../Shared/SharedStyles';
 
 const Container = styled.div`
   width: 80%;
@@ -10,18 +11,25 @@ const Container = styled.div`
 `;
 
 const MapItem = styled.div`
-  width: 200px;
-  height: 200px;
-  background: red;
-  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const ItemCount = styled.div`
-  
+  width: 100px;
+  height: 100px;
+  color: ${colours.primary};
+  border: 2px solid ${colours.primary};
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ItemTitle = styled.div`
-  
+  margin-top: 10px;
 `;
 
 const JourneyCentricMap: FC = () => {
