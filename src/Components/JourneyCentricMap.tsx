@@ -3,33 +3,58 @@ import styled from 'styled-components';
 import { colours } from '../Shared/SharedStyles';
 
 const Container = styled.div`
-  width: 80%;
+  width: 800px;
   color: white;
   display: flex;
   justify-content: space-between;
   margin: auto;
+
+  @media(max-width: 850px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const MapItem = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  width: 140px;
+
+  @media(max-width: 850px) {
+    width: 100%;
+    flex-direction: row;
+  }
 `;
 
 const ItemCount = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   color: ${colours.primary};
   border: 2px solid ${colours.primary};
   border-radius: 50%;
+  font-size: 1.8em;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding-top: 8px;
+
+  @media(max-width: 850px) {
+    
+  }
 `;
 
 const ItemTitle = styled.div`
   margin-top: 10px;
+  font-size: 1.2em;
+  color: rgb(255 255 255 / 0.7);
+
+  @media(max-width: 850px) {
+   
+  }
 `;
 
 const JourneyCentricMap: FC = () => {

@@ -240,12 +240,12 @@ const EBook: FC = () => {
     
     case "2":
       title = "DB Only Workouts";
-      image = "i5496";
+      image = "i6107";
       break;
 
     case "3":
       title = "KB Only Workouts";
-      image = "i6107";
+      image = "i5496";
       break;
   }
 
