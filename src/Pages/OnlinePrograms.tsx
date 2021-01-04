@@ -9,6 +9,7 @@ import { PageDescription } from './E-Books/EBooks';
 import { Section } from './Home';
 import PurchaseOverlay from '../Components/PurchaseOverlay';
 import Footer from '../Shared/Footer';
+import { key, StripeBuyNow } from '../Shared/Products';
 
 export const Centered = styled.div`
   display: flex;
@@ -413,6 +414,10 @@ const OnlinePrograms: FC = () => {
     setOverlayOpen(true);
   }
 
+  const handleBuyNow = (product: key) => {
+    StripeBuyNow(product);
+  }
+
   return (
     <PageBodyContainer>
       <PurchaseOverlay open={OverlayOpen} image={OverlayContent.image} title={OverlayContent.title} total={OverlayContent.total} CloseOverlay={CloseOverlay} />
@@ -497,7 +502,8 @@ const OnlinePrograms: FC = () => {
                 <span>120</span>
             </Price>
             <Detail>8 Week Plan</Detail>
-            <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   8 Week plan", 120)}>Buy Now</Button>
+            {/* <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   8 Week plan", 120)}>Buy Now</Button> */}
+            <Button onClick={() => handleBuyNow('FF8')}>Buy Now</Button>
           </ProgramDetail>
           
           <ProgramDetail>
@@ -506,7 +512,8 @@ const OnlinePrograms: FC = () => {
                 <span>150</span>
             </Price>
             <Detail>12 Week Plan</Detail>
-            <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   12 Week plan", 150)}>Buy Now</Button>
+            {/* <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   12 Week plan", 150)}>Buy Now</Button> */}
+            <Button onClick={() => handleBuyNow('FF12')}>Buy Now</Button>
           </ProgramDetail>
 
           <LastProgramDetail>
@@ -580,7 +587,8 @@ const OnlinePrograms: FC = () => {
                 <span>120</span>
             </Price>
             <Detail>8 Week Plan</Detail>
-            <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 8 Week plan", 120)}>Buy Now</Button>
+            {/* <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 8 Week plan", 120)}>Buy Now</Button> */}
+            <Button onClick={() => handleBuyNow('Strength8')}>Buy Now</Button>
           </ProgramDetail>
           
           <ProgramDetail>
@@ -589,7 +597,8 @@ const OnlinePrograms: FC = () => {
                 <span>150</span>
             </Price>
             <Detail>12 Week Plan</Detail>
-            <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 12 Week plan", 150)}>Buy Now</Button>
+            {/* <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 12 Week plan", 150)}>Buy Now</Button> */}
+            <Button onClick={() => handleBuyNow('Strength12')}>Buy Now</Button>
           </ProgramDetail>
 
           <LastProgramDetail>
@@ -656,7 +665,8 @@ const OnlinePrograms: FC = () => {
                 <span>120</span>
             </Price>
             <Detail>8 Week Plan</Detail>
-            <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 8 Week plan", 120)}>Buy Now</Button>
+            {/* <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 8 Week plan", 120)}>Buy Now</Button> */}
+            <Button onClick={() => handleBuyNow('FatLoss8')}>Buy Now</Button>
           </ProgramDetail>
           
           <ProgramDetail>
@@ -665,7 +675,8 @@ const OnlinePrograms: FC = () => {
                 <span>150</span>
             </Price>
             <Detail>12 Week Plan</Detail>
-            <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 12 Week plan", 150)}>Buy Now</Button>
+            {/* <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 12 Week plan", 150)}>Buy Now</Button> */}
+            <Button onClick={() => handleBuyNow('FatLoss12')}>Buy Now</Button>
           </ProgramDetail>
 
           <LastProgramDetail>

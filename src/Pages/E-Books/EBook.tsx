@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import styled from 'styled-components';
 import PurchaseOverlay from '../../Components/PurchaseOverlay';
 import { imageLib, ImagesDesktop } from '../../Shared/ImageLib';
+import { key, StripeBuyNow } from '../../Shared/Products';
 import { colours, SharedSettings } from '../../Shared/SharedStyles';
 import { HashTagMini, Icon, IOverlayContent, Price } from '../OnlinePrograms';
 
@@ -76,7 +77,7 @@ const Buy = styled.div`
   }
 
   @media(max-width: 500px) {
-    width: calc(100% - 80px);:5
+    width: calc(100% - 80px);
   }
 `;
 
@@ -231,21 +232,25 @@ const EBook: FC = () => {
   let { ebook }: IParams = useParams();
   let title: string = "";
   let image: imageLib = "boxJump";
+  let buyNow: key = "KB_ONLY_WORKOUTS";
 
   switch(ebook) {
     case "1": 
       title = "Bodyweight Finishers";
       image = "i6969";
+      buyNow = 'BODYWEIGHT_FINISHERS'
       break;
     
     case "2":
       title = "DB Only Workouts";
       image = "i6107";
+      buyNow = 'DB_ONLY_WORKOUTS'
       break;
 
     case "3":
       title = "KB Only Workouts";
       image = "i5496";
+      buyNow = 'KB_ONLY_WORKOUTS'
       break;
   }
 
@@ -264,6 +269,12 @@ const EBook: FC = () => {
     })
     setOverlayOpen(true);
   }
+
+  
+  const handleBuyNow = () => {
+    StripeBuyNow(buyNow);
+  }
+
 
   return (
     <Container>
@@ -327,7 +338,8 @@ const EBook: FC = () => {
             <span>50</span>
           </Price>
 
-          <Buy onClick={() => OpenOverlay(image, title, 50)}>BUY NOW</Buy>
+          {/* <Buy onClick={() => OpenOverlay(image, title, 50)}>BUY NOW</Buy> */}
+          <Buy onClick={handleBuyNow}>BUY NOW</Buy>
         </PriceContainer>
 
         

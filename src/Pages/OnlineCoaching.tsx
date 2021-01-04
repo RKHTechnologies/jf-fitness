@@ -12,6 +12,7 @@ import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import checkIcon from '../img/Check_Icon.svg';
 import { faPoundSign } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../Shared/Footer';
+import { StripeBuyNow } from '../Shared/Products';
 
 export const Centered = styled.div`
   display: flex;
@@ -200,6 +201,11 @@ const CoachingButton = styled(Button)`
 
 
 const OnlineCoaching: FC = () => {
+  
+  const handleClick = () => {
+    StripeBuyNow('Online121');
+  }
+
   return (
     <PageBodyContainer>
       <Hero image="barResting" small />
@@ -266,7 +272,7 @@ const OnlineCoaching: FC = () => {
                 </Price>
                 <CoachingDetail>per month (minimum commitment - 3 months)</CoachingDetail>
                 {/* <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   12 Week plan", 150)}>Buy Now</Button> */}
-                <CoachingButton>Buy Now</CoachingButton>      
+                <CoachingButton onClick={handleClick}>Buy Now</CoachingButton>      
               </PriceContainer>
             </Right>
           </Card>
