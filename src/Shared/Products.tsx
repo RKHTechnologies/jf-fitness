@@ -31,7 +31,7 @@ export type key = 'KB_ONLY_WORKOUTS' | 'DB_ONLY_WORKOUTS' | 'BODYWEIGHT_FINISHER
 
 export const StripeBuyNow = async (key: key) => {
   let error;
-  const live = false;
+  const live = true;
   
   const stripeLivePromise = loadStripe('pk_live_51I0mfdKMKjJVMuayrEaMd5b2Jju1o4TuVZRHcvFTPPYLjf7WX3IPlGyHOHWIcoMR01ejgmlFpazKGIOtzDomngU70012CeyE39');
   const stripeTestPromise = loadStripe('pk_test_51I0mfdKMKjJVMuaybe4I3l0JoAypvpUQsn57Cs6kogWUkji67AYZMeTEfSBZRfxP2a4vDEZQ82IBj7JsOAy480tz00jojMFWRA');
