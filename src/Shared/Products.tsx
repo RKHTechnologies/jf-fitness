@@ -46,8 +46,8 @@ export const StripeBuyNow = async (key: key) => {
         quantity: 1,
       }],
       mode: 'payment',
-      successUrl: 'http://localhost:3000/jf-fitness/success',
-      cancelUrl: 'http://localhost:3000/jf-fitness/cancel',
+      successUrl: 'http://rkhtechnologies.github.io/jf-fitness/success',
+      cancelUrl: 'http://rkhtechnologies.github.io/jf-fitness/cancel',
     })
   );
 
