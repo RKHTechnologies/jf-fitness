@@ -17,7 +17,7 @@ const AboutUs = styled.div`
   text-align: justify;
   font-size: 1.6em;
   font-weight: 100;
-  color: rgb(255 255 255 / 0.7);
+  color: rgb(255 255 255 / 0.8);
   line-height: 30px;
 
   @media(max-width: ${SharedSettings.mobile}) {
