@@ -15,9 +15,10 @@ const Container = styled.div`
 
 const AboutUs = styled.div`
   text-align: justify;
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 100;
-  color: rgb(255 255 255 / 0.88);
+  color: rgb(255 255 255 / 0.7);
+  line-height: 30px;
 
   @media(max-width: ${SharedSettings.mobile}) {
     margin-top: 70px;
