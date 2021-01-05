@@ -30,6 +30,14 @@ export const Section = styled.div`
   justify-content: center;
   padding-top: ${(p: SectionProps) => p.topSpace ? "100px" : null};
 
+  &#journeyCentricMap {
+    padding: 0;
+    margin: 0;
+  }
+  &#description {
+    padding-bottom: 0;
+  } 
+
   div.wrapper {
     width: 96%;
     max-width: ${SharedSettings.maxWidth};

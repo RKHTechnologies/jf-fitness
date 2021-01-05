@@ -26,6 +26,7 @@ const MapItem = styled.div`
   @media(max-width: 850px) {
     width: 100%;
     flex-direction: row;
+    justify-content: flex-start;
   }
 `;
 
@@ -43,7 +44,7 @@ const ItemCount = styled.div`
   padding-top: 8px;
 
   @media(max-width: 850px) {
-    
+    margin: 10px 20px;
   }
 `;
 

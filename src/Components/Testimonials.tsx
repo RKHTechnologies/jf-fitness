@@ -128,11 +128,9 @@ const Testimonials: FC = () => {
     contentIndex.current += 1;
     if (contentIndex.current > 4) contentIndex.current = 0;    
 
-    console.log("next index");
     flipped.current = !flipped.current;
 
     setTimeout(function() {
-      console.log("delay");
       setContent(testimonialContent[contentIndex.current]?.content);
       setName(testimonialContent[contentIndex.current]?.name);
     }, 500);
@@ -142,8 +140,7 @@ const Testimonials: FC = () => {
   const timer = () => {
     setTimeout(() => {
       seconds.current--;
-      console.log("Seconds: ", seconds.current);
-
+      
       if (seconds.current <= 0) {
         seconds.current = timerSeconds;
         nextIndex();
