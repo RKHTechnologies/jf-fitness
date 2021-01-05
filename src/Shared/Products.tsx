@@ -1,5 +1,6 @@
 import { loadStripe } from '@stripe/stripe-js';
 import { FC } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const TestKeys = {
   'KB_ONLY_WORKOUTS': 'price_1I0nvEKMKjJVMuayZ9j2aXj8',
@@ -31,7 +32,9 @@ export type key = 'KB_ONLY_WORKOUTS' | 'DB_ONLY_WORKOUTS' | 'BODYWEIGHT_FINISHER
 
 export const StripeBuyNow = async (key: key) => {
   let error;
-  const live = true;
+  const live = false;
+  debugger;
+  const location = window.location.href;
   
   const stripeLivePromise = loadStripe('pk_live_51I0mfdKMKjJVMuayrEaMd5b2Jju1o4TuVZRHcvFTPPYLjf7WX3IPlGyHOHWIcoMR01ejgmlFpazKGIOtzDomngU70012CeyE39');
   const stripeTestPromise = loadStripe('pk_test_51I0mfdKMKjJVMuaybe4I3l0JoAypvpUQsn57Cs6kogWUkji67AYZMeTEfSBZRfxP2a4vDEZQ82IBj7JsOAy480tz00jojMFWRA');
@@ -46,8 +49,8 @@ export const StripeBuyNow = async (key: key) => {
         quantity: 1,
       }],
       mode: 'payment',
-      successUrl: 'http://rkhtechnologies.github.io/jf-fitness/success',
-      cancelUrl: 'http://rkhtechnologies.github.io/jf-fitness/cancel',
+      successUrl: `${location}?success=true`,
+      cancelUrl: `${location}?cancel=true`,
     })
   );
 

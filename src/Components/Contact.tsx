@@ -103,6 +103,7 @@ const FormItem = styled.input`
   font-size: 0.8em;
   font-weight: 400;
   padding-top: 6px;
+  color: #757575;
 `;
 
 const MultiLineForm = styled.textarea`
@@ -116,6 +117,7 @@ const MultiLineForm = styled.textarea`
   box-sizing: border-box;
   padding: 14px 20px 0;
   font-size: 0.8em;
+  color: #757575;
   font-weight: 400;
 `;
 
