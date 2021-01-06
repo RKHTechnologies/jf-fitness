@@ -11,7 +11,7 @@ const PageBlur = styled.div`
   right: 0;
   left: 0;
   backdrop-filter: blur(12px);
-  /* z-index: 5; */
+  z-index: 3;
 `;
 
 const Card = styled.div`

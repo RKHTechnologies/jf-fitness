@@ -161,19 +161,16 @@ const Contact: React.FC = () => {
       message: data.message,
     }
 
-    // emailjs.send('gmail', 'JFF_Contact', returnData, 'user_VBsMGjRvpdD4Kr6YWfz4f')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //       setOverlayOpen(true);
-    //       setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible");
-    //   }, (error) => {
-    //       console.log(error.text);
-    //       setOverlayOpen(true);
-    //       setOverlayText("Oops, an error occured. Please try again later, or contact us if the issue persists.");
-    //   });
-
-      setOverlayOpen(true);
-      setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible");
+    emailjs.send('gmail', 'JFF_Contact', returnData, 'user_VBsMGjRvpdD4Kr6YWfz4f')
+      .then((result) => {
+          console.log(result.text);
+          setOverlayOpen(true);
+          setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible");
+      }, (error) => {
+          console.log(error.text);
+          setOverlayOpen(true);
+          setOverlayText("Oops, an error occured. Please try again later, or contact us if the issue persists.");
+      });
 
     event.target.reset();
   }
