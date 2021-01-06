@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { colours, SharedSettings } from "../Shared/SharedStyles";
 import emailjs from 'emailjs-com';
+import InfoOverlay from "../Shared/InfoOverlay";
 // import InfoOverlay from "./InfoOverlay";
 
 interface sectionProps {
@@ -141,8 +142,8 @@ export const SubmitButton = styled.input`
 `;
 
 const Contact: React.FC = () => {
-  // const [overlayOpen, setOverlayOpen] = useState(false);
-  // const [overlayText, setOverlayText] = useState("");
+  const [overlayOpen, setOverlayOpen] = useState(false);
+  const [overlayText, setOverlayText] = useState("");
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -160,18 +161,19 @@ const Contact: React.FC = () => {
       message: data.message,
     }
 
-    debugger;
+    // emailjs.send('gmail', 'JFF_Contact', returnData, 'user_VBsMGjRvpdD4Kr6YWfz4f')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //       setOverlayOpen(true);
+    //       setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible");
+    //   }, (error) => {
+    //       console.log(error.text);
+    //       setOverlayOpen(true);
+    //       setOverlayText("Oops, an error occured. Please try again later, or contact us if the issue persists.");
+    //   });
 
-    emailjs.send('gmail', 'JFF_Contact', returnData, 'user_VBsMGjRvpdD4Kr6YWfz4f')
-      .then((result) => {
-          console.log(result.text);
-          // setOverlayOpen(true);
-          // setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible");
-      }, (error) => {
-          console.log(error.text);
-          // setOverlayOpen(true);
-          // setOverlayText("Oops, an error occured. Please try again later, or contact us if the issue persists.");
-      });
+      setOverlayOpen(true);
+      setOverlayText("Thank you for getting in touch, we'll reply back as soon as possible");
 
     event.target.reset();
   }
@@ -198,7 +200,7 @@ const Contact: React.FC = () => {
 
         </Container>
         
-        {/* <InfoOverlay open={overlayOpen} close={() => setOverlayOpen(false)} text={overlayText} /> */}
+        <InfoOverlay open={overlayOpen} close={() => setOverlayOpen(false)} text={overlayText} />
     </Section>
   );
 };
