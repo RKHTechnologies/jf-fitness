@@ -23,7 +23,7 @@ interface IProps {
 
 const TestimonialsSection = styled.div`
   position: relative;
-  width: 500px;
+  width: 1200px;
   min-height: 250px;
   background: rgb(255 255 255 / 0.08);
   border-radius: 5px;
@@ -114,7 +114,7 @@ const AfterQuote = styled.div`
 
 const Testimonials: FC = () => {
   
-  const timerSeconds = 4;
+  const timerSeconds = 6;
   const seconds = useRef(timerSeconds);
   const contentIndex = useRef(0);
   const flipped = useRef(false);
@@ -126,7 +126,7 @@ const Testimonials: FC = () => {
 
   const nextIndex = () => {    
     contentIndex.current += 1;
-    if (contentIndex.current > 4) contentIndex.current = 0;    
+    if (contentIndex.current > 6) contentIndex.current = 0;    
 
     flipped.current = !flipped.current;
 
