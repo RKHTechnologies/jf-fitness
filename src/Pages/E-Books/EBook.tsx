@@ -237,7 +237,7 @@ const EBook: FC = () => {
   switch(ebook) {
     case "1": 
       title = "Bodyweight Finishers";
-      image = "i6969";
+      image = "i5814";
       buyNow = 'BODYWEIGHT_FINISHERS'
       break;
     

@@ -143,7 +143,7 @@ const EBooks: FC = () => {
 
       <CardsGrid>
         <Card onClick={() => handleNav("/ebooks/1")}>
-          <Image image={"i6969"} />
+          <Image image={"i5814"} />
           <Heading>Bodyweight Finishers</Heading>
           <Description>
             Bodyweight Finishers is a series of high-intensity, functional bodyweight movements, which is designed to push you to your limits and pack a serious challenge to your workouts.

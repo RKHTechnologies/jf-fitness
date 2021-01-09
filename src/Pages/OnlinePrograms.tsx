@@ -127,7 +127,7 @@ const Product = styled.div`
     'overview image'
     'requirements image'
     'equipment image'
-    'expect price'
+    'expect image'
     'expect price'
     'expect price';
     
@@ -147,8 +147,30 @@ const Product = styled.div`
       'expect'
       'price';
   }
-  
 `;
+
+const ComingSoon = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    content: 'COMING SOON';
+    font-size: 8vw;
+    color: ${colours.light};
+    letter-spacing: 10px;
+    font-weight: 100;
+    transform: rotate(18deg);
+  }
+`;
+
 
 interface ImageProps {
   image: imageLib;
@@ -441,7 +463,7 @@ const OnlinePrograms: FC = () => {
       <ProductsGrid>  
         <Product>
           <Image image={"boxJump"} />
-          <Title>Functional Fitness</Title>
+          <Title>Functional Fitness vol.1</Title>
           <OverviewSection height={160}>
             <Overview>
               Functional fitness is at the heart of what we do. This program is designed to improve the way you move, build strength and develop energy systems.
@@ -495,16 +517,6 @@ const OnlinePrograms: FC = () => {
               </ul>
             </Overview>
           </Expect>
-
-          <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>120</span>
-            </Price>
-            <Detail>8 Week Plan</Detail>
-            {/* <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   8 Week plan", 120)}>Buy Now</Button> */}
-            <Button onClick={() => handleBuyNow('FF8')}>Buy Now</Button>
-          </ProgramDetail>
           
           <ProgramDetail>
             <Price>
@@ -525,8 +537,9 @@ const OnlinePrograms: FC = () => {
 
 
         <Product>
+          <ComingSoon />
           <Image image={"holdUpBar"} />
-          <Title>Strength</Title>
+          <Title>Functional Fitness vol.2</Title>
           <OverviewSection height={180}>
             <Overview>
               Strength training is key to becoming more robust and should be fundamental in all training programs.
@@ -579,18 +592,7 @@ const OnlinePrograms: FC = () => {
               </ul>
             </Overview>
           </Expect>
-
-          
-          <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>120</span>
-            </Price>
-            <Detail>8 Week Plan</Detail>
-            {/* <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 8 Week plan", 120)}>Buy Now</Button> */}
-            <Button onClick={() => handleBuyNow('Strength8')}>Buy Now</Button>
-          </ProgramDetail>
-          
+         
           <ProgramDetail>
             <Price>
                 <Icon icon={faPoundSign} />
@@ -599,84 +601,6 @@ const OnlinePrograms: FC = () => {
             <Detail>12 Week Plan</Detail>
             {/* <Button onClick={() => OpenOverlay("holdUpBar", "Strength - 12 Week plan", 150)}>Buy Now</Button> */}
             <Button onClick={() => handleBuyNow('Strength12')}>Buy Now</Button>
-          </ProgramDetail>
-
-          <LastProgramDetail>
-            <p>For further information or if you have any questions, please get in touch</p>
-            <Button secondary onClick={handleEmail}>EMAIL US</Button>
-          </LastProgramDetail>
-        </Product>
-
-
-
-
-        <Product>
-          <Image image={"pushWeight"} />
-          <Title>Fat Loss</Title>
-          <OverviewSection height={100}>
-            <Overview>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Overview>
-          </OverviewSection>
-          
-          <Requirements height={140}>
-            <SubHeading>
-              <Icon icon={faCalendarCheck} />
-              <div>Requirements</div>
-            </SubHeading>
-            <Overview>
-              <ul>
-                <li>Must not be new to exercise</li>
-                <li>Have a good understanding of how to perform fundamental movement patterns (Squat, Hip Hinge – e.g. Deadlifts, Pull Ups, Bench Press, Military Press, Plank, etc.)</li>
-              </ul>  
-            </Overview>
-          </Requirements>
-
-          <Equipment height={160}>
-            <SubHeading>
-              <Icon icon={faDumbbell} />
-              <div>Equipment</div>
-            </SubHeading>
-            {/* <Overview>You will access to at least one of the following, the more the better:</Overview> */}
-            <Overview>
-              <ul>
-                <li>Barbell &amp; Plates</li>
-                <li>Kettlebell</li>
-                <li>Dumbbells</li>
-                <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
-              </ul>
-            </Overview>
-          </Equipment>
-
-          <Expect height={100}>
-            <SubHeading>
-              <Icon icon={faHeartbeat} />
-              <div>What to Expect</div>
-            </SubHeading>
-            <Overview>
-              <ul>
-                <li>4 day training split (Upper, Lower, Full Body, Conditioning session)</li>
-              </ul>
-            </Overview>
-          </Expect>
-
-          
-          <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>120</span>
-            </Price>
-            <Detail>8 Week Plan</Detail>
-            {/* <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 8 Week plan", 120)}>Buy Now</Button> */}
-            <Button onClick={() => handleBuyNow('FatLoss8')}>Buy Now</Button>
-          </ProgramDetail>
-          
-          <ProgramDetail>
-            <Price>
-                <Icon icon={faPoundSign} />
-                <span>150</span>
-            </Price>
-            <Detail>12 Week Plan</Detail>
-            {/* <Button onClick={() => OpenOverlay("pushWeight", "Fat Loss - 12 Week plan", 150)}>Buy Now</Button> */}
-            <Button onClick={() => handleBuyNow('FatLoss12')}>Buy Now</Button>
           </ProgramDetail>
 
           <LastProgramDetail>

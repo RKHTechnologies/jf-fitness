@@ -41,7 +41,6 @@ const App: FC = () => {
 
 
   const checkParams = () => {
-    debugger;
     if (params.has('success'))
       hasSuccess();
 
