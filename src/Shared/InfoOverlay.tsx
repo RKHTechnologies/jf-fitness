@@ -17,7 +17,7 @@ const PageBlur = styled.div`
 const Card = styled.div`
   position: fixed;
   width: 800px;
-  height: 120px;
+  height: 160px;
   margin: auto;
   top: calc(50% - 50px);
   left: calc(50% - 400px);
@@ -32,12 +32,14 @@ const Card = styled.div`
   font-weight: 100;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   border-radius: 10px;
+  text-align: center;
 `;
 
 const OK = styled(Button)`
   padding: 8px 16px 2px;
   font-size: 0.9em;
   margin-top: 16px;
+  margin-bottom: -8px;
 `;
 
 interface IProps {

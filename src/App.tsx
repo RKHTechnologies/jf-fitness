@@ -49,15 +49,15 @@ const App: FC = () => {
   }
 
   const hasSuccess = () => {
-    console.log("Successful transaction. Congrats.");
+    console.log("Successful transaction.");
     setOverlayOpen(true);
-    setOverlayText("Purchase Successful. Your reciept will be with you shortly - and we will send over your PDF E-Book via email within 48 hours");
+    setOverlayText("Thank you for your purchase. Your product and receipt will be with you shortly.");
   }
 
   const hasCancel = () => {
     console.log("Transaction cancelled.");
     setOverlayOpen(true);
-    setOverlayText("Transaction Cancelled. Please get in contact if you're having any issues or would like more information about any of our products");
+    setOverlayText("Transaction Cancelled. Please get in contact if you're having any issues or would like further information about any of our products");
   }
 
 
