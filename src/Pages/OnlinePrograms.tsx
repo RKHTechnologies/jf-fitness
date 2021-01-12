@@ -18,9 +18,13 @@ export const Centered = styled.div`
   height: 100%;
 `;
 
+interface IOverlay {
+  small?: boolean;
+}
+
 export const Overlay = styled.div`
   width: 100%;
-  height: 65%;
+  height: ${(p: IOverlay) => p.small ? "65%" : "85%"};
   background: rgba(255,255,255,0.15);
   position: absolute;
   top: 0;
@@ -447,7 +451,7 @@ const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
       <PurchaseOverlay open={OverlayOpen} image={OverlayContent.image} title={OverlayContent.title} total={OverlayContent.total} CloseOverlay={CloseOverlay} />
-      <Hero image="i5052" small />
+      <Hero image="i5052" />
       <Overlay />
 
       <Section id="description" lastItem>

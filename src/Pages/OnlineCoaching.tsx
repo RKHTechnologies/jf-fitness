@@ -208,7 +208,7 @@ const OnlineCoaching: FC = () => {
 
   return (
     <PageBodyContainer>
-      <Hero image="i6808" small />
+      <Hero image="i6808" />
       <Overlay />
 
       <Section id="description" lastItem>

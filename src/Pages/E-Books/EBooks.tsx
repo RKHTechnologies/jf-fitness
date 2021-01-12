@@ -24,8 +24,7 @@ export const PageDescription = styled.div`
   margin-top: 20px;
 
   & > span {
-    color: ${colours.primary};
-    
+    color: ${colours.primary}; 
   }
 
   @media(max-width: 1100px) {
@@ -123,7 +122,7 @@ const EBooks: FC = () => {
 
   return (
     <PageBodyContainer>
-      <Hero image="i5478" small imageHeight="0" />
+      <Hero image="i5515" />
       <Overlay />
 
       <Section id="description" lastItem>
@@ -133,9 +132,9 @@ const EBooks: FC = () => {
             Looking for workout inspiration?
           </Title>
           <PageDescription>
-            These downloadable E-books which have been tried and tested by the JF Fitness team are a great addition to any workout or can be used separately as stand alone workouts.
+            These downloadable e-books which have been tried and tested by the JF Fitness team are a great addition to any workout or can be used separately as individual standalone workouts. 
             <br /><br />
-            They bring intensity, inspiration and a serious challenge to your sessions.
+            Expect a fun intensity, that brings a challenge to your sessions, whilst developing some serious metabolic conditioning. 
           </PageDescription>
           <HashTag>#BeYourOwnAthlete</HashTag>
         </div>
