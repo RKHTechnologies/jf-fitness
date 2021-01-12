@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
     <Section>
         <Container>
           <MainHeader>Contact Us</MainHeader>
-          <SubHeader>If you're looking to get involved, have any questions, or would like to book in a session - please get in touch below, and we will get back to you as soon as possible</SubHeader>
+          <SubHeader>If you are interested or have any questions – Please get in touch below, and we will get back to you as soon as possible</SubHeader>
 
           <FormContainer onSubmit={handleSubmit}>
             <Column>

@@ -134,7 +134,7 @@ const Product = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   grid-row-gap: 0;
-  grid-template-columns: 600px auto;
+  grid-template-columns: 700px auto;
 
   @media(max-width: 1170px) {
     grid-template-columns: 1fr;
@@ -204,6 +204,10 @@ const Title = styled.h1`
   font-weight: 300;
   margin: 0;
   text-transform: uppercase;
+
+  small {
+    font-size: 0.7em;
+  }
 
   @media(max-width: 700px) {
     font-size: 3em;
@@ -443,32 +447,34 @@ const OnlinePrograms: FC = () => {
   return (
     <PageBodyContainer>
       <PurchaseOverlay open={OverlayOpen} image={OverlayContent.image} title={OverlayContent.title} total={OverlayContent.total} CloseOverlay={CloseOverlay} />
-      <Hero image="i5325" small />
+      <Hero image="i5052" small />
       <Overlay />
 
       <Section id="description" lastItem>
         <div className="wrapper">
           <TextOverlay>Online Programs</TextOverlay>
           <PageDescription>
-            JF Fitness has designed several pre-recorded programmes which are centred around moving well, building strength and muscle, losing body fat, and performing better.
+            JF Fitness has designed several pre-recorded programmes which are centred around functional fitness. 
             <br /><br />
-            These programs follow an 8-12 week progressive programme, designed to meet your goals, whilst ensuring fundamental movement patterns are present throughout.
+            Whether you are looking to develop mobility, build strength and muscle, lose body fat or perform better, these programmes have it all. 
             <br /><br />
-            If you are looking for structure, guidance, and a program that will deliver results, then this is the product for you.
+            Each program follows a carefully structured and progressive 12-week plan, ensuring key fundamental movement patterns are present throughout. 
+            <br /><br />
+            If you are looking for structure, guidance, and a program that will take your training to the next level, look no further.
+            <HashTagMini>#BeYourOwnAthlete</HashTagMini>
           </PageDescription>
-          <HashTag>#BeYourOwnAthlete</HashTag>
         </div>
       </Section>
       
       <ProductsGrid>  
         <Product>
           <Image image={"boxJump"} />
-          <Title>Functional Fitness vol.1</Title>
+          <Title>Functional Fitness <small>vol</small>.1</Title>
           <OverviewSection height={160}>
             <Overview>
-              Functional fitness is at the heart of what we do. This program is designed to improve the way you move, build strength and develop energy systems.
+              This is volume 1 of our Functional Fitness 12-week programs. 
               <br /><br />
-              Whether you choose the 8 or 12 week plan, functional fitness incorporates structured progressions week on week to ensure continuous improvement and motivation, whilst developing aesthetics and athletic ability.  
+              This plan will improve the way you move. It will increase your strength and muscle mass. It will develop a serious capacity. On top of that, It incorporates structured progressions week on week, to ensure continuous improvement and motivation, whilst developing aesthetics and athletic ability.
             </Overview>
             <HashTagMini>#BeYourOwnAthlete</HashTagMini>
           </OverviewSection>
@@ -480,9 +486,7 @@ const OnlinePrograms: FC = () => {
             </SubHeading>
             <Overview>
               <ul>
-                <li>Able to perform fundamental movement patterns adequately (squat, deadlift, bench, pull up, plank, lunge, carrys, etc)</li>
-                <li>A strong cardio base</li>
-                <li>A good training age</li>
+                <li>A good understanding of how to perform key fundamental movement patterns e.g. Squat, Deadlift, Lunge, Pull Up, Push Up, etc.</li>
               </ul>
             </Overview>
           </Requirements>
@@ -495,9 +499,9 @@ const OnlinePrograms: FC = () => {
             <Overview>
               <ul>
                 <li>Barbell &amp; Plates</li>
-                <li>Kettlebell</li>
+                <li>Kettlebells</li>
                 <li>Dumbbells</li>
-                <li>Cardio Equipment (Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill, etc.)</li>
+                <li>Cardio Equipment - Ski Erg, Bike Erg, Assault Bike, Rower, Treadmill</li>
               </ul>
             </Overview>
           </Equipment>
@@ -509,11 +513,9 @@ const OnlinePrograms: FC = () => {
             </SubHeading>
             <Overview>
               <ul>
-                <li>4 weekly workouts</li>
-                <li>Workouts delivered via the Truecoach app</li>
-                <li>Video demonstrations</li>
-                <li>Week by week progress</li>
-                <li>Online support</li>
+                <li>Downloadable PDF</li>
+                <li>4 Weekly Workouts</li>
+                <li>Week On Week Progress</li>
               </ul>
             </Overview>
           </Expect>
@@ -539,7 +541,7 @@ const OnlinePrograms: FC = () => {
         <Product>
           <ComingSoon />
           <Image image={"holdUpBar"} />
-          <Title>Functional Fitness vol.2</Title>
+          <Title>Functional Fitness <small>vol</small>.2</Title>
           <OverviewSection height={180}>
             <Overview>
               Strength training is key to becoming more robust and should be fundamental in all training programs.
