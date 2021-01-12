@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc0e999c869c0e1f948bdc7db5644361",
+    "revision": "85f73c06804cecc69161acbc2cd5b3d4",
     "url": "/jf-fitness/index.html"
   },
   {
-    "revision": "0b7f8631d116d51202bc",
+    "revision": "57e6198086a788ec32de",
     "url": "/jf-fitness/static/css/main.caff4c0f.chunk.css"
   },
   {
-    "revision": "2fe3d2a7e56e9566ea06",
-    "url": "/jf-fitness/static/js/2.cc51b993.chunk.js"
+    "revision": "ef7d5b9a56ca4a896e7c",
+    "url": "/jf-fitness/static/js/2.3d12fc78.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/jf-fitness/static/js/2.cc51b993.chunk.js.LICENSE.txt"
+    "url": "/jf-fitness/static/js/2.3d12fc78.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0b7f8631d116d51202bc",
-    "url": "/jf-fitness/static/js/main.6e7cc90e.chunk.js"
+    "revision": "57e6198086a788ec32de",
+    "url": "/jf-fitness/static/js/main.5947cd7a.chunk.js"
   },
   {
     "revision": "ca48e22de7e439ad5ce1",
@@ -48,6 +48,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jf-fitness/static/media/5496.babbe491.jpg"
   },
   {
+    "revision": "fb8fd33b10e70103dd583bc8207257eb",
+    "url": "/jf-fitness/static/media/5509.fb8fd33b.jpg"
+  },
+  {
     "revision": "e2382e950c38407a0cf807c4d7e27c9c",
     "url": "/jf-fitness/static/media/5814.e2382e95.jpg"
   },
@@ -58,6 +62,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1e97d7c419476b98a2d1ed8496546742",
     "url": "/jf-fitness/static/media/6211.1e97d7c4.jpg"
+  },
+  {
+    "revision": "0d569d7ffd67e253ea1ff8ce23705394",
+    "url": "/jf-fitness/static/media/6311.0d569d7f.jpg"
+  },
+  {
+    "revision": "e037ba2f27394d247826175141521a9a",
+    "url": "/jf-fitness/static/media/6585.e037ba2f.jpg"
+  },
+  {
+    "revision": "1e041c7976e057d764abe8c8a354d33b",
+    "url": "/jf-fitness/static/media/6808.1e041c79.jpg"
   },
   {
     "revision": "6b036dcc4c8408283bd1fc467acfb217",
