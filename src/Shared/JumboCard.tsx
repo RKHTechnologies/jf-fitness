@@ -178,9 +178,9 @@ const JumboCard: FC<IProps> = ({ title, text, buttonText, link, colour, image }:
         <SideContainer>
           <h3>{title}</h3>
           <p>
-            It is movements that mimic everyday actions, whilst incorporating multiple muscle groups at the same time. It builds strength, stability, and mobility across the body, making us more efficient human beings not only inside the gym but outside as well.  
+            Functional Fitness is a classification of exercise which involves training the body for the activities performed in daily life. 
             <br /><br />
-            It is designed to optimise training time to maximise performance using mix modalities. It is efficient, adaptable, goal centric, whilst covering the all-important fundamental movement patterns.
+            It is a purposeful and individual approach to continued development across areas such as movement, strength and capacity. Each endeavour should transcend into daily life and contribute to a long-term, sustainable and healthy lifestyle. 
           </p>
           <Button onClick={handleClick}>{buttonText}</Button>
         </SideContainer>

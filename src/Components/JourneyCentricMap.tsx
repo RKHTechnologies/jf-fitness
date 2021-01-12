@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colours } from '../Shared/SharedStyles';
 
 const Container = styled.div`
-  width: 800px;
+  width: 100%;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -18,10 +18,10 @@ const Container = styled.div`
 const MapItem = styled.div`
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 140px;
+  width: 160px;
 
   @media(max-width: 850px) {
     width: 100%;
@@ -52,9 +52,11 @@ const ItemTitle = styled.div`
   margin-top: 10px;
   font-size: 1.2em;
   color: rgb(255 255 255 / 0.7);
+  text-align: center;
 
   @media(max-width: 850px) {
-   
+   text-align: left;
+   width: calc(100% - 86px);
   }
 `;
 
@@ -75,11 +77,19 @@ const JourneyCentricMap: FC = () => {
       </MapItem>
       <MapItem>
         <ItemCount>4</ItemCount>
-        <ItemTitle>Assessnents</ItemTitle>
+        <ItemTitle>Assessments</ItemTitle>
       </MapItem>
       <MapItem>
         <ItemCount>5</ItemCount>
-        <ItemTitle>Weekly Checkins</ItemTitle>
+        <ItemTitle>Program Design</ItemTitle>
+      </MapItem>
+      <MapItem>
+        <ItemCount>6</ItemCount>
+        <ItemTitle>Weekly Check-Ins and Monthly Support</ItemTitle>
+      </MapItem>
+      <MapItem>
+        <ItemCount>7</ItemCount>
+        <ItemTitle>Successful Fitness Journey</ItemTitle>
       </MapItem>
     </Container>
   );

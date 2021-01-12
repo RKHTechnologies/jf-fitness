@@ -12,7 +12,7 @@ export const TestKeys = {
   'Strength8': 'price_1I5e3dKMKjJVMuayz58KABmU',
   'FF12': 'price_1I5nE0KMKjJVMuaygqdqz16k',
   'FF8': 'price_1I0nrfKMKjJVMuayIfBrjo2H',
-  'Online121': 'price_1I0npNKMKjJVMuayTKl8yKQi',
+  'Online121': 'price_1I8vFMKMKjJVMuayrGG5FtOK',
 }
 
 export const LiveKeys = {
@@ -25,7 +25,7 @@ export const LiveKeys = {
   'Strength8': 'price_1I5YWVKMKjJVMuayyGHZyauh',
   'FF12': 'price_1I5YVMKMKjJVMuaytLRZC4k7',
   'FF8': 'price_1I5YV1KMKjJVMuayRbFdFTt1',
-  'Online121': 'price_1I5YOcKMKjJVMuayBk33h02P',
+  'Online121': 'price_1I8vEWKMKjJVMuayKHdTK84Y',
 }
 
 export type key = 'KB_ONLY_WORKOUTS' | 'DB_ONLY_WORKOUTS' | 'BODYWEIGHT_FINISHERS' | 'FatLoss12' | 'FatLoss8' | 'Strength12' | 'Strength8' | 'FF12' | 'FF8' | 'Online121';

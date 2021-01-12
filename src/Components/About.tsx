@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ImagesDesktop } from '../Shared/ImageLib';
-import { SharedSettings } from '../Shared/SharedStyles';
+import { colours, SharedSettings } from '../Shared/SharedStyles';
 
 const Container = styled.div`
   width: 100%;
@@ -29,9 +29,30 @@ const AboutUs = styled.div`
 const SideImage = styled.div`
   width: 96%;
   height: 96%;
-  background: url(${ImagesDesktop['boxJump']});
+  background: url(${ImagesDesktop['i6211']});
   background-size: cover;
   margin: auto 0 auto auto;
+`;
+
+export const HashTag = styled.div`
+  font-size: 1.6em;
+  color: ${colours.primary};
+  margin-top: 30px;
+  font-style: italic;
+  
+  @media(max-width: 1100px) {
+    margin: 30px 20px 0;
+    font-size: 1.4em;
+  }
+  
+  @media(max-width: 500px) {
+    margin: 30px 0 0;
+  }
+`;
+
+export const HashTagMini = styled(HashTag)`
+  font-size: 1.2em !important;
+  margin: 15px 0 !important;
 `;
 
 const About: React.FC = () => {
@@ -41,16 +62,14 @@ const About: React.FC = () => {
         JF FITNESS places functional fitness at the center of success.
         <br />
         <br />
-        With over 6 years of personal training experience and a passion for seeing clients grow and progress, JF Fitness has created a range of accessible online programmes for all breadth of abilities.
+        With over 7 years of personal training experience and a passion for seeing clients grow, JF Fitness has created a range of accessible online products, which are a guaranteed to improve mobility, build strength and muscle, burn fat and develop athletic capacity, all in a challenging and safe manner. 
         <br />
         <br />
-        From dynamic subscription-based training programmes through to bespoke 1-2-1 online plans, JF Fitness has the solution to help you reach and break through your goals in a supportive environment.
+        From completely bespoke 1-2-1 online coaching through to 12-week functional fitness programmes, JF Fitness has the solution to help you reach and break through your goals. 
         <br />
         <br />
-        With a considered and structured approach to each plan and session, JF Fitness focuses on functional fitness and movement and ensures this meets your intentions and needs. 
-        <br />
-        <br />
-        Everyone has their own, unique inner athlete. JF Fitness can help unlock and unleash yours.  
+        Everyone has their own unique inner athlete, so take the necessary action today and JF Fitness will help unlock yours.
+        <HashTagMini>#BeYourOwnAthlete</HashTagMini>
       </AboutUs>
       <SideImage />
     </Container>

@@ -208,21 +208,18 @@ const OnlineCoaching: FC = () => {
 
   return (
     <PageBodyContainer>
-      <Hero image="barResting" small />
+      <Hero image="i6808" small />
       <Overlay />
 
       <Section id="description" lastItem>
         <div className="wrapper">
           <TextOverlay>1-2-1 Online Coaching</TextOverlay>
           <CoachingDescription>
-            The 1-2-1 online coaching service is a unique and <span>completely bespoke</span> functional fitness programme designed around  our individual goals, needs and wants.
+            The 1-2-1 online coaching service is our top tiered service. It is completely client centric and tailored to you and your individual goals, whilst adhering to our principal view that functional fitness is at the heart of what we do. 
             <br /><br />
-            This is the JF Fitness <span>top tiered</span> service, which has a proven track record for delivering consistently <span>amazing results</span>.
+            No goal is too big or small and with the necessary strategies and systems in place JF Fitness has the tools to bring success to your fitness journey.
             <br /><br />
-            Within this service, there is also the opportunity to <span>work 1-2-1</span> on Zoom for additional support through your individual sessions. 
-            <br /><br />
-            Everyone deserves to have a successful relationship with fitness, so sign up today and start your journey.
-            <br /><br />
+            Take the necessary action today and become your own athlete. 
             <HashTagMini>#BeYourOwnAthlete</HashTagMini>
           </CoachingDescription>
         </div>
@@ -237,38 +234,31 @@ const OnlineCoaching: FC = () => {
       <Section id="whatServiceOffers" fullwidth>
           <Card>
             <Left>
-              <Image image={"boxJump"} />
+              <Image image={"i6585"} />
             </Left>
             <Right>
-              <ItemTitle>What the service Offers</ItemTitle>
+              <ItemTitle>What to Expect</ItemTitle>
               <CheckList>
-                <li>Onboarding call and mobility assessment</li>
-                <li>Bespoke weekly workouts tailored towards your needs and wants</li>
-                <li>Access to Truecoach app where your workouts will be delivered daily</li>
+                <li>Consultation call</li>
+                <li>Onboarding/Assessments</li>
+                <li>Bespoke exercise program </li>
+                <li>Weekly workouts direct to your phone</li>
+                <li>Access to the Truecoach app</li>
                 <li>Video demonstrations</li>
-                <li>Exercise history and trackable progress</li>
-                <li>20 minute monthly check in calls</li>
-                <li>Additional training support</li>
-                <li>Nutritional advice</li>
-                <li>Option of additional online PT sessions via Zoom (£70 per session)</li>
+                <li>Trackable progress</li>
+                <li>Weekly check-ins</li>
+                <li>Monthly support calls</li>
               </CheckList>
 
-              <ItemTitle>How it Works</ItemTitle>
+              <ItemTitle>What Next...</ItemTitle>
               <HowItWorks>
-                Once you have taken the next step on your fitness journey, by purchasing a 1-2-1 online coaching programme, you will be contacted to arrange an onboarding call, to discuss your goals, wants and needs.
-                <br /><br />
-                From there, a personalised  programme will be created and the road towards a successful fitness journey will begin….
+                Once purchased a member of the team will be in touch to arrange your initial consultation call.
               </HowItWorks>
-
-              <ItemTitle>What you will need</ItemTitle>
-              <ul>
-                <li>Access to a gym</li>
-              </ul>
 
               <PriceContainer>
                 <Price>
                     <Icon icon={faPoundSign} />
-                    <OverallPrice>200</OverallPrice>
+                    <OverallPrice>250</OverallPrice>
                 </Price>
                 <CoachingDetail>per month (minimum commitment - 3 months)</CoachingDetail>
                 {/* <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   12 Week plan", 150)}>Buy Now</Button> */}

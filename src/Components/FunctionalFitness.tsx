@@ -26,7 +26,7 @@ const FunctionalFitness: FC = () => {
       buttonText="Find out more" 
       link="link" 
       colour="darkGrey" 
-      image="i6211" 
+      image="i6311" 
     />
   );
 }

@@ -170,11 +170,11 @@ const Services: FC = ()  => {
           <Text>
             <Title>1-2-1 Online Coaching</Title>
             <Description>
-              The bespoke 1-2-1 online coaching program is our top tiered product and is designed to suit your needs, no matter what your goal.
+              The 1-2-1 online coaching service is our top tiered product and is designed to suit your individual goals, needs and wants. 
               <br /><br />
-              This has <Highlight>YOU</Highlight> at the forefront, whether it’s your current training abilities, personal lifestyle, equipment access, routine, previous injuries, etc. we deliver a bespoke service that is journey centric and has a proven track record of getting you to where you want to be. 
+              This has <Highlight>YOU</Highlight> at the forefront, whether its your current training abilities, personal lifestyle, equipment access, daily routine, previous injuries, etc. we deliver a completely bespoke and tailored service that is journey centric and has a proven track record of getting you to where you want to be. 
               <br /><br />
-              This service includes everything from onboarding, assessments, goal setting, bespoke training plans, weekly check ins, 1-2-1 support, nutritional advice, and more, so if this sounds like the plan for you, click below to find out more.  
+              This service has it all including an initial onboarding call, mobility assessments, goal setting, bespoke training plans, weekly check ins, 1-2-1 online support, nutritional advice, and more. So, if this sounds like the plan for you, click below to find out more. 
             </Description>
             <Button onClick={() => handleNav("/onlinecoaching")} >Find out More</Button>
           </Text>
@@ -183,15 +183,15 @@ const Services: FC = ()  => {
 
       <Strip alt id="onlinePrograms">
         <Service alt>
-          <Image image="stretching" alt />
+          <Image image="i5092" alt />
           <Text alt>
             <Title alt>Online Programs</Title>
             <Description>
-              The online programs are downloadable 8-12 week progressive plans, which are designed for those who are looking for exercise guidance and inspiration, whilst maintaining some aspects of control and accountability.   
+              The online programs are a series of downloadable 12-week functional fitness plans, which are progressive and carefully structured.
               <br /><br />
-              Whether you are looking to build strength, lose body fat, or improve performance, our plans will have you covered and steer you in the right direction to fitness success.  
+              They are designed for those who are looking for exercise guidance and inspiration, whilst maintaining some aspects of control and accountability. 
               <br /><br />
-              Click below to see our latest plans
+              Whether you are looking to build strength and muscle, lose body fat, or improve overall performance, our programs will have you covered and steer you in the right direction to fitness success. 
             </Description>
             <Button onClick={() => handleNav("/onlineprograms")}>View our different programs</Button>
           </Text>
@@ -200,9 +200,9 @@ const Services: FC = ()  => {
 
       <Strip id="ebooks">
         <Service>
-          <Image image="i5092" />
+          <Image image="i5509" />
           <Text>
-            <Title>Ebooks</Title>
+            <Title>E-Books</Title>
             <Description>
               The JF Fitness downloadable E-Books can be a great addition to your workouts or be used as stand-alone sessions. 
               <br /><br />
