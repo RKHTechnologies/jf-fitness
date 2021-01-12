@@ -126,7 +126,7 @@ const Testimonials: FC = () => {
 
   const nextIndex = () => {    
     contentIndex.current += 1;
-    if (contentIndex.current > 6) contentIndex.current = 0;    
+    if (contentIndex.current > 5) contentIndex.current = 0;    
 
     flipped.current = !flipped.current;
 

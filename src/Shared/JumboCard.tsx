@@ -118,7 +118,7 @@ const Button = styled.div`
   width: calc(100% - 105px);
   text-align: center;
   position: absolute;
-  bottom: 10px;  
+  bottom: 26px;  
   left: 26px;
   cursor: pointer;
 
