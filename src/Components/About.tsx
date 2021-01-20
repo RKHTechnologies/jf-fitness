@@ -4,8 +4,9 @@ import { ImagesDesktop } from '../Shared/ImageLib';
 import { colours, SharedSettings } from '../Shared/SharedStyles';
 
 const Container = styled.div`
-  width: 100%;
+  width: 92%;
   display: grid;
+  margin: 20px auto auto;
   grid-template-columns: 1fr 600px;
 
   @media(max-width: ${SharedSettings.mobile}) {
@@ -15,10 +16,10 @@ const Container = styled.div`
 
 const AboutUs = styled.div`
   text-align: justify;
-  font-size: 1.6em;
+  font-size: 1.3em;
   font-weight: 100;
   color: rgb(255 255 255 / 0.8);
-  line-height: 30px;
+  line-height: 24px;
 
   @media(max-width: ${SharedSettings.mobile}) {
     margin-top: 70px;
@@ -59,13 +60,13 @@ const About: React.FC = () => {
   return (
     <Container>
       <AboutUs>
-        JF FITNESS places functional fitness at the center of success.
+        JF FITNESS places functional fitness at the centre of success.
         <br />
         <br />
-        With over 7 years of personal training experience and a passion for seeing clients grow, JF Fitness has created a range of accessible online products, which are a guaranteed to improve mobility, build strength and muscle, burn fat and develop athletic capacity, all in a challenging and safe manner. 
+        With over 7 years of personal training experience and a passion for seeing clients grow, JF Fitness has created a range of accessible online products, which are guaranteed to improve mobility, build strength and muscle, burn fat and develop athletic capacity, all in a challenging and safe manner. 
         <br />
         <br />
-        From completely bespoke 1-2-1 online coaching through to 12-week functional fitness programmes, JF Fitness has the solution to help you reach and break through your goals. 
+        From bespoke 1-2-1 online coaching,  through to 12-week functional fitness programmes, JF Fitness has the solution to help you reach and break through your goals. 
         <br />
         <br />
         Everyone has their own unique inner athlete, so take the necessary action today and JF Fitness will help unlock yours.

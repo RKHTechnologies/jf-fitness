@@ -154,7 +154,7 @@ const EBooks: FC = () => {
           <Image image={"i6107"} />
           <Heading>DB Only Workouts</Heading>  
           <Description>
-            DB only workouts is a great addition to the E-Book series and is designed to pack some serious punch. Expect EMOM’s and AMRAP’s, Circuits and Intensity and be prepared to develop some serious conditioning. 
+            DB only workouts is a great addition to the E-Book series and is designed to pack some serious punch. Expect EMOMs and AMRAPs, Circuits and Intensity and be prepared to develop some serious conditioning. 
           </Description>
           <Button onClick={() => handleNav("/ebooks/2")}>Find out more</Button>
         </Card>
@@ -163,7 +163,7 @@ const EBooks: FC = () => {
           <Image image={"i5496"} />
           <Heading>KB Only Workouts</Heading>
           <Description>
-            KB only workouts is a great addition to the E-Book series and is designed to pack some serious punch. Expect EMOM’s and AMRAP’s, Circuits and Intensity and be prepared to develop some serious conditioning.
+            KB only workouts is a great addition to the E-Book series and is designed to pack some serious punch. Expect EMOMs and AMRAPs, Circuits and Intensity and be prepared to develop some serious conditioning.
           </Description>
           <Button onClick={() => handleNav("/ebooks/3")}>Find out more</Button>
         </Card>

@@ -174,7 +174,7 @@ const Services: FC = ()  => {
               <br /><br />
               This has <Highlight>YOU</Highlight> at the forefront, whether its your current training abilities, personal lifestyle, equipment access, daily routine, previous injuries, etc. we deliver a completely bespoke and tailored service that is journey centric and has a proven track record of getting you to where you want to be. 
               <br /><br />
-              This service has it all including an initial onboarding call, mobility assessments, goal setting, bespoke training plans, weekly check ins, 1-2-1 online support, nutritional advice, and more. So, if this sounds like the plan for you, click below to find out more. 
+              This service has it all, including an initial onboarding call, mobility assessments, goal setting, bespoke training plans, weekly check-ins, 1-2-1 online support, nutritional advice and more. So, if this sounds like the plan for you, click below to find out more. 
             </Description>
             <Button onClick={() => handleNav("/onlinecoaching")} >Find out More</Button>
           </Text>

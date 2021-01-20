@@ -178,7 +178,7 @@ const JumboCard: FC<IProps> = ({ title, text, buttonText, link, colour, image }:
         <SideContainer>
           <h3>{title}</h3>
           <p>
-            Functional Fitness is a classification of exercise which involves training the body for the activities performed in daily life. 
+            Functional Fitness is a classification of exercise, which involves training the body for the activities performed in daily life. 
             <br /><br />
             It is a purposeful and individual approach to continued development across areas such as movement, strength and capacity. Each endeavour should transcend into daily life and contribute to a long-term, sustainable and healthy lifestyle. 
           </p>

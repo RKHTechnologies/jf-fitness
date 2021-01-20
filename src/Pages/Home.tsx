@@ -64,7 +64,7 @@ const Home: React.FC<IProps> = ({updateSticky}: IProps) => {
       <HeroVideo />
       
       <Section id="intro" topSpace>
-      <div className="wrapper">
+        <div className="wrapper">
           <About />
         </div>
       </Section>

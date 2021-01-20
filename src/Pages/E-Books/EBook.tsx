@@ -301,7 +301,7 @@ const EBook: FC = () => {
             <>
               <div>DB only workouts is a great addition to the E-Book series and is designed to pack some serious punch.</div>
               <br />
-              <div>Expect EMOM’s and AMRAPs, Circuits and Intensity, and be prepared to develop some serious conditioning.</div>
+              <div>Expect EMOMs and AMRAPs, Circuits and Intensity, and be prepared to develop some serious conditioning.</div>
               <br />
               <div>There are 20 high energy workouts which can complement your existing programme or be used solely on their own.</div>
               <br />
@@ -314,7 +314,7 @@ const EBook: FC = () => {
             <>
               <div>KB only workouts is a great addition to the E-Book series and is designed to pack some serious punch.</div>
               <br />
-              <div>Expect EMOM’s and AMRAPs, Circuits and Intensity, and be prepared to develop some serious conditioning.</div>
+              <div>Expect EMOMs and AMRAPs, Circuits and Intensity, and be prepared to develop some serious conditioning.</div>
               <br />
               <div>There are 20 high energy workouts which can complement your existing programme or be used solely on their own.</div>
               <br />

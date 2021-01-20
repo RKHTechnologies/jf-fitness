@@ -217,7 +217,7 @@ const OnlineCoaching: FC = () => {
           <CoachingDescription>
             The 1-2-1 online coaching service is our top tiered service. It is completely client centric and tailored to you and your individual goals, whilst adhering to our principal view that functional fitness is at the heart of what we do. 
             <br /><br />
-            No goal is too big or small and with the necessary strategies and systems in place JF Fitness has the tools to bring success to your fitness journey.
+            No goal is too big or small and, with the necessary strategies and systems in place, JF Fitness has the tools to bring success to your fitness journey.
             <br /><br />
             Take the necessary action today and become your own athlete. 
             <HashTagMini>#BeYourOwnAthlete</HashTagMini>
