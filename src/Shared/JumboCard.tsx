@@ -130,6 +130,7 @@ const Button = styled.div`
 
   @media(max-width: ${SharedSettings.mobile}) {
     margin: 4px auto 6px;
+    bottom: 10px;
   }
 `;
 
