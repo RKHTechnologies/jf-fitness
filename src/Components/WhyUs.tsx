@@ -34,7 +34,7 @@ export const Grid = styled.div`
 export const GridItem = styled.div`
   display: grid;
   grid-gap: 25px 0;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas: 
     'icon title'
     'icon description';
@@ -61,12 +61,13 @@ export const Icon = styled(FontAwesomeIcon)`
 
 export const Title = styled.h2`
   grid-area: title;
-  width: 85%;
+  width: 110%;
   margin-top: 21px;
   margin-bottom: 0;
   color: rgb(255 255 255 / 0.88);
   font-weight: 300;
   text-transform: uppercase;
+  font-size: 1.2em;
 
   @media(max-width: ${SharedSettings.mobile}) {
     width: 95%;
