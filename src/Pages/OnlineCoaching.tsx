@@ -27,9 +27,10 @@ const CoachingDescription = styled(PageDescription)`
   text-align: center;
   font-weight: 300;
   color: rgb(255 255 255 / 0.62);
-  
+  width: 95%;
   text-align: justify;
-  font-size: 1.6em;
+  font-size: 1.3em;
+  line-height: 24px;
   font-weight: 100;
   color: rgb(255 255 255 / 0.7);
   margin-top: 20px;

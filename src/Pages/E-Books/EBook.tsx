@@ -104,23 +104,19 @@ const Image = styled.div`
 
 export const Title = styled.h1`
   width: 100%;
-  font-size: 3.5em;
-  margin: 0;
-  margin-bottom: 20px;
+  font-size: 2.2em;
   font-weight: 300;
   color: rgb(255 255 255 / 0.88);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: auto;
+  margin-bottom: 15px;
+  line-height: 32px;
   
   @media(max-width: ${SharedSettings.mobile}) {
     margin: 0 0 20px;
-    font-size: 2.8em;
-    text-align: center;
-  }
-
-  @media(max-width: 850px) {
     font-size: 2.2em;
+    text-align: center;
   }
 
   @media(max-width: 500px) {
@@ -172,7 +168,7 @@ const Testimonial = styled.div`
   color: rgb(255 255 255 / 0.88);
   font-size: 1.2em;
   text-align: justify;
-  padding: 30px 50px 50px;
+  padding: 30px 50px;
   box-sizing: border-box;
   max-width: 800px;
   position: relative;
@@ -183,23 +179,27 @@ const Testimonial = styled.div`
   margin: auto;
 
   &:before {
-    content: '"';
-    position: absolute;
+    content: '“';
     color: ${colours.primary};
-    margin-top: -27px;
-    margin-left: -50px;
-    font-size: 3em;
-    font-family: fantasy;
+    position: absolute;
+    top: -24px;
+    left: 0px;
+    font-size: 6em;
+    z-index: -1;
+    font-family: 'Oswald';
+    opacity: 0.3;
   }
   
   &:after {
-    content: '"';
-    position: absolute;
+    content: '”';
     color: ${colours.primary};
-    margin-bottom: 27px;
-    margin-right: 50px;
-    font-size: 3em;
-    font-family: fantasy;
+    position: absolute;
+    font-size: 6em;
+    z-index: -1;
+    font-family: 'Oswald';
+    opacity: 0.3;
+    bottom: -55px;
+    right: 40px;
   }
 
   span {

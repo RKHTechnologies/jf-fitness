@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { colours, PageBodyContainer, SharedSettings } from '../../Shared/SharedStyles';
 import styled from 'styled-components';
 import Hero from '../../Shared/Hero';
-import { HashTag, Overlay, TextOverlay } from '../OnlinePrograms';
+import { HashTag, HashTagMini, Overlay, TextOverlay } from '../OnlinePrograms';
 import { Image } from '../../Pages/OnlinePrograms';
 import { useHistory } from 'react-router';
 import { Title } from './EBook';
@@ -18,10 +18,11 @@ export const Centered = styled.div`
 
 export const PageDescription = styled.div`
   text-align: justify;
-  font-size: 1.6em;
+  font-size: 1.3em;
+  line-height: 24px;
   font-weight: 100;
   color: rgb(255 255 255 / 0.7);
-  margin-top: 20px;
+  margin: 20px auto 0;
 
   & > span {
     color: ${colours.primary}; 
@@ -128,15 +129,13 @@ const EBooks: FC = () => {
       <Section id="description" lastItem>
         <div className="wrapper">
           <TextOverlay>E-BOOKS</TextOverlay>
-          <Title>
-            Looking for workout inspiration?
-          </Title>
           <PageDescription>
+            <Title>Looking for workout inspiration?</Title>
             These downloadable e-books which have been tried and tested by the JF Fitness team are a great addition to any workout or can be used separately as individual standalone workouts. 
             <br /><br />
             Expect a fun intensity, that brings a challenge to your sessions, whilst developing some serious metabolic conditioning. 
+            <HashTagMini>#BeYourOwnAthlete</HashTagMini>
           </PageDescription>
-          <HashTag>#BeYourOwnAthlete</HashTag>
         </div>
       </Section>
 
