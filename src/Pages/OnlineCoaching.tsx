@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { colours, PageBodyContainer, SharedSettings } from '../Shared/SharedStyles';
 import styled from 'styled-components';
-import { Button, Detail, HashTagMini, Icon, Overlay, Price, TextOverlay } from './OnlinePrograms';
+import { Button, Detail, HashTagMini, Icon, Overlay, Overview, Price, Product, ProductsGrid, SubHeading, TextOverlay } from './OnlinePrograms';
 import Hero from '../Shared/Hero';
 import { Section } from './Home';
 import { PageDescription } from './E-Books/EBooks';
@@ -10,9 +10,10 @@ import Contact from '../Components/Contact';
 import JourneyCentricMap from '../Components/JourneyCentricMap';
 import { imageLib, ImagesDesktop } from '../Shared/ImageLib';
 import checkIcon from '../img/Check_Icon.svg';
-import { faPoundSign } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faDumbbell, faHeartbeat, faPoundSign } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../Shared/Footer';
 import { StripeBuyNow } from '../Shared/Products';
+import { Title } from '../Pages/OnlinePrograms';
 
 export const Centered = styled.div`
   display: flex;
@@ -37,19 +38,20 @@ const CoachingDescription = styled(PageDescription)`
 `;
 
 const Card = styled.div`
-  width: 100%;
+  width: 90%;
   background: rgba(255,255,255,0.12);
   color: rgb(255 255 255 / 0.7);
   font-weight: 100;
   font-size: 1.2em;
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 10px;
 `;
 
 const Left = styled.div`
   width: 50%;
-  padding: 25px;
+  padding-right: 20px;
   box-sizing: border-box;
   
   @media(max-width: 900px) {
@@ -78,9 +80,8 @@ const Image = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 10px;
   border-radius: 5px;
-  min-height: 600px;
+  min-height: 586px;
 
   @media(max-width: 1170px) {
     min-height: 450px;
@@ -92,7 +93,7 @@ const Image = styled.div`
 `;
 
 const ItemTitle = styled.h1`
-  color: ${colours.primary};
+  color: rgb(255 255 255, 0.88);
   text-transform: uppercase;
   text-align: left;
   font-weight: 400;
@@ -143,6 +144,8 @@ const PriceContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-left: -8px;
+  margin-bottom: -10px;
+  margin-top: 8px;
 
   @media(max-width: 450px) {
     flex-wrap: wrap;
@@ -179,6 +182,8 @@ const OverallPrice = styled.span`
   font-size: 0.8em;
 `;
 
+
+
 const CoachingDetail = styled(Detail)`
   font-size: 1em;
 
@@ -188,6 +193,10 @@ const CoachingDetail = styled(Detail)`
     margin: 0;
     margin-bottom: -15px;
   }
+`;
+
+const InfoDetail = styled(CoachingDetail)`
+  margin-left: 8px;
 `;
 
 const CoachingButton = styled(Button)`
@@ -200,11 +209,22 @@ const CoachingButton = styled(Button)`
   }
 `;
 
+const CoachingTitle = styled(Title)`
+  font-size: 3em;
+`;
+
 
 const OnlineCoaching: FC = () => {
   
   const handleClick = () => {
     StripeBuyNow('Online121');
+  }
+
+  const handleEmail = () => {
+    window.open(
+      'mailto:contact@jf-fitness.com',
+      '_blank'
+    );
   }
 
   return (
@@ -238,6 +258,7 @@ const OnlineCoaching: FC = () => {
               <Image image={"i6585"} />
             </Left>
             <Right>
+              <CoachingTitle>1-2-1 Online Coaching</CoachingTitle>
               <ItemTitle>What to Expect</ItemTitle>
               <CheckList>
                 <li>Consultation call</li>
@@ -262,11 +283,76 @@ const OnlineCoaching: FC = () => {
                     <OverallPrice>250</OverallPrice>
                 </Price>
                 <CoachingDetail>per month (minimum commitment - 3 months)</CoachingDetail>
-                {/* <Button onClick={() => OpenOverlay("boxJump", "Functional Fitness -   12 Week plan", 150)}>Buy Now</Button> */}
                 <CoachingButton onClick={handleClick}>Buy Now</CoachingButton>      
+              </PriceContainer>
+
+              <PriceContainer>
+                <InfoDetail>For further information or if you have any questions, please get in touch</InfoDetail>
+                <CoachingButton secondary onClick={handleEmail}>EMAIL US</CoachingButton>
               </PriceContainer>
             </Right>
           </Card>
+
+          {/* <ProductsGrid>
+            <Product>
+            <Image image={"i6585"} />
+            <Title>1-2-1 Online Coaching</Title>
+
+            <Requirements>
+              <SubHeading>
+                <Icon icon={faCalendarCheck} />
+                <div>What to Expect</div>
+              </SubHeading>
+              <Overview>
+                <CheckList>
+                  <li>Consultation call</li>
+                  <li>Onboarding/Assessments</li>
+                  <li>Bespoke exercise program </li>
+                  <li>Weekly workouts direct to your phone</li>
+                  <li>Access to the Truecoach app</li>
+                  <li>Video demonstrations</li>
+                  <li>Trackable progress</li>
+                  <li>Weekly check-ins</li>
+                  <li>Monthly support calls</li>
+                </CheckList>
+              </Overview>
+            </Requirements>
+
+            <div>
+              <SubHeading>
+                <Icon icon={faDumbbell} />
+                <div>What Next...</div>
+              </SubHeading>
+              <HowItWorks>
+                Once purchased a member of the team will be in touch to arrange your initial consultation call.
+              </HowItWorks>
+            </div>
+
+            <PriceContainer>
+              <Price>
+                  <Icon icon={faPoundSign} />
+                  <OverallPrice>250</OverallPrice>
+              </Price>
+              <CoachingDetail>per month (minimum commitment - 3 months)</CoachingDetail>
+              <CoachingButton onClick={handleClick}>Buy Now</CoachingButton>      
+            </PriceContainer>
+           */}
+            {/*             
+            <ProgramDetail>
+              <Price>
+                  <Icon icon={faPoundSign} />
+                  <span>150</span>
+              </Price>
+              <Detail>12 Week Plan</Detail>
+              <Button onClick={() => handleBuyNow('FF12')}>Buy Now</Button>
+            </ProgramDetail>
+
+            <LastProgramDetail>
+              <p>For further information or if you have any questions, please get in touch</p>
+              <Button secondary onClick={handleEmail}>EMAIL US</Button>
+            </LastProgramDetail> */}
+          {/* </Product>
+        </ProductsGrid> */}
       </Section>
 
       <Section id="testimonials">

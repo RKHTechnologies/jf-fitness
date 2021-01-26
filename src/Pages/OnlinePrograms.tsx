@@ -115,7 +115,7 @@ export const HashTagMini = styled(HashTag)`
   margin: 15px 0 !important;
 `;
 
-const Product = styled.div`
+export const Product = styled.div`
   flex-direction: column;
   padding: 10px;
   border-radius: 10px;
@@ -200,7 +200,7 @@ export const Image = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   grid-area: title;
   width: 100%;
   color: ${colours.primary};
@@ -219,7 +219,7 @@ const Title = styled.h1`
   }
 `;
 
-const Overview = styled.div`
+export const Overview = styled.div`
   width: 100%;
   color: rgb(255 255 255 / 0.7);
   text-align: justify;
@@ -341,7 +341,7 @@ export const Button = styled.div`
   }
 `;
 
-const SubHeading = styled.div`
+export const SubHeading = styled.div`
   color: ${colours.light};
   font-weight: 400;
   font-size: 1.8em;
